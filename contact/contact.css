@@ -165,14 +165,9 @@ nav a,
 }
 
 .hero-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* fixed */
-  justify-content: center;
-  padding: 3rem;
-  gap: 5rem;
-  flex-wrap: nowrap;
+  border: 5px solid green !important;
 }
+
 
 .hero-text { /*body*/
   flex: 1 1 500px;

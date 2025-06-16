@@ -65,7 +65,6 @@
 <div class="description-wrapper">
 
   <div class="top-content">
-
    <div class="video-frame" onclick="swapToYoutube(this)">
   <video autoplay muted loop playsinline>
     <source src="../videos/LDT-Thumb.mp4" type="video/mp4" />
@@ -73,23 +72,7 @@
   </video>
   <div class="play-button">▶</div>
 </div>
-
-<script>
-  function swapToYoutube(container) {
-    const iframe = document.createElement('iframe');
-    iframe.src = "https://www.youtube.com/embed/bls7M6jDBfU?autoplay=1"; // Fixed here
-    iframe.width = "622";
-    iframe.height = "350";
-    iframe.frameBorder = "0";
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-    iframe.allowFullscreen = true;
-
-    container.innerHTML = ''; // Clear current video and play button
-    container.appendChild(iframe);
-  }
-</script>
-
-
+    
     <div class="cast-crew-columns">
       <div class="cast-box">
         <h2>Cast</h2>
@@ -138,3 +121,18 @@
     &copy; 2025 Ojo Verdadero Films, LLC. All rights reserved.
   </div>
 </footer>
+
+<script>
+  function swapToYoutube(container) {
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/bls7M6jDBfU?autoplay=1"; // Fixed here
+    iframe.width = "622";
+    iframe.height = "350";
+    iframe.frameBorder = "0";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    container.innerHTML = ''; // Clear current video and play button
+    container.appendChild(iframe);
+  }
+</script>

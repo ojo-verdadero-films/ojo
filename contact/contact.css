@@ -157,19 +157,22 @@ nav a,
 
 /* Hero Section */
 .hero {
-  display: flex;
-  flex-direction: row;       /* side by side */
-  justify-content: center;   /* center horizontally */
-  align-items: flex-start;   /* align top edges */
-  gap: 2rem;                 /* space between text and form */
+  background-image: url('../images/soft-background.png'); /* Adjust the path */
+  background-size: cover;       /* Makes the image cover the entire area */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
   padding: 4rem 2rem;
-  background-image: url('../images/soft-background.png'); 
-  background-size: cover;       
-  background-position: center;  
-  background-repeat: no-repeat; 
-  flex-wrap: nowrap;
 }
 
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* fixed */
+  justify-content: center;
+  padding: 3rem;
+  gap: 5rem;
+  flex-wrap: nowrap;
+}
 
 .hero-text { /*body*/
   flex: 1 1 500px;
@@ -257,6 +260,7 @@ nav a,
   background-color: #a32439;
   transform: translateY(-2px);
 }
+
 
 .flower-border-container {
   width: 100%;

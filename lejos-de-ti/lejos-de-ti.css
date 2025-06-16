@@ -144,47 +144,44 @@ nav a,
 }
 
 /* Top Content & Description */
-.top-content {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  width: 100vw;
-  margin: 0 auto 2rem;
-  padding: 2rem 4rem;
-  box-sizing: border-box;
-}
-
+/* Hero video */
 .description-wrapper {
-  width: 100vw;
-  margin: 4rem 0;
+  max-width: 1300px;
+  margin: 5rem auto;
   padding: 3rem 4rem;
+  font-family: "ivymode", sans-serif;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 50px;
   color: #222;
-  font-family: "ivymode", sans-serif;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+  flex: 1;
+  transform: scale(1.2);
 }
 
-/* Video Frame */
+.top-content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 1rem;               /* Space between video and cast/crew */
+  max-width: 1400px;       /* Limit total width */
+  margin: 0 auto 2rem;     /* Center and add bottom margin */
+  box-sizing: border-box;
+}
+
 .video-frame {
   flex: 1 1 60%;
   padding: 1rem;
   background: #afbb98;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 30px 10px 50px 5px;
+  box-shadow: inset 0 0 30px 10px rgba(255, 255, 255, 0.6);
+  border-radius: 30px 10px 50px 5px; /* top-left, top-right, bottom-right, bottom-left */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.video-frame iframe,
-.video-frame video {
+.video-frame iframe {
   width: 622px;
   height: 350px;
   border-radius: 8px;
@@ -193,14 +190,23 @@ nav a,
   box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
 }
 
-.video-wrapper video,
-.video-wrapper iframe {
+.video-frame video,
+.video-frame iframe {
+  width: 622px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: none;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
+}
+
+.video-wrapper video {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   display: block;
   object-fit: cover;
-  border: none;
+  border-radius: 10px;
 }
 
 .play-button {
@@ -210,41 +216,32 @@ nav a,
   transform: translate(-50%, -50%);
   font-size: 4rem;
   color: white;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
+  text-shadow: 0 0 15px rgba(0,0,0,0.8);
+  pointer-events: none; /* so clicks go through to the wrapper */
   user-select: none;
 }
 
-/* Cast & Crew */
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+/* Cast and crew containers side-by-side */
 .cast-crew-columns {
+  flex: 1 1 40%;  /* Use rest of horizontal space */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
-  max-width: 1300px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-.cast-column,
-.crew-column {
-  flex: 1 1 45%;
+  gap: 1rem;
+  height: 100%;
+  max-width: 580px; /* 280 + 280 + gap, adjust if needed */
 }
 
-.cast-column h3,
-.crew-column h3 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-}
-
-.cast-column ul,
-.crew-column ul {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
+/* Individual cast and crew boxes */
 .cast-box, .crew-box {
+  writing-mode: horizontal-tb;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 8px;
@@ -252,7 +249,7 @@ nav a,
   width: 280px;
   height: 400px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
@@ -287,17 +284,18 @@ nav a,
   box-sizing: border-box;
 }
 
-
 /* Synopsis strip below everything */
 .synopsis-strip {
-  width: 100vw;
-  margin: 2rem 0;
-  padding: 3rem 4rem;
   background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  width: calc(100% + 8rem); /* add left+right padding */
+  margin: 2rem -4rem 0 -4rem; /* pull left and right by padding amount */
   box-sizing: border-box;
+  max-width: none;
 }
 
 .synopsis-strip h2 {

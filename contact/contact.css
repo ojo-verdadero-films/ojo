@@ -164,10 +164,6 @@ nav a,
   padding: 4rem 2rem;
 }
 
-.hero-container {
-  border: 5px solid green !important;
-}
-
 
 .hero-text { /*body*/
   flex: 1 1 500px;

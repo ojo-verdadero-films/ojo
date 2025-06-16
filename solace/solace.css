@@ -403,7 +403,7 @@ footer {
     font-family: "nitti-typewriter-cameo", sans-serif;
   }
 
-   footer {
+   footer-container {
   position: static; /* remove absolute */
   width: 100vx;
   background-color: #000;

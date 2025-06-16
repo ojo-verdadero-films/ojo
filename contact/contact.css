@@ -166,7 +166,7 @@ nav a,
 
 .hero-container {
   display: flex;
-  flex-direction: row !important;
+  flex-direction: row;
   align-items: center; /* fixed */
   justify-content: center;
   padding: 3rem;

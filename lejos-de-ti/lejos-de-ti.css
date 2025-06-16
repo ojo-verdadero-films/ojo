@@ -1,41 +1,54 @@
-/* Reset & Base Styles */
-* {
+/* Base resets and layout */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
- 
-body {
-  font-family: "ivymode", sans-serif;
-  background-image: url('../images/soft-background.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed; /* optional, for a nice parallax effect */
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Quattrocento', serif;
+  background-color: #fff;
   color: #111;
-  margin: 0;
-  min-height: 100vh;
+}
+
+/* Make body a flex column to push footer down */
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
 }
-/* Header */
+
+/* Wrapper for all main page content except footer */
+.page-content {
+  flex: 1 0 auto; /* take available vertical space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer styles */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 0;
+  user-select: none;
+  letter-spacing: 1px;
+  font-family: "ivymode", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  flex-shrink: 0; /* prevent footer from shrinking */
+}
+
+/* Example desktop layout fixes */
+
+/* Header styling */
 header {
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #f4eee6;
-  box-sizing: border-box;
-  z-index: 100;
-  margin-top: 0;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
 }
-
 
 .header-left {
   display: flex;
@@ -44,226 +57,148 @@ header {
 }
 
 .logo {
-  height: 100px;
-  margin-right: 0rem;
+  height: 50px;
+  width: auto;
 }
 
 .brand span {
   display: block;
-  font-size: 28px;
-  line-height: 1.3;
-  color: #000000;
-  font-family: "nitti-typewriter-cameo", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111;
 }
 
-/* Navigation Styles */
-.header-right nav {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 22px;
-  align-items: center;
-  color: #000000;
-}
-
-nav a, 
-.dropbtn { /*these are the Home and Contact buttons*/
-  font-weight: bold;
+/* Navigation */
+nav a, .dropbtn {
   text-decoration: none;
-  color: #000000;
-  font-size: 26px;
-  font-family: 'Quattrocento', serif;
+  color: #111;
+  margin-left: 1.5rem;
+  font-weight: 600;
   cursor: pointer;
-  padding: 0.25rem 0;
   position: relative;
 }
 
-.header-right nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: #7e2513;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.header-right nav a:hover::after,
-.brand a:hover {
-  transform: scaleX(1);
-}
-
-/* Dropdown Menu */
-/* Container needs to be relative for absolute positioning */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropbtn { /*this is the Portfolio button*/
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: #000000;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #7e2513;
+  background-color: #fff;
   min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 20;
+  top: 120%;
+  left: 0;
 }
 
-.dropdown-content a {
-  color: #f6e3db;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* When hovering over the whole container, show the content */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.flower-border-container {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  height: 25px;
-  background-image: url('../images/flowers.jpg');
-  background-repeat: repeat-x;
-  background-position: center;
-  background-size: cover;
-  background-color: #fac3bb;
+.dropdown-content a {
+  color: #111;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
 }
 
-body.subpage {
-  font-family: 'Quattrocento', serif;
-  background-color: #fff;
-  color: #111;
-  margin: 0;
-  padding: 0 1.5rem; /* horizontal padding for content */
-  line-height: 1.6;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
 }
 
-/* Hero video */
-body.subpage {
-  font-family: 'Quattrocento', serif;
-  background-color: #fff;
-  color: #111;
-  margin: 0;
-  padding: 0 1.5rem; /* horizontal padding for content */
-  line-height: 1.6;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+/* Flower section */
+.flower-section {
+  height: 20px; /* or whatever your flower border height is */
 }
 
-.top-content {
-  font-family: 'Quattrocento', serif;
-  color: #111;
-  margin: 0;
-  padding: 0 1.5rem; /* horizontal padding for content */
-  line-height: 1.6;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Description wrapper styling */
 .description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+/* Cast and crew columns */
+.cast-crew-columns {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.cast-box, .crew-box {
   flex: 1;
-  transform: scale(1.2);
 }
 
-.top-content {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  gap: 1rem;               /* Space between video and cast/crew */
-  max-width: none !important;
-  margin: 0 auto 2rem;     /* Center and add bottom margin */
-  box-sizing: border-box;
+/* Synopsis strip */
+.synopsis-strip {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #e60039; /* pink/red accent */
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
-.video-frame {
-  flex: 1 1 60%;
-  padding: 1rem;
-  background: #afbb98;
-  box-shadow: inset 0 0 30px 10px rgba(255, 255, 255, 0.6);
-  border-radius: 30px 10px 50px 5px; /* top-left, top-right, bottom-right, bottom-left */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+/* Indiegogo section */
+.indiegogo-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff0f6; /* subtle pinkish background */
+  border-radius: 8px;
+  gap: 2rem;
+}
+
+.indiegogo-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #111;
+}
+
+.indiegogo-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #e60039;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.indiegogo-button:hover {
+  background-color: #b5002b;
+}
+
+.indiegogo-video {
+  flex: 1;
+  max-width: 560px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Video frame */
+.video-frame {
   position: relative;
-}
-
-.video-frame iframe {
   width: 622px;
-  height: 350px;
-  border-radius: 8px;
-  border: none;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
+  max-width: 100%;
+  cursor: pointer;
 }
 
-.video-frame {
-  flex: 1 1 60%;
-  padding: 1rem;
-  background: #afbb98;
-  box-shadow: inset 0 0 30px 10px rgba(255, 255, 255, 0.6);
-  border-radius: 30px 10px 50px 5px; /* top-left, top-right, bottom-right, bottom-left */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-frame iframe {
-  width: 622px;
-  height: 350px;
-  border-radius: 8px;
-  border: none;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
-}
 .video-frame video,
 .video-frame iframe {
-  width: 622px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: none;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
-}
-
-.video-wrapper video {
   width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -272,204 +207,8 @@ body.subpage {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
-  text-shadow: 0 0 15px rgba(0,0,0,0.8);
-  pointer-events: none; /* so clicks go through to the wrapper */
-  user-select: none;
-}
-
-
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  display: block;
-  border: none;
-}
-
-/* Cast and crew containers side-by-side */
-.cast-crew-columns {
-  flex: 1 1 40%;  /* Use rest of horizontal space */
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  height: 100%;
-  max-width: 580px; /* 280 + 280 + gap, adjust if needed */
-}
-
-/* Individual cast and crew boxes */
-.cast-box, .crew-box {
-  writing-mode: horizontal-tb;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  overflow-y: auto;
-}
-
-.cast-box h2, .crew-box h2 {
-  font-family: "ivymode", sans-serif;
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
-  font-weight: 700;
-}
-
-.cast-box p, .crew-box p {
-  font-size: 1rem;
-  line-height: 1.4;
-  margin: 0.3rem 0;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.synopsis-strip {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1400px;   /* Stretch beyond your usual 1300px limit */
-  margin-left: auto;   /* Push left edge inward */
-  margin-right: 0;     /* Allow full extension to the right */
-  box-sizing: border-box;
-}
-
-
-/* Synopsis strip below everything */
-.synopsis-strip {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-  width: calc(100% + 8rem); /* add left+right padding */
-  margin: 2rem -4rem 0 -4rem; /* pull left and right by padding amount */
-  box-sizing: border-box;
-  max-width: none;
-}
-
-
-
-.synopsis-strip h2 {
-  font-family: "ivymode", sans-serif;
-  font-size: 2.8rem;
-  margin-bottom: 1.3rem;
-  font-weight: 700;
-}
-
-.synopsis-strip p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  text-align: justify;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-weight: 300;
-}
-
-footer {
-  background: #000;
-  color: #fff;
-  padding: 0.6 rem 0;
-  user-select: none;
-  letter-spacing: 1px;
-  font-family: "ivymode", sans-serif;
-  text-align: center;
-  box-sizing: border-box;
-  margin-tops: 0rem;
-  user-select: none;
-}
-
-@media (max-width: 768px) {
-  header {
-    background-color: #f4eee6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    gap: 0.5rem;
-  }
-
-  .top-content {
-    flex-direction: column;
-    padding: 0.5rem 0 1rem;
-    gap: 1rem;
-    margin-top: 0;
-  }
-
-  .video-frame {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 20px;
-    padding-top: 1rem;
-  }
-
-  .video-frame iframe,
-  .video-frame video {
-    width: 100%;
-    height: 220px;
-  }
-
-  .cast-crew-columns {
-    flex-direction: column;
-    width: 100%;
-    max-width: none;
-    gap: 1rem;
-  }
-
-  .cast-box,
-  .crew-box {
-    width: 100%;
-    height: auto;
-  }
-
-  .description-wrapper {
-    transform: scale(1);
-    padding: 1rem 2rem;
-    margin-top: 0.5rem;
-  }
-
-  .synopsis-strip {
-    margin: 1rem -1.5rem 0 -1.5rem;
-    width: calc(100% + 3rem);
-    padding: 1.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .synopsis-strip h2 {
-    font-size: 2rem;
-  }
-
-  .synopsis-strip p {
-    text-align: center !important;
-  }
-
-  .logo {
-    height: 40px;
-  }
-
-  .brand span {
-    font-size: 12px;
-    font-family: "nitti-typewriter-cameo", sans-serif;
-  }
-
-   footer {
-    text-align: center !important;
-    padding: 0.5rem 0 !important;
-    font-size: 0.8rem !important;
-    background-color: #000 !important;
-    color: #fff !important;
-  }
+  pointer-events: none;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }

@@ -17,7 +17,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 /* Header */
@@ -150,7 +149,6 @@ nav a,
 
 .top-content {
   font-family: 'Quattrocento', serif;
-
   color: #111;
   margin: 0;
   padding: 0 1.5rem; /* horizontal padding for content */
@@ -158,59 +156,38 @@ nav a,
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-}
-.description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
-  flex: 1;
-  transform: scale(1.2);
-}
-
-.description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
-  flex: 1;
-  transform: scale(1.2);
-}
-
-/* Hero video */
-.description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
-  flex: 1;
-  transform: scale(1.2);
-}
-
-.top-content {
   display: flex;
   justify-content: center; /* Center horizontally */
   gap: 1rem;               /* Space between video and cast/crew */
-  max-width: 1400px;       /* Limit total width */
-  margin: 0 auto 2rem;     /* Center and add bottom margin */
   box-sizing: border-box;
 }
+.description-wrapper {
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 3rem 4rem;
+  font-family: "ivymode", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  color: #222;
+  flex: 1;
+  transform: scale(1.2);
+}
 
+.description-wrapper {
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 3rem 4rem;
+  font-family: "ivymode", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  color: #222;
+  flex: 1;
+  transform: scale(1.2);
+}
 .video-frame {
   flex: 1 1 60%;
   padding: 1rem;

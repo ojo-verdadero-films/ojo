@@ -338,9 +338,6 @@ footer {
     width: 100%;
     margin: 2rem 0 0;
   }
-}
-
-@media (max-width: 768px) {
   header {
     background-color: #f4eee6;
     display: flex;

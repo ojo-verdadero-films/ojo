@@ -312,7 +312,9 @@ body, html {
     gap: 0.5rem;
     background-color: #f4eee6;
   }
-
+  .hero-text {
+    text-align: center !important;
+  }
   .header-left {
     display: flex;
     align-items: center;

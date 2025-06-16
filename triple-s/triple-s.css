@@ -314,11 +314,72 @@ nav a, .dropbtn {
 }
 
 @media screen and (max-width: 768px) {
+  /* --- Cast and Crew layout (default for desktop) --- */
+.cast-crew-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.cast-box,
+.crew-box {
+  flex: 1;
+}
+
+/* --- Video Frame --- */
+.video-frame {
+  max-width: 640px;
+  margin: 2rem auto;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-frame video,
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px black;
+  cursor: pointer;
+}
+
+/* --- Description and Synopsis --- */
+.description-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.synopsis-strip {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+/* --- Responsive (Mobile) --- */
+@media screen and (max-width: 768px) {
   .cast-crew-columns {
     flex-direction: column;
+    padding: 0;
     gap: 1.5rem;
-    align-items: flex-start;
-    max-width: 100%;
   }
 
   .cast-box,
@@ -326,18 +387,24 @@ nav a, .dropbtn {
     width: 100%;
   }
 
-  .video-frame {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .description-wrapper {
-    padding: 1.5rem;
-  }
-
+  .description-wrapper,
   .synopsis-strip {
     padding: 1.5rem;
   }
+
+  .video-frame {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+/* --- Footer --- */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: "ivymode", sans-serif;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-top: 3rem;
 }

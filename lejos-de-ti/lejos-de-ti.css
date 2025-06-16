@@ -321,7 +321,7 @@ footer {
   text-align: center;
   box-sizing: border-box;
   margin: 0;
-  position: static; /* or just remove this if not set */
+  flex-shrink: 0; /* prevent shrinking */
   width: 100%;
 }
 

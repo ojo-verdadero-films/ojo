@@ -146,37 +146,42 @@ nav a, .dropbtn {
 /* Indiegogo section */
 .indiegogo-section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: #fff0f6; /* subtle pinkish background */
-  border-radius: 8px;
   gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9; /* light background for contrast */
+}
+
+.indiegogo-video {
+  flex: 1 1 560px;
+  max-width: 560px;
 }
 
 .indiegogo-text {
-  flex: 1;
+  flex: 1 1 300px;
+  max-width: 300px;
+  color: #111; /* dark text */
+  font-family: 'Quattrocento', serif;
   font-size: 1.1rem;
-  line-height: 1.6;
-  color: #111;
 }
 
 .indiegogo-button {
   display: inline-block;
   margin-top: 1rem;
-  background-color: #e60039;
-  color: white;
   padding: 0.75rem 1.25rem;
-  font-weight: 700;
+  background: #E84949; /* Indiegogo red */
+  color: white;
   text-decoration: none;
-  border-radius: 4px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: 'Quattrocento', serif;
   transition: background-color 0.3s ease;
 }
 
-.indiegogo-button:hover {
-  background-color: #b5002b;
+.indiegogo-button:hover,
+.indiegogo-button:focus {
+  background-color: #b73a3a; /* darker red on hover */
 }
 
 .indiegogo-video {

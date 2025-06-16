@@ -439,29 +439,22 @@ body.subpage {
   .synopsis-strip p {
     text-align: center !important;
   }
- header {
-  position: relative;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: row;
-  padding: 1rem 2rem;
-  background-color: #f4eee6;
-  z-index: 100;
-}
+ 
+ 
 
 .logo {
-  height: 80px;
+  height: 40px;
 }
 
 .brand span {
-  font-size: 24px;
+  font-size: 12px;
   font-family: "nitti-typewriter-cameo", sans-serif;
 }
   footer {
     text-align: center !important;
     padding: 0.5rem 0 !important;
     font-size: 0.8rem !important;
+    background-color: #000; 
   }
 }
 

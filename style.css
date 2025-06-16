@@ -129,7 +129,7 @@ nav a,
 
 .bottom-wrapper {
   display: flex;
-  flex-direction: row;   /* explicit row */
+  flex-direction: row !important;
   flex-wrap: nowrap;     /* no wrapping */
   gap: 5rem;
   align-items: center;

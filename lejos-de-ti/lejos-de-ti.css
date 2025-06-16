@@ -423,174 +423,84 @@ footer {
 
 
 @media (max-width: 768px) {
-  /* Header styles */
   header {
-    padding: 1.5rem 1rem;
-    text-align: center;
-    background-color: #000; /* adjust to your brand color */
-    color: #fff;
-  }
-
-  header .logo {
-    max-width: 180px;
-    margin: 0 auto 1rem auto;
-    display: block;
-  }
-
-  header h1, header h2 {
-    font-family: "ivymode", sans-serif;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-  }
-
-  header h1 {
-    font-size: 2.4rem;
-  }
-
-  header h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    opacity: 0.8;
-  }
-
-  /* Navigation inside header */
-  header nav {
-    margin-top: 1rem;
+    background-color: #f4eee6;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
   }
-
-  header nav a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.25rem 0.5rem;
-  }
-
-  header nav a:hover,
-  header nav a:focus {
-    text-decoration: underline;
-  }
-
-  /* General mobile tweaks */
 
   .top-content {
     flex-direction: column;
-    align-items: center;
+    padding: 0.5rem 0 1rem;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  .video-frame {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    padding-top: 1rem;
+  }
+
+  .video-frame iframe,
+  .video-frame video {
+    width: 100%;
+    height: 220px;
   }
 
   .cast-crew-columns {
     flex-direction: column;
+    width: 100%;
+    max-width: none;
+    gap: 1rem;
   }
 
-  .cast-box, .crew-box {
-    width: 280px;
+  .cast-box,
+  .crew-box {
+    width: 100%;
     height: auto;
   }
 
-  .video-frame iframe {
-    width: 100%;
-    max-width: 622px;
-    height: 250px;
-  }
-
-  footer {
-    position: static;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    background-color: #000;
-    color: #fff;
-    padding: 0.2rem 0;
-    user-select: none;
-    letter-spacing: 1px;
-    font-family: "ivymode", sans-serif;
-    text-align: center;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .indiegogo-section {
-    display: flex;
-    gap: 2.5rem;
-    background-color: #afbb98;
-    color: #000;
-    font-family: "ivymode", sans-serif;
-    font-weight: 200;
-    border-radius: 12px;
-    height: 600px;
-    margin: 4rem auto;
-    box-shadow: 0 8px 20px rgba(175, 187, 152, 0.35);
-    align-items: center;
-    flex-direction: column;
-    max-width: 95%;
-    padding: 3rem 1.5rem;
-  }
-
-  .indiegogo-text {
-    flex: 2;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .indiegogo-text p {
-    font-size: 2.7rem;
-    font-style: oblique;
-    font-weight: 900;
-    background-color: rgba(223, 245, 253, 0.53);
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    flex-grow: 1;
-    overflow-y: auto;
-  }
-
-  .indiegogo-button {
-    display: inline-block;
-    background-color: #cecdb9d2;
-    color: #22393e;
-    font-weight: 1000;
-    padding: 0.75rem 2rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 1.7rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(34, 57, 62, 0.25);
-    align-self: center;
-  }
-
-  .indiegogo-button:hover,
-  .indiegogo-button:focus {
-    background-color: #46707e;
-    color: #fff;
-    outline: none;
-    box-shadow: 0 6px 12px rgba(70, 112, 126, 0.6);
-    cursor: pointer;
-  }
-
-  .indiegogo-video {
-    flex: 1;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  .description-wrapper {
+    transform: scale(1);
     padding: 1rem 2rem;
+    margin-top: 0.5rem;
   }
 
-  .indiegogo-video iframe {
-    width: 100%;
-    height: 250px;
-    max-height: 550px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: none;
+  .synopsis-strip {
+    margin: 1rem -1.5rem 0 -1.5rem;
+    width: calc(100% + 3rem);
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .synopsis-strip h2 {
+    font-size: 2rem;
+  }
+
+  .synopsis-strip p {
+    text-align: center !important;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .brand span {
+    font-size: 12px;
+    font-family: "nitti-typewriter-cameo", sans-serif;
+  }
+
+   footer {
+    text-align: center !important;
+    padding: 0.5rem 0 !important;
+    font-size: 0.8rem !important;
+    background-color: #000 !important;
+    color: #fff !important;
   }
 }

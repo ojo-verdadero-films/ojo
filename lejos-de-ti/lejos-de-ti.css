@@ -432,14 +432,16 @@ footer {
     padding: 1.5rem;
     border-radius: 12px;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   .synopsis-strip h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   .synopsis-strip p {
-    font-size: 1rem;
+    font-size: 1.8rem;
     line-height: 1.4;
   }
 
@@ -449,6 +451,7 @@ footer {
     max-width: 100%;
     padding: 2rem 1rem;
     height: auto;
+    background-color: #afbb98; /* soft olive-green tone */
   }
 
   .indiegogo-text,
@@ -465,6 +468,10 @@ footer {
   .indiegogo-button {
     font-size: 1.2rem;
     padding: 0.6rem 1.5rem;
+    display: inline-block;
+    background-color: #cecdb9d2;
+    color: #22393e;
+    align-self: center;
   }
 
   .indiegogo-video iframe {

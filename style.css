@@ -816,7 +816,34 @@ body, html {
     text-align: center;
   }
 }
+header {
+    flex-direction: column;
+    padding: 1rem;
+  }
 
+  .logo {
+    height: 70px;
+    margin-bottom: 0.5rem;
+  }
+
+  .brand span {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .header-right nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 18px;
+    margin-top: 0.5rem;
+  }
+
+  nav a,
+  .dropbtn {
+    font-size: 20px;
+  }
+}
 
 
 

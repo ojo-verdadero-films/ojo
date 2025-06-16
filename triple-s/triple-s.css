@@ -313,31 +313,13 @@ nav a, .dropbtn {
   font-size: 0.8rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .top-content {
-    flex-direction: column;
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 
-  .cast-crew-columns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .video-frame iframe {
-    height: 250px;
-    width: 100%;
-  }
-
-  .description-wrapper {
-    padding: 2rem;
-    transform: none;
-  }
-
-  .synopsis-strip {
-    width: 100%;
-    margin: 2rem 0 0;
-  }
   header {
     background-color: #f4eee6;
     display: flex;
@@ -359,6 +341,7 @@ nav a, .dropbtn {
     padding: 0.5rem;
     border-radius: 20px;
     padding-top: 1rem;
+    margin-bottom: 1rem; /* space below video before cast/crew */
   }
 
   .video-frame iframe,
@@ -371,7 +354,7 @@ nav a, .dropbtn {
     flex-direction: column;
     width: 100%;
     max-width: none;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .cast-box,
@@ -382,17 +365,19 @@ nav a, .dropbtn {
 
   .cast-box h2,
   .crew-box h2 {
-    padding: .5rem;
+    padding: 0.5rem;
+  }
 
   .description-wrapper {
     transform: scale(1);
-    padding: 1rem 2rem;
+    padding: 1rem 1.25rem;
     margin-top: 0.5rem;
   }
 
   .synopsis-strip {
-    margin: 1rem -1.5rem 0 -1.5rem;
-    width: calc(100% + 3rem);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     padding: 1.5rem;
     font-size: 1.2rem;
     text-align: center;
@@ -406,6 +391,23 @@ nav a, .dropbtn {
     text-align: center !important;
   }
 
+  .indiegogo-section {
+    flex-direction: column;
+    max-width: 95%;
+    padding: 1.5rem;
+    height: auto;
+    margin: 1.5rem auto; /* tightened vertical spacing */
+  }
+
+  .indiegogo-text,
+  .indiegogo-video {
+    max-width: 100%;
+  }
+
+  .indiegogo-video iframe {
+    height: 200px;
+  }
+
   .logo {
     height: 40px;
   }
@@ -415,25 +417,18 @@ nav a, .dropbtn {
     font-family: "nitti-typewriter-cameo", sans-serif;
   }
 
- footer {
-  width: 100vw;
-  position: relative;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-.footer-container {
-  background: #000;
-  color: #fff;
-  padding: 0.5rem 0;
-  user-select: none;
-  letter-spacing: 1px;
-  font-family: "ivymode", sans-serif;
-  text-align: center;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 100%;
-  font-size: 0.8rem;
+  footer {
+    position: static;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-family: "ivymode", sans-serif;
+    user-select: none;
+    margin: 0;
+    box-sizing: border-box;
+  }
 }

@@ -367,6 +367,14 @@ nav a,
   .top-content {
     flex-direction: column;
   }
+  header {
+    background-color: #f4eee6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
 
   .cast-crew-columns {
     flex-direction: column;

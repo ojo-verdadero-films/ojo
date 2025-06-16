@@ -458,4 +458,10 @@ body.subpage {
     padding: 0.5rem 0;
   }
 }
+@media (max-width: 768px) {
+  .synopsis-strip p {
+    text-align: center !important;
+  }
+}
+
 

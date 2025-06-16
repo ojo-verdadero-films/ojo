@@ -750,51 +750,49 @@ body, html {
 /* ========== MOBILE STYLES ========== */
 @media (max-width: 768px) {
     header {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    gap: 0.5rem;
-    background-color: #f4eee6;
-  }
-  .hero-text {
-    text-align: center;
-  }
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  background-color: #f4eee6;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-  .header-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
 
-  .logo {
-    height: 40px;
-    margin: 0;
-  }
+.logo {
+  height: 40px;
+  margin: 0;
+}
 
-  .brand span {
-    font-size: 16px;
-    line-height: 1.2;
-  }
+.brand span {
+  font-size: 16px;
+  line-height: 1.2;
+}
 
-  .header-right {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
+.header-right {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
-  .header-right nav {
-    display: flex;
-    gap: 0.8rem;
-    font-size: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.header-right nav {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  nav a,
-  .dropbtn {
-    font-size: 1rem;
-    padding: 0.25rem;
-  }
-
+nav a,
+.dropbtn {
+  font-size: 1rem;
+  padding: 0.25rem;
+}

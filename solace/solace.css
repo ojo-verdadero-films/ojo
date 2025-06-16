@@ -416,4 +416,5 @@ footer-container {
   box-sizing: border-box;
   margin-tops: 0rem;
   user-select: none;
+  width: 100%;
 }

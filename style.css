@@ -760,39 +760,24 @@ body, html {
   box-sizing: border-box;
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
 .logo {
-  height: 40px;
-  margin: 0;
-}
+    height: 65px;
+    margin-right: 0.5rem;
+  }
 
-.brand span {
-  font-size: 16px;
-  line-height: 1.2;
-}
+  .brand span {
+    font-size: 20px;
+    line-height: 1.1;
+  }
 
-.header-right {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+  .header-right nav {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
 
-.header-right nav {
-  display: flex;
-  gap: 0.8rem;
-  font-size: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav a,
-.dropbtn {
-  font-size: 1rem;
-  padding: 0.25rem;
+  nav a,
+  .dropbtn {
+    font-size: 20px;
+  }
 }

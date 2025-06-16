@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hell Mutt | Paola Chavez</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/xpt2hpp.css">
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/ruf6pwh.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="hell-mutt.css" />
+  <link rel="stylesheet" href="global.css" />
+
+  <!-- Internal overrides (optional) -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quattrocento', serif;
+      background-color: #fff;
+      color: #111;
+    }
+  </style>
+</head>
+
+<body class="sub-page">
+
+ <header>
+
+  <div class="header-left">
+    <img src="../images/Eye Logo_Transparent.png" alt="Ojo Verdadero Films Logo" class="logo" />
+    <div class="brand">
+      <span>Ojo</span>
+      <span>Verdadero</span>
+      <span>Films</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <nav>
+      <a href="../index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropbtn">Portfolio</span>
+        <div class="dropdown-content">
+        <a href="../hell-mutt/hell-mutt.html">Hell Mutt</a>
+        <a href="../lejos-de-ti/lejos-de-ti.html">Lejos De Ti</a>
+        <a href="../triple-s/triple-s.html">Triple-S Polaris</a>
+        <a href="../solace/solace.html">Solace</a>
+        </div>
+      </div>
+      <a href="../contact/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="flower-section">
+  <div class="flower-border-container"></div>
+</section> <!-- close flower-section -->
+
+<div class="description-wrapper">
+
+<div class="top-content">
+
+  <div class="video-frame" onclick="swapToYoutube(this)">
+  <video autoplay muted loop playsinline>
+    <source src="../videos/Hell-Mutt-Thumbnail.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="play-button">▶</div>
+</div>
+
+<script>
+  function swapToYoutube(container) {
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/ElODUGqQtlw?autoplay=1";
+    iframe.width = "622";
+    iframe.height = "350";
+    iframe.frameBorder = "0";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    container.innerHTML = ''; // Clear current video and play button
+    container.appendChild(iframe);
+  }
+</script>
+
+    <div class="cast-crew-columns">
+      <div class="cast-box">
+        <h2>Cast</h2>
+        <p>Bex Miller as Casper</p>
+        <p>Alyson King as Mother</p>
+        <p>Jaymes Wheeler as Father</p>
+        <p>Ari Green as Young Casper</p>
+      </div>
+      <div class="crew-box">
+        <h2>Crew</h2>
+        <p>Director & Writer: Paola Chavez</p>
+        <p>Director of Photography: Defne Mustecaplioglu</p>
+        <p>1st Assistant Director: Sophia King</p>
+        <p>Script Supervisor: Nick McEuen</p>
+        <p>1st Assistant Camera & Gaffer: Hitesh Jha</p>
+        <p>2nd Assistant Camera & Key Grip: Aaron Jowers</p>
+        <p>Sound Supervisor: Taysia Luke</p>
+        <p>Production Assistant/Craft Service: Erick Cruz-Salva</p>
+        <p>Still Photography: Anden Garfield</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="synopsis-strip">
+    <h2>Synopsis</h2>
+    <p>Hell Mutt is a slow-burning psychological descent into isolation, guilt, and inherited madness. Trapped in a decaying house with his unhinged mother, a frail young man drifts between memory and delusion, haunted by the echoes of a childhood mistake—the moment he unplugged his dying father's life support. Casper spirals into paranoia and violence as he seeks freedom. When reality blurs with desire and madness, Casper must confront the terrifying cost of his escape.</p>
+  </div>
+</div> 
+
+<footer>
+  <div class="footer-container">
+    &copy; 2025 Ojo Verdadero Films, LLC. All rights reserved.
+  </div>
+</footer>

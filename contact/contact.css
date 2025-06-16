@@ -1,0 +1,314 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #f4eee6;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100; 
+  margin-top: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 100px;
+  margin-right: 0rem;
+}
+
+.brand span {
+  display: block;
+  font-size: 28px;
+  line-height: 1.3;
+  color: #000000;
+  font-family: "nitti-typewriter-cameo", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Navigation Styles */
+.header-right nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 22px;
+  align-items: center;
+  color: #000000;
+}
+
+nav a, 
+.dropbtn { /*these are the Home and Contact buttons*/
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+  font-size: 26px;
+  font-family: 'Quattrocento', serif;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.header-right nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #7e2513;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.header-right nav a:hover::after,
+.brand a:hover {
+  transform: scaleX(1);
+}
+
+/* Dropdown Menu */
+/* Container needs to be relative for absolute positioning */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn { /*this is the Portfolio button*/
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7e2513;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #f6e3db;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* When hovering over the whole container, show the content */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  height: 13rem;
+  overflow: hidden;
+  background-color: #e8c6b5;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee-scroll 130s linear infinite;
+  font-family: "rl-limo", sans-serif;
+  font-size: 10rem;
+  color: #ff3c01;
+  opacity: 0.10;
+  line-height: 13rem; /* vertically align inside wrapper */
+}
+
+.marquee span {
+  padding-right: 4rem;
+}
+
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  background-image: url('../images/soft-background.png'); /* Adjust the path */
+  background-size: cover;       /* Makes the image cover the entire area */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  padding: 4rem 2rem;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* fixed */
+  justify-content: center;
+  padding: 3rem;
+  gap: 5rem;
+  flex-wrap: nowrap;
+}
+
+.hero-text { /*body*/
+  flex: 1 1 500px;
+  max-width: 600px;
+  text-align: justify;
+  font-size: 8rem;
+  letter-spacing: 1px;
+  font-family: "ivymode", sans-serif;
+  font-style: bold;
+  font-weight: 700;
+}
+
+.hero-title { /*title*/
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "novantique-script", sans-serif;
+  font-style: italic;
+}
+
+.highlight {
+  color: #66021f;
+  font-style: italic;
+}
+
+.hero-subtext {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  max-width: 600px;
+  font-style: bold;
+}
+
+.contact-form {
+  flex: 1 1 450px;
+  max-width: 450px;
+  background-color: #fac3bb;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  height: auto;
+  /* removed invalid align-items */
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+/* Ensure form fields fill width */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  font-family: 'Quattrocento', serif;
+  font-size: 1rem;
+}
+.contact-form button[type="submit"] {
+  background-color: #66021f;
+  color: white;
+  border: none;
+  font-style: bold;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: "ivymode", sans-serif;
+  font-weight: 400;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  display: inline-block;
+  display: block;        
+  margin: 1rem auto 0;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #a32439;
+  transform: translateY(-2px);
+}
+
+.flower-border-container {
+  width: 100%;
+  height: 10px;
+  background-image: url('../images/flowers.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin-top: 0;
+  background-color: #fac3bb;
+  background-size: 100% auto
+}
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  padding: .6rem 0rem;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "ivymode", sans-serif;
+  user-select: none;
+  margin-top: 0rem;
+  letter-spacing: 1px;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #66021f;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-family: "rl-limo", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+  opacity: 0.8;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+}
+
+#backToTop:hover {
+  opacity: 1;
+}
+
+body, html {
+  overflow-x: hidden;
+}

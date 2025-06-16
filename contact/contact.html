@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/ojo/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Paola Chavez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/xpt2hpp.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ruf6pwh.css">
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="global.css" />
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <img src="/images/Eye Logo_Transparent.png" alt="Ojo Verdadero Films Logo" class="logo" />
+    <div class="brand">
+      <span>Ojo</span>
+      <span>Verdadero</span>
+      <span>Films</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <nav>
+      <a href="/index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropbtn">Portfolio</span>
+        <div class="dropdown-content">
+          <a href="/hell-mutt/hell-mutt.html">Hell Mutt</a>
+          <a href="../lejos-de-ti/lejos-de-ti.html">Lejos De Ti</a>
+          <a href="../triple-s/triple-s.html">Triple-S Polaris</a>
+          <a href="../solace/solace.html">Solace</a>
+        </div>
+      </div>
+      <a href="/contact/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="flower-section">
+  <img src="../images/flowers.jpg" alt="Flower border" style="width: 100%; height: 30px; object-fit: cover;" />
+</section>
+
+<div class="marquee-wrapper" style="margin-top: -.55rem;">
+  <div class="marquee">
+      <span>It Begins With An Idea • It Begins With An Idea • It Begins With An Idea •</span>
+      <span>It Begins With An Idea • It Begins With An Idea • It Begins With An Idea •</span>
+      <span>It Begins With An Idea • It Begins With An Idea • It Begins With An Idea •</span>
+      <span>It Begins With An Idea • It Begins With An Idea • It Begins With An Idea •</span>
+      <span>It Begins With An Idea • It Begins With An Idea • It Begins With An Idea •</span>
+      <span>It Begins With An Idea • It Begins With An Idea • It Begins With An Idea •</span>
+      <span>It Begins With An Idea • It Begins With An Idea • It Begins With An Idea •</span>
+   </div>
+</div>
+
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h2 class="hero-title">
+       <span class="highlight">I’m so grateful you’re here!</span><br>
+      </h2>
+      <p class="hero-subtext">
+        Whether you’re a fellow creative, a potential collaborator, or someone who simply felt a spark from the work—please reach out. I’d love to connect and hear more about what moves you. I’m always open to meaningful connections and creative possibilities.   
+      </p>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/mqabbzal" method="POST">
+  <label for="first-name">Name *</label>
+  <div class="name-fields">
+    <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
+    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+  </div>
+
+  <label for="email">Email *</label>
+  <input type="email" id="email" name="email" placeholder="How can I reach you?" required />
+
+  <label for="subject">Subject *</label>
+  <input type="text" id="subject" name="subject" placeholder="What’s this about?" required />
+
+  <label for="message">What’s on your mind? *</label>
+  <textarea id="message" name="message" placeholder="Tell me everything..." rows="5" required></textarea>
+
+  <!-- Optional extras for better experience -->
+  <input type="hidden" name="_subject" value="New Contact Form Submission">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <button type="submit">SUBMIT</button>
+</form>
+
+<!-- Container for confirmation message -->
+<div id="form-confirmation" style="display:none; margin-top:1rem; color: green; font-weight: bold;">
+  Thank you for being part of the story. I'll be in touch soon! 💌
+</div>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const confirmation = document.getElementById('form-confirmation');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop the form from submitting normally
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none'; // Hide the form on success
+        confirmation.style.display = 'block'; // Show thank-you message
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            alert(data["errors"].map(error => error.message).join(", "));
+          } else {
+            alert("Oops! There was a problem submitting your form");
+          }
+        })
+      }
+    }).catch(error => {
+      alert("Oops! There was a problem submitting your form");
+    });
+  });
+</script>
+
+
+</section>
+<footer>
+  &copy; 2025 Ojo Verdadero Films, LLC. All rights reserved.
+</footer>
+
+</body>
+</html>

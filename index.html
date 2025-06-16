@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paola Chavez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/xpt2hpp.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ruf6pwh.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="global.css" />
+</head>
+
+
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="images/Eye Logo_Transparent.png" alt="Ojo Verdadero Films Logo" class="logo" />
+    <div class="brand">
+      <span>Ojo</span>
+      <span>Verdadero</span>
+      <span>Films</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropbtn">Portfolio</span>
+        <div class="dropdown-content">
+          <a href="lejos-de-ti/lejos-de-ti.html">Lejos De Ti</a>
+          <a href="hell-mutt/hell-mutt.html">Hell Mutt</a>
+          <a href="triple-s/triple-s.html">Triple-S Promo</a>
+          <a href="solace/solace.html">Solace</a>
+        </div>
+      </div>
+      <a href="contact/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="flower-section">
+  <div class="flower-border-container"></div>
+
+<section class="bottom-section">
+  <div class="bottom-wrapper">
+    <div class="text-side">
+      <p class="text-content">
+        Drawn to the raw, the intimate, and the unsettling. These are stories from a compromised moralist — told with heart, shaped by grit, and always true. This is where my work lives. Stay awhile.
+      </p>
+      <p class="signature">Love,<br>Paola Chavez</p>
+    </div>
+    <div class="photo-content">
+      <img src="/images/Paola_1.jpg" alt="Director Photo" />
+    </div>
+  </div> 
+</section>
+
+<section class="wave-border"></section>
+
+<section class="philosophy-section">
+  <h2>Philosophy</h2>
+  <div class="philosophy-text">
+    <p>
+      I’m dedicated to exploring the raw complexities of human nature through my work. My goal is to strip stories down to their emotional core, using minimal dialogue and relying on precise, intentional visuals so that every frame pushes the story forward with clarity and weight. Filmmaking is a deeply collaborative process fueled by passion and trust. I draw energy from my crew and seek out people who can guide me to elevate the project. I strive to build strong connections with my actors, guiding them through emotional journeys with image-driven direction. Together, we experiment to find authentic ways to express complex emotions beyond words. For me, films are not just personal visions—they are collective stories shaped by every hand and heart involved. Ultimately, they are a collective journey, a shared search for honesty in the shadows, and a testament to the power of storytelling to reveal the unspoken.
+    </p>
+  </div>
+</section>
+
+<section class="plaid-section">
+  <div class="plaid-border-container"></div>
+
+<section class="portfolio-section" id="portfolio"
+  style="background: url('/images/soft-background.png') center/cover no-repeat; padding: 60px 0;">
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item" data-url="solace/solace.html">
+      <img src="images/Solace.jpg" alt="Solace" />
+      <p><strong></strong> – A story of loss, trauma, and the fragile thread of healing.</p>
+    </div>
+
+    <div class="portfolio-item" data-url="triple-s/triple-s.html">
+      <img src="images/Triple-S.png" alt="Triple-S" />
+      <p><strong></strong> – A collaboration with a local Triple-S Polaris dealership.</p>
+    </div>
+
+    <div class="portfolio-item" data-url="hell-mutt/hell-mutt.html">
+      <img src="images/HellMutt.jpg" alt="Hell Mutt" />
+      <p><strong></strong> – The past speaks through the static. Don’t sit too close.</p>
+    </div>
+
+    <div class="portfolio-item" data-url="lejos-de-ti/lejos-de-ti.html">
+      <img src="images/Lejos De Ti.png" alt="Lejos De Ti" />
+      <p><strong></strong> – Ella llevó su carga hasta que los destrozó a ambos. / She carried his burden until it shattered them both.</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', () => {
+      const url = item.getAttribute('data-url');
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  });
+</script>
+
+
+  <section class="sponsorships-section">
+  <h2>Sponsorships and Collaborations</h2>
+  <div class="logo-wrapper">
+    <img src="images/Triple-S Logo.png" alt="Sponsor 1" class="sponsor-logo" />
+    <img src="images/Sony Logo.png" alt="Sponsor 2" class="sponsor-logo" />
+  </div>
+</section>
+
+ <section class="quote-block fade-in" id="quote-section">
+  <div class="photo-quote-container">
+    <img src="images/Paola_3.jpg" alt="Paola Chavez" class="profile-photo" />
+    <div class="quote-text">
+      <p class="quote-line">"The stories have to come from deep within, and that takes time because for me, writing is suffering. Writing is the wound and filmmaking is the knife.  But once it’s on the page and you’re on set, something shifts. I become almost masochistic. It’s where you come to know the pain most intimately. It has to become a friend so you can push harder — because to get it right on camera, you have to keep bleeding."</em></p>
+      <p class="quote-credit">– Paola Chavez</p>
+    </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    fadeInElements.forEach(el => observer.observe(el));
+  });
+</script>
+
+ <section class="contact-section" id="contact">
+  <div class="marquee">
+    <span>
+      Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together •
+      &nbsp;&nbsp;&nbsp;
+      Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together • Let's Create Together •
+    </span>
+  </div>
+
+   <div class="contact-button-wrapper">
+    <button class="contact-button" id="contactNavigate">Step Behind The Camera</button>
+  </div>
+</section>
+
+<script>
+  document.getElementById("contactNavigate").addEventListener("click", function () {
+    window.location.href = "contact/contact.html";
+
+  });
+</script>
+
+<section class="stay-close-section">
+  <div class="stay-close-container">
+    <div class="stay-close-left">
+      <h2>Stay in Touch 💌</h2>
+      <p>Stay Close! Follow me on socials for updates—but for the most personal pieces of the journey, sign up for my little newsletter. I’ll send you a diary entry whenever the mood strikes. 🌷 </p>
+  <form class="newsletter-form" action="https://formspree.io/f/mrbkkpdl" method="POST">
+  <input type="email" name="email" placeholder="email address" required>
+  <button type="submit">Subscribe</button>
+</form>
+
+
+    <div class="stay-close-right">
+      <a href="https://www.instagram.com/paolachavez.cine" target="_blank">
+        <img src="images/insta.png" alt="Instagram"> 
+      </a>
+      <a href="https://www.threads.net/@paolachavez" target="_blank">
+        <img src="images/threads.png" alt="Threads"> 
+      </a>
+      <a href="https://www.youtube.com/channel/UCRrLho4eD3uAebwMukPT7qA">
+        <img src="images/youtube.png" alt="YouTube"> 
+      </a>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 Ojo Verdadero Films, LLC. All rights reserved.
+  </footer>
+  <button id="backToTop">↑ Back to Top</button>
+
+ <script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 1500) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+</body>
+</html>
+

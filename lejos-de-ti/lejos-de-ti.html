@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lejos De Ti | Paola Chavez</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/xpt2hpp.css">
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/ruf6pwh.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="lejos-de-ti.css" />
+  <link rel="stylesheet" href="global.css" />
+
+  <!-- Internal overrides (optional) -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quattrocento', serif;
+      background-color: #fff;
+      color: #111;
+    }
+  </style>
+</head>
+
+<body class="sub-page">
+
+  <header>
+
+  <div class="header-left">
+    <img src="../images/Eye Logo_Transparent.png" alt="Ojo Verdadero Films Logo" class="logo" />
+    <div class="brand">
+      <span>Ojo</span>
+      <span>Verdadero</span>
+      <span>Films</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <nav>
+      <a href="../index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropbtn">Portfolio</span>
+        <div class="dropdown-content">
+        <a href="lejos-de-ti.html">Lejos De Ti</a>
+        <a href="../hell-mutt/hell-mutt.html">Hell Mutt</a>
+        <a href="../triple-s/triple-s.html">Triple-S Promo</a>
+        <a href="../solace/solace.html">Solace</a>
+        </div>
+      </div>
+      <a href="../contact/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="flower-section">
+  <div class="flower-border-container"></div>
+</section> <!-- close flower-section -->
+
+<div class="description-wrapper">
+
+  <div class="top-content">
+
+   <div class="video-frame" onclick="swapToYoutube(this)">
+  <video autoplay muted loop playsinline>
+    <source src="../videos/LDT-Thumb.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="play-button">▶</div>
+</div>
+
+<script>
+  function swapToYoutube(container) {
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/bls7M6jDBfU?autoplay=1"; // Fixed here
+    iframe.width = "622";
+    iframe.height = "350";
+    iframe.frameBorder = "0";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    container.innerHTML = ''; // Clear current video and play button
+    container.appendChild(iframe);
+  }
+</script>
+
+
+    <div class="cast-crew-columns">
+      <div class="cast-box">
+        <h2>Cast</h2>
+        <p>- To Be Announced - </p>
+      </div>
+      <div class="crew-box">
+        <h2>Crew</h2>
+        <p>Director & Writer: Paola Chavez</p>
+        <p>1st Assistant Director: Sophia King</p>
+        <p>2nd Assistant Director: Taysia Luke</p>
+        <p>Script Supervisor: Nick McEuen</p>
+        <p>1st Assistant Camera: Hitesh Jha</p>
+        <p>2nd Assistant Camera: Aaron Jowers</p>
+        <p>Key Grip: Claire Jensen</p>
+        <p>Production Assistant/Craft Service: Erick Cruz-Salva</p>
+        <p>Still Photography: Anden Garfield</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="synopsis-strip">
+    <h2>Synopsis</h2>
+    <p>Lejos De Ti is a tense, emotional journey about a fractured sibling bond pushed to its breaking point. When Eva’s estranged brother Danny returns with a dark confession, she is forced to confront their shared past and the unbearable weight of his actions. In the film’s haunting climax, Eva faces a devastating choice—one that will not only decide Danny’s fate but forever alter her own path, forcing her to reconcile love, pain, and the cost of freedom.</p>
+  </div>
+</div> 
+
+<section class="indiegogo-section">
+  <div class="indiegogo-text">
+    <p>
+      Your support helps bring powerful stories like <em>Lejos De Ti</em> to life. Every donation, big or small, makes a difference in helping us complete the film and share it with the world. Thank you for being part of this journey.
+    </p>
+    <a href="https://igg.me/at/lejos-de-ti-short-film/x/38539717#/" target="_blank" rel="noopener noreferrer" class="indiegogo-button">
+      Support Us on Indiegogo!
+    </a>
+  </div>
+  <div class="indiegogo-video">
+    <!-- Replace src with your video embed URL -->
+    <iframe 
+    width="560" height="315" src="https://www.youtube.com/embed/TgaMPdVZbpY?si=8dMnKShkd3oyAeXv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    &copy; 2025 Ojo Verdadero Films, LLC. All rights reserved.
+  </div>
+</footer>

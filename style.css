@@ -1,0 +1,753 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevents side-scroll */
+}
+/* Base Styles */
+body {
+  font-family: 'Quattrocento', serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Header Layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #f4eee6;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100; 
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 100px;
+  margin-right: 0rem;
+}
+
+.brand span {
+  display: block;
+  font-size: 28px;
+  line-height: 1.3;
+  color: #000000;
+  font-family: "nitti-typewriter-cameo", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Navigation Styles */
+.header-right nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 22px;
+  align-items: center;
+  color: #000000;
+}
+
+nav a, 
+.dropbtn { /*these are the Home and Contact buttons*/
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+  font-size: 26px;
+  font-family: 'Quattrocento', serif;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.header-right nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #7e2513;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.header-right nav a:hover::after,
+.brand a:hover {
+  transform: scaleX(1);
+}
+
+/* Dropdown Menu */
+/* Container needs to be relative for absolute positioning */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn { /*this is the Portfolio button*/
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7e2513;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #f6e3db;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* When hovering over the whole container, show the content */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.bottom-wrapper {
+  max-width: 2000px;     /* a reasonable max width */
+  min-height: 700px;
+  margin: 0rem auto;     /* vertical margin + auto center horizontally */
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  background-color: #fbcfc9;
+  padding: 0 2rem;       /* padding inside so content doesn’t hug edges */
+  box-sizing: border-box;
+  justify-content: center; /* center flex children horizontally */
+}
+
+.text-side {
+  flex: 1 1 600px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;  /* stack text and signature vertically */
+  align-items: flex-start; /* align all left, can be center if you want */
+  text-align: left;        /* text aligns left */
+  padding: 1rem;
+  font-size: 2.5rem;
+  box-sizing: border-box;
+  font-family: "ivymode", sans-serif;
+}
+
+.text-content {
+  font-family: "ivymode", sans-serif;
+  font-weight: 300;
+  font-size: 2.8rem ;
+  color: #333;
+  margin: 3rem 0 1.5rem 0;
+  text-align: justify;
+}
+
+body .signature {
+  font-family: "novantique-script", sans-serif; 
+  font-weight: 500 !important;
+  font-size: 4.5rem;
+  color: #000;
+  margin: 0;
+  align-self: flex-start; 
+}
+
+.photo-content {
+  flex: 1 1 450px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 100% / 100% 100% 0 0;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-bottom {
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.hero-text,
+.hero-image {
+  text-align: center;
+}
+
+/* Photo Quote Container */
+.photo-quote-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .photo-quote-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Profile Photo */
+.profile-photo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote Text */
+.quote-text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #5a2a2a;
+  font-style: italic;
+  text-align: left;
+  font-family: italic; /* This looks like a mistake but preserved as you wrote */
+}
+
+.quote-credit {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Quattrocento', serif;
+  font-style: normal;
+}
+
+.quote-block {
+  display: none;
+  background-color: #9e6f67;
+  padding: 4rem 2rem;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sponsorships Section */
+.sponsorships-section {
+  display: none;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #ff9a60f3;
+  text-align: left;
+  color: #ff9a60f3;
+  margin-top: 3rem; /* Added margin to separate from others */
+}
+
+.sponsorships-section h2 {
+  font-family: italic;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #000000f3;
+}
+
+/* Logo Wrapper */
+.logo-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.logo-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Sponsor Logo */
+.sponsor-logo {
+  height: 200px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  max-height: 80px; /* Preserved from earlier, may be redundant with height:200px */
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Logos Container */
+.logos-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ff6f61 #ff6f61;
+}
+
+.logos-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.logos-container::-webkit-scrollbar-track {
+  background: #ff6f61;
+}
+
+.logos-container::-webkit-scrollbar-thumb {
+  background-color: #ff6f61;
+  border-radius: 4px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: flex;
+  background:transparent;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.portfolio-item {
+  width: 380px;
+  background: #d1a48194;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers content horizontally */
+  font-family: 'Quattrocento', serif;
+  color: #111;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 420px; /* less tall than before */
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.portfolio-item p {
+  padding: 1rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Specific portfolio item image heights */
+.portfolio-item:nth-child(1) img,
+.portfolio-item:nth-child(2) img,
+.portfolio-item:nth-child(3) img,
+.portfolio-item:nth-child(4) img {
+  height: 550px;
+}
+
+/* Portfolio Section Heading */
+.portfolio-section h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  background-color: #ec8168;
+  position: relative;
+  padding: 0 3rem 4rem 3rem; /* top 0, right 1rem, bottom 4rem, left 1rem */
+  margin-top: 0px;
+  margin-bottom: 0rem;
+  overflow: visible;
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  z-index: 1;
+}
+
+
+.philosophy-section h2 { /*this is the title*/
+  font-family: "ivymode", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+  color: #f6e3db;
+  margin-bottom: 1rem;      /* reduce gap between title and body */
+}
+
+.philosophy-text { /*this is the body text*/
+  font-size: 1.5rem;
+  max-width: 1500px;
+  padding: 0;               /* no padding here */
+  margin: 0 auto 0;         /* keep bottom margin zero */
+  line-height: 1.8;
+  color: #f6e3db;
+  font-family: "ivymode", sans-serif;
+  text-align: justify;
+}
+.contact-section {
+  position: relative;
+  background-color: #f4c2ae;
+  font-size: 10rem;
+  height: 11rem; /* Adjust for the size you want */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+/* Large Heading */
+.contact-heading {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.marquee-wrapper {
+  position: relative;
+  height: 9rem; /* Slightly smaller than font-size to account for descenders */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.marquee {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-55%); /* Slightly more than 50% to nudge up */
+  width: 100%;
+  white-space: nowrap;
+  font-family: "rl-limo", sans-serif;
+  font-size: 10rem;
+  line-height: 0.85; /* Prevents overflow from descenders */
+  color: #66021f;
+  opacity: 0.10;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+
+
+.marquee span {
+  display: inline-block;
+  animation: marquee-scroll 200s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.contact-button-wrapper {
+  position: absolute;
+  z-index: 1;
+}
+
+.contact-button {
+  background-color: #ffe9ec;
+  color: #a26e75;
+  font-family: "rl-limo", sans-serif;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transform: translateY(-50%);
+}
+
+.rolling-banner {
+  background-color: #f9f3f1;
+  padding: 6rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.banner-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #847e52;
+  animation: scrollText 15s linear infinite;
+}
+
+.contact-form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0rem 0rem;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "ivymode", sans-serif;
+  user-select: none;
+  margin-top: 0rem;
+  letter-spacing: 1px;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #66021f;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-family: "rl-limo", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+  opacity: 0.8;
+  z-index: 1000;
+  display: none;
+}
+
+#backToTop:hover {
+  opacity: 1;
+}
+body, html {
+  overflow-x: hidden;
+}
+.wave-border {
+  display: block;
+  background-image: url('images/waves-orange.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  width: 100%;
+  height: 130px; /* Try 200px or 150px if you still don’t see it */
+  margin-bottom: 0px;
+  background-size: 110% auto; /* wider, but keeps proportions */
+
+}
+.flower-border-container {
+  background-image: url('images/flowers.jpg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 23px;              /* Adjust based on the SVG’s ideal height */
+  width: 100%;
+  margin: 0;
+  display: block;
+  background-size: 100% auto;
+}
+.plaid-border-container {
+  background-image: url('images/plaid.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 30px;
+  display: block;
+  background-color: #ec8168; /* TEMP test color to see it */
+}
+.plaid-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0;
+}
+.stay-close-section {
+  background: #fce9e3;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.stay-close-container {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stay-close-left h2 {
+  font-family: "novantique-script", sans-serif;
+  font-size: 4.2rem;
+  margin-bottom: 0.5rem;
+  color: #7e2513;
+}
+
+.stay-close-left p {
+  font-size: 1.8rem;
+  font-style: bold;
+  line-height: 1.6;
+  color: #4a2e24;
+  margin-bottom: 2rem;
+  font-family: "ivymode", sans-serif;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;  /* centers the items horizontally */
+  gap: 1rem;                /* space between input and button */
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  flex: 1 1 300px;          /* lets the input take available space with a min width */
+  max-width: 400px;         /* optional max width */
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #7e2513;
+  border-radius: 6px;
+}
+
+.newsletter-form button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #7e2513;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #af6652;
+}
+
+.stay-close-right {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2.5rem; /* space between icons */
+  justify-content: center;
+  width: 100%;
+}
+
+.stay-close-right a:hover img {
+  transform: scale(1.1);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+  box-shadow: none;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: block;
+}
+
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.email-signup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.email-signup input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #7e2513;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.email-signup button {
+  background-color: #7e2513;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.email-signup button:hover {
+  background-color: #5c1b0f;
+}
+
+.signature {
+  font-style: italic;
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5rem;
+  color: #7e2513;
+}
+
+
+
+
+

@@ -172,18 +172,24 @@ nav a,
   padding: 3rem;
   gap: 5rem;
   flex-wrap: nowrap;
+  max-width: 1200px;
 }
 
 .hero-text { /*body*/
-  flex: 1 1 500px;
+  flex: 1 1 50px;
   max-width: 600px;
   text-align: justify;
-  font-size: 8rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   font-style: bold;
   font-weight: 700;
 }
+
+.hero-text, .contact-form {
+  min-width: 0;
+}
+
 
 .hero-title { /*title*/
   font-size: 5rem;
@@ -207,7 +213,7 @@ nav a,
 }
 
 .contact-form {
-  flex: 1 1 450px;
+  flex: 1 1 50%;
   max-width: 450px;
   background-color: #fac3bb;
   padding: 2.5rem;

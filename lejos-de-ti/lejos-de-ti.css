@@ -319,7 +319,7 @@ nav a,
 }
 
 footer {
-  position: absolute; /* or absolute if you want fixed at bottom */
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100vw;

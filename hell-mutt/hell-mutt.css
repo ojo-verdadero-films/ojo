@@ -399,6 +399,7 @@ body.subpage {
     width: 100%;
     padding: 0.5rem;
     border-radius: 20px;
+    padding-top: 1rem; /* reduce from maybe 2rem or more */
   }
 
   .video-frame iframe,

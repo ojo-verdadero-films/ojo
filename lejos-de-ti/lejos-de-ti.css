@@ -525,14 +525,13 @@ footer {
     flex-direction: column;
     width: 100%;
     max-width: none;
-    gap: 1rem;
+    gap: .5rem;
   }
 
   .cast-box,
   .crew-box {
     width: 100%;
     height: auto;
-    margin-top: -1rem;
   }
 
   .description-wrapper {

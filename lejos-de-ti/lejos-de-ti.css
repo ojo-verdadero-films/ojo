@@ -378,19 +378,20 @@ nav a,
 }
 
 footer {
-  position: fixed; /* or absolute if you want fixed at bottom */
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100vw;
   background-color: #000;
   color: #fff;
-  padding: 0.2rem 0;
+  padding: 0.4rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
   margin: 0;
   box-sizing: border-box;
+  z-index: 999;
 }
 .indiegogo-section {
   display: flex;
@@ -474,20 +475,121 @@ footer {
 
 
 /* Responsive: stack vertically on small screens */
+/* ========== MOBILE STYLES (Max Width: 768px) ========== */
 @media (max-width: 768px) {
+  /* Stack hero section vertically */
+  .top-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  /* Stack cast and crew sections vertically */
+  .cast-crew-columns {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .cast-box, .crew-box {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Video sizing */
+  .video-frame,
+  .video-frame iframe,
+  .video-frame video,
+  .video-wrapper iframe {
+    width: 100% !important;
+    height: 230px !important;
+  }
+
+  /* Synopsis strip scaling */
+  .synopsis-strip {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+
+  .synopsis-strip h2 {
+    font-size: 2rem;
+  }
+
+  .synopsis-strip p {
+    font-size: 1.1rem;
+  }
+
+  /* Indiegogo section stacks vertically */
   .indiegogo-section {
     flex-direction: column;
-    max-width: 95%;
-    padding: 3rem 1.5rem;
+    max-width: 100%;
+    padding: 2rem 1rem;
+    height: auto;
   }
 
   .indiegogo-text,
   .indiegogo-video {
     max-width: 100%;
+    padding: 0;
+  }
+
+  .indiegogo-text p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .indiegogo-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.5rem;
   }
 
   .indiegogo-video iframe {
-    height: 250px;
+    height: 200px;
   }
+
+  /* Header layout tweaks */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  nav a,
+  .dropbtn {
+    font-size: 22px;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  /* Description Wrapper - reduce scale */
+  .description-wrapper {
+    transform: scale(1);
+    padding: 2rem;
+    margin: 2rem 1rem;
+  }
+
+  /* Flower Border – ensure visible */
+  .flower-border-container {
+    height: 20px;
+  }
+  footer {
+  position: static;
+  width: 100%;
+  margin-top: 2rem;
+}
 }
 

@@ -313,104 +313,31 @@ nav a, .dropbtn {
   font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
-  html, body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
-
-  header {
-    background-color: #f4eee6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    gap: 0.5rem;
-  }
-
-  .top-content {
-    flex-direction: column;
-    padding: 0.5rem 0 1rem;
-    gap: 1rem;
-    margin-top: 0;
-  }
-
-  .video-frame iframe,
-  .video-frame video {
-    width: 100%;
-    height: 220px;
-  }
-
-  .cast-box h2,
-  .crew-box h2 {
-    padding: 0.5rem;
-  }
-
-  .synopsis-strip {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding: 1.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .synopsis-strip h2 {
-    font-size: 2rem;
-  }
-
-  .synopsis-strip p {
-    text-align: center !important;
-  }
-
-  .logo {
-    height: 40px;
-  }
-
-  .brand span {
-    font-size: 12px;
-    font-family: "nitti-typewriter-cameo", sans-serif;
-  }
-
-  footer {
-    position: static;
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    padding: 0.5rem 0;
-    text-align: center;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    font-family: "ivymode", sans-serif;
-    user-select: none;
-    margin: 0;
-    box-sizing: border-box;
-  }
-}
-
+@media screen and (max-width: 768px) {
   .cast-crew-columns {
     flex-direction: column;
-    gap: 2rem;
-    align-items: stretch;
+    gap: 1.5rem;
+    align-items: flex-start;
     max-width: 100%;
   }
 
-  .cast-box, .crew-box {
+  .cast-box,
+  .crew-box {
     width: 100%;
-    font-size: 1rem;
   }
 
   .video-frame {
     width: 100%;
-    max-width: 100%;
-    height: auto;
     aspect-ratio: 16 / 9;
     border-radius: 12px;
     overflow: hidden;
   }
 
+  .description-wrapper {
+    padding: 1.5rem;
+  }
+
   .synopsis-strip {
-    padding: 2rem 1.5rem;
-    font-size: 1.05rem;
-  
+    padding: 1.5rem;
+  }
+}

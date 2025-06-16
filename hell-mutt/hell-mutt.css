@@ -385,11 +385,11 @@ body.subpage {
   }
 
   .cast-crew-columns {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .video-frame iframe {
-    height: 250px;
+    height: 250px !important;
   }
 }
 footer {

@@ -16,8 +16,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 /* Header */
 header {
@@ -158,34 +156,6 @@ nav a,
   margin-left: auto;
   margin-right: auto;
 }
-.description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
-  flex: 1;
-  transform: scale(1.2);
-}
-
-.description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
-  flex: 1;
-  transform: scale(1.2);
-}
-
 /* Hero video */
 .description-wrapper {
   max-width: 1300px;
@@ -289,7 +259,7 @@ nav a,
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 280px;
-  height: 400px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -340,8 +310,6 @@ nav a,
   box-sizing: border-box;
   max-width: none;
 }
-
-
 
 .synopsis-strip h2 {
   font-family: "ivymode", sans-serif;
@@ -478,9 +446,6 @@ footer {
   border: none;
 }
 
-
-/* Responsive: stack vertically on small screens */
-@media (max-width: 768px) {
   .video-frame iframe {
     height: 250px;
     width: 100%;

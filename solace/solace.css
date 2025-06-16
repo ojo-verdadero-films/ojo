@@ -416,8 +416,8 @@ nav a, .dropbtn {
   font-family: "ivymode", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  margin-top: 0rem;
-  user-select: none;
+  margin-top: 0;
   width: 100vw;
   position: relative;
+  left: 0;
 }

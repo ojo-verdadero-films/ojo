@@ -442,6 +442,7 @@ footer {
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 4px 6px rgba(34, 57, 62, 0.25);
   align-self: center; /* ✨ this centers it horizontally in the flex column */
+  text-align: center;
 }
 
 .indiegogo-button:hover,

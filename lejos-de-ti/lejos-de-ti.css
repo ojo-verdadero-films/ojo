@@ -158,8 +158,10 @@ nav a,
   margin-right: auto;
   display: flex;
   justify-content: center; /* Center horizontally */
-  gap: 1rem;               /* Space between video and cast/crew */
+  gap: 2rem;               /* Space between video and cast/crew */
   box-sizing: border-box;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .description-wrapper {
   max-width: 1300px;

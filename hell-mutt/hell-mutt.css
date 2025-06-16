@@ -483,4 +483,11 @@ header {
   font-family: "nitti-typewriter-cameo", sans-serif;
 }
 
+@media (max-width: 768px) {
+  footer {
+    text-align: center !important;
+    padding: 0.5rem 0 !important;
+    font-size: 0.8rem !important;
+  }
+}
 

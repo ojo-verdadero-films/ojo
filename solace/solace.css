@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  flex: 1;
+}
+
 body.sub-page {
   font-family: 'Quattrocento', serif;
   background-color: #fff;
@@ -289,7 +293,7 @@ nav a, .dropbtn {
 
 /* Footer */
 footer {
-  position: absolute; /* or absolute if you want fixed at bottom */
+  position: relative; /* or absolute if you want fixed at bottom */
   bottom: 0;
   left: 0;
   width: 100vw;

@@ -295,15 +295,16 @@ nav a, .dropbtn {
 footer-container {
   background: #000;
   color: #fff;
-  padding: 0.6 rem 0;
+  padding: 0.6rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  margin-tops: 0rem;
+  margin-top: 0rem;
   user-select: none;
-  width: 100%;
+  width: 100vw;
+  position: relative;
 }
 /* Responsive */
 @media (max-width: 768px) {
@@ -409,13 +410,14 @@ footer-container {
    footer-container {
   background: #000;
   color: #fff;
-  padding: 0.6 rem 0;
+  padding: 0.6rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  margin-tops: 0rem;
+  margin-top: 0rem;
   user-select: none;
-  width: 100%;
+  width: 100vw;
+  position: relative;
 }

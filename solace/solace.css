@@ -16,10 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  flex: 1;
-}
-
 body.sub-page {
   font-family: 'Quattrocento', serif;
   background-color: #fff;
@@ -415,7 +411,8 @@ nav a, .dropbtn {
  footer {
   width: 100vw;
   position: relative;
-  left: 0;
+  left: 50%;
+  margin-left: -50vw;
   margin: 0;
   padding: 0;
   margin-left: -1.5rem;
@@ -434,4 +431,3 @@ nav a, .dropbtn {
   width: 100%;
   font-size: 0.8rem;
 }
-

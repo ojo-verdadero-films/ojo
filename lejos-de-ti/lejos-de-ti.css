@@ -174,7 +174,7 @@ nav a,
   display: flex;
   justify-content: center; /* Center horizontally */
   gap: 1rem;               /* Space between video and cast/crew */
-  max-width: 1400px;       /* Limit total width */
+  max-width: 600px;       /* Limit total width */
   margin: 0 auto 2rem;     /* Center and add bottom margin */
   box-sizing: border-box;
 }

@@ -407,7 +407,15 @@ nav a, .dropbtn {
     font-family: "nitti-typewriter-cameo", sans-serif;
   }
 
-   .footer {
+ footer {
+  width: 100vw;
+  position: relative;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
   background: #000;
   color: #fff;
   padding: 0.6rem 0;
@@ -416,8 +424,7 @@ nav a, .dropbtn {
   font-family: "ivymode", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  margin-top: 0;
-  width: 100vw;
-  position: relative;
-  left: 0;
+  margin: 0 auto;
+  width: 100%;
 }
+

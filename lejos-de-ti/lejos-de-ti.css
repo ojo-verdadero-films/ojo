@@ -400,11 +400,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Remove height: 100%; */
   padding: 1rem 2rem;
-
-  aspect-ratio: 1 / 1;  /* forces square container */
-  max-height: 550px;    /* optional max height */
+  width: 400px;  /* fixed width */
+  height: 400px; /* fixed height, square */
+  max-height: 550px; /* optional */
 }
 .indiegogo-video iframe {
   width: 100%;
@@ -413,6 +412,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: none;
 }
+
 
 @media (max-width: 768px) {
   .top-content {

@@ -314,47 +314,9 @@ body, html {
 }
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1.5rem;
-  }
-
-  .hero-text {
-    font-size: 3rem; /* smaller font size on mobile */
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtext {
-    font-size: 1.4rem;
-  }
-
-  .marquee {
-    font-size: 3rem;
-    line-height: 4rem;
-  }
-
-  header {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .header-left, .header-right nav {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .header-right nav {
-    gap: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .logo {
-    height: 60px;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    padding: 1.5rem !important;
+    border: 5px solid red; /* temporary visual debug */
   }
 }

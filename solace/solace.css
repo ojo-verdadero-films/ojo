@@ -371,12 +371,10 @@ footer {
   text-align: center;
   box-sizing: border-box;
   margin-top: 0rem;
-  user-select: none;
   display: flex;
-  justify-content: center !important;
+  justify-content: center;
   align-items: center;
-  text-align: center !important;
- }
+}
 
 @media (max-width: 768px) {
   header {

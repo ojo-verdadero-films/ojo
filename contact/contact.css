@@ -303,6 +303,7 @@ footer {
 body, html {
   overflow-x: hidden;
 }
+
 @media (max-width: 768px) {
   header {
     display: flex !important;
@@ -312,9 +313,11 @@ body, html {
     gap: 0.5rem;
     background-color: #f4eee6;
   }
+
   .hero-text {
     text-align: center !important;
   }
+
   .header-left {
     display: flex;
     align-items: center;
@@ -323,12 +326,12 @@ body, html {
   }
 
   .logo {
-    height: 40px !important; /* Much smaller */
+    height: 40px !important;
     margin: 0;
   }
 
   .brand span {
-    font-size: 16px !important; /* Reduce brand text size */
+    font-size: 16px !important;
     line-height: 1.2;
   }
 
@@ -341,16 +344,22 @@ body, html {
   .header-right nav {
     display: flex;
     gap: 0.8rem;
-    font-size: 1rem !important; /* Shrink nav text */
+    font-size: 1rem !important;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  nav a, .dropbtn {
-    font-size: 1rem !important; /* Even smaller nav links */
+  nav a,
+  .dropbtn {
+    font-size: 1rem !important;
     padding: 0.25rem;
   }
+
+  footer {
+    text-align: center !important;
+    padding: 0.5rem 0 !important;
+    font-size: 0.8rem !important;
+    background-color: #000 !important;
+    color: #fff !important;
+  }
 }
-
-
-

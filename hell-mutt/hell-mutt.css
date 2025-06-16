@@ -380,7 +380,23 @@ body.subpage {
 
 
 @media (max-width: 768px) {
-   header {
+  header {
+  background-color: #f4eee6 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0.5rem 1rem !important;
+  border: 3px solid red !important;
+}
+
+footer {
+  background-color: #000 !important;
+  text-align: center !important;
+  padding: 0.5rem 0 !important;
+  font-size: 0.8rem !important;
+  border: 3px solid blue !important;
+} 
+  header {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;

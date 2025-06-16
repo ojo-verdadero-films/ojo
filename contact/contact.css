@@ -324,15 +324,6 @@ body, html {
     gap: 0.5rem;
     background-color: #f4eee6;
   }
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* fixed */
-  justify-content: center;
-  padding: 3rem;
-  gap: 5rem;
-  flex-wrap: nowrap;
-}
   .hero-text {
     text-align: center !important;
   }
@@ -382,13 +373,6 @@ body, html {
     color: #fff !important;
   }
 }
-.hero-container {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 2rem !important;
-    padding: 2rem 1rem !important;
-  }
-
   .hero-text {
     font-size: 2.2rem !important;
     max-width: 100% !important;
@@ -415,4 +399,10 @@ body, html {
   .name-fields {
     flex-direction: column !important;
     gap: 0.5rem !important;
+  }
+.hero-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    padding: 2rem 1rem !important;
   }

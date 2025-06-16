@@ -4,22 +4,22 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 body {
   font-family: "ivymode", sans-serif;
   background-image: url('../images/soft-background.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed; /* optional, for a nice parallax effect */
+  background-attachment: fixed;
   color: #111;
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   overflow-x: hidden;
 }
+
 /* Header */
 header {
   position: relative;
@@ -36,7 +36,6 @@ header {
   margin-top: 0;
 }
 
-
 .header-left {
   display: flex;
   align-items: center;
@@ -45,14 +44,14 @@ header {
 
 .logo {
   height: 100px;
-  margin-right: 0rem;
+  margin-right: 0;
 }
 
 .brand span {
   display: block;
   font-size: 28px;
   line-height: 1.3;
-  color: #000000;
+  color: #000;
   font-family: "nitti-typewriter-cameo", sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -64,14 +63,14 @@ header {
   gap: 1.5rem;
   font-size: 22px;
   align-items: center;
-  color: #000000;
+  color: #000;
 }
 
-nav a, 
-.dropbtn { /*these are the Home and Contact buttons*/
+nav a,
+.dropbtn {
   font-weight: bold;
   text-decoration: none;
-  color: #000000;
+  color: #000;
   font-size: 26px;
   font-family: 'Quattrocento', serif;
   cursor: pointer;
@@ -98,18 +97,17 @@ nav a,
 }
 
 /* Dropdown Menu */
-/* Container needs to be relative for absolute positioning */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropbtn { /*this is the Portfolio button*/
+.dropbtn {
   background: none;
   border: none;
   font-size: 26px;
   cursor: pointer;
-  color: #000000;
+  color: #000;
 }
 
 .dropdown-content {
@@ -117,7 +115,7 @@ nav a,
   position: absolute;
   background-color: #7e2513;
   min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
@@ -128,17 +126,15 @@ nav a,
   display: block;
 }
 
-/* When hovering over the whole container, show the content */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* Flower Border */
 .flower-border-container {
   position: relative;
   left: 50%;
-  right: 50%;
   margin-left: -50vw;
-  margin-right: -50vw;
   width: 100vw;
   height: 25px;
   background-image: url('../images/flowers.jpg');
@@ -148,75 +144,49 @@ nav a,
   background-color: #fac3bb;
 }
 
+/* Top Content & Description */
 .top-content {
   font-family: 'Quattrocento', serif;
-
   color: #111;
-  margin: 0;
-  padding: 0 1.5rem; /* horizontal padding for content */
+  padding: 0 1.5rem;
   line-height: 1.6;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
-  flex: 1;
-  transform: scale(1.2);
-}
-
-.description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
-  flex: 1;
-  transform: scale(1.2);
-}
-
-/* Hero video */
-.description-wrapper {
-    transform: scale(1);
-    padding: 1rem 2rem;
-    margin-top: 0.5rem;
-  }
-
-.top-content {
+  max-width: 1400px;
+  margin: 0 auto 2rem;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  gap: 1rem;               /* Space between video and cast/crew */
-  max-width: 1400px;       /* Limit total width */
-  margin: 0 auto 2rem;     /* Center and add bottom margin */
+  justify-content: center;
+  gap: 1rem;
   box-sizing: border-box;
 }
 
+.description-wrapper {
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 3rem 4rem;
+  font-family: "ivymode", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  color: #222;
+  flex: 1;
+  transform: scale(1);
+}
+
+/* Video Frame */
 .video-frame {
   flex: 1 1 60%;
   padding: 1rem;
   background: #afbb98;
-  box-shadow: inset 0 0 30px 10px rgba(255, 255, 255, 0.6);
-  border-radius: 30px 10px 50px 5px; /* top-left, top-right, bottom-right, bottom-left */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 30px 10px 50px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.video-frame iframe {
+.video-frame iframe,
+.video-frame video {
   width: 622px;
   height: 350px;
   border-radius: 8px;
@@ -225,23 +195,14 @@ nav a,
   box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
 }
 
-.video-frame video,
-.video-frame iframe {
-  width: 622px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: none;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
-}
-
-.video-wrapper video {
+.video-wrapper video,
+.video-wrapper iframe {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   display: block;
   object-fit: cover;
-  border-radius: 10px;
+  border: none;
 }
 
 .play-button {
@@ -251,31 +212,22 @@ nav a,
   transform: translate(-50%, -50%);
   font-size: 4rem;
   color: white;
-  text-shadow: 0 0 15px rgba(0,0,0,0.8);
-  pointer-events: none; /* so clicks go through to the wrapper */
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
   user-select: none;
 }
 
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  display: block;
-  border: none;
-}
-/* Cast and crew containers side-by-side */
+/* Cast & Crew */
 .cast-crew-columns {
-  flex: 1 1 40%;  /* Use rest of horizontal space */
+  flex: 1 1 40%;
   display: flex;
   flex-direction: row;
   gap: 1rem;
   height: 100%;
-  max-width: 580px; /* 280 + 280 + gap, adjust if needed */
+  max-width: 580px;
 }
 
-/* Individual cast and crew boxes */
 .cast-box, .crew-box {
-  writing-mode: horizontal-tb;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 8px;
@@ -305,179 +257,69 @@ nav a,
   letter-spacing: 1px;
 }
 
+/* Synopsis */
 .synopsis-strip {
-    margin: 1rem -1.5rem 0 -1.5rem;
-    width: calc(100% + 3rem);
-    padding: 1.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-  }
+  margin: 1rem -1.5rem 0;
+  width: calc(100% + 3rem);
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
 
- .synopsis-strip h2 {
-    font-size: 2rem;
-  }
+.synopsis-strip h2 {
+  font-size: 2rem;
+}
 
 .synopsis-strip p {
-    text-align: center !important;
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-  .top-content {
-    flex-direction: column;
-  }
-  header {
-    background-color: #f4eee6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    gap: 0.5rem;
-  }
+  font-size: 1rem;
+  line-height: 1.4;
+}
 
-  .cast-crew-columns {
-    flex-direction: column;
-    width: 100%;
-    max-width: none;
-    gap: 1rem;
-  }
-
-
-  .video-frame iframe,
-  .video-frame video {
-    width: 100%;
-    height: 220px;
-  }
- .video-frame {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 20px;
-    padding-top: 1rem;
-  }
-
+/* Footer */
 footer {
   position: static;
-  bottom: 0;
-  left: 0;
   width: 100vw;
   background-color: #000;
   color: #fff;
   padding: 0.4rem 0;
-  user-select: none;
-  letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
-  margin: 0;
-  box-sizing: border-box;
   z-index: 999;
 }
+
+/* Indiegogo */
 .indiegogo-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.2rem;
-    padding: 1.5rem 1rem;
-    height: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  padding: 1.5rem 1rem;
+}
 
-  .indiegogo-text p {
-    font-size: 1.2rem;
-    padding: 0 1rem;
-  }
+.indiegogo-text p {
+  font-size: 1.2rem;
+  padding: 0 1rem;
+}
 
-  .indiegogo-button {
-    font-size: 1.2rem;
-    padding: 0.6rem 1.2rem;
-  }
+.indiegogo-button {
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+}
 
-  .indiegogo-video iframe {
-    width: 100%;
-    height: 220px;
+.indiegogo-video iframe {
+  width: 100%;
+  height: 220px;
+}
 
+/* Responsive */
 @media (max-width: 768px) {
-  .cast-crew-columns {
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-  }
-
-  .cast-box,
-  .crew-box {
-    width: 100%;
-    height: auto;
-  }
-
-.video-frame {
-    padding: 0.5rem;
-    border-radius: 15px;
-  }
-
-  .video-frame iframe,
-  .video-frame video {
-    width: 100%;
-    height: 200px;
-  }
-
   .top-content {
     flex-direction: column;
     padding: 0.5rem 0 1rem;
     gap: 1rem;
-    margin-top: 0;
   }
 
-    /* Synopsis section compress */
-  .synopsis-strip {
-    width: 100%;
-    margin: 2rem 0;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  .synopsis-strip h2 {
-    font-size: 3rem;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  .synopsis-strip p {
-    font-size: 1.8rem;
-    line-height: 1.4;
-  }
-
-  /* Indiegogo section stacks vertically */
-  .indiegogo-section {
-    flex-direction: column;
-    max-width: 100%;
-    padding: 2rem 1rem;
-    height: auto;
-    background-color: #afbb98; /* soft olive-green tone */
-  }
-
-  .indiegogo-text,
-  .indiegogo-video {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .indiegogo-text p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .indiegogo-button {
-    font-size: 1.2rem;
-    padding: 0.6rem 1.5rem;
-    display: inline-block;
-    background-color: #cecdb9d2;
-    color: #22393e;
-    align-self: center;
-  }
-
-  .indiegogo-video iframe {
-    height: 200px;
-  }
-
-  /* Header layout tweaks */
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -500,34 +342,94 @@ footer {
     font-size: 22px;
   }
 
- .logo {
+  .logo {
     height: 40px;
   }
 
-  /* Description Wrapper - reduce scale */
   .description-wrapper {
     transform: scale(1);
     padding: 2rem;
     margin: 2rem 1rem;
   }
 
-  /* Flower Border – ensure visible */
   .flower-border-container {
     height: 20px;
   }
-  footer {
-    text-align: center !important;
-    padding: 0.5rem 0 !important;
-    font-size: 0.8rem !important;
-    background-color: #000 !important;
-    color: #fff !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
-.brand span {
-    font-size: 12px;
-    font-family: "nitti-typewriter-cameo", sans-serif;
+
+  .cast-crew-columns {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
   }
 
+  .cast-box,
+  .crew-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .video-frame {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 15px;
+  }
+
+  .video-frame iframe,
+  .video-frame video {
+    width: 100%;
+    height: 200px;
+  }
+
+  .synopsis-strip {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .synopsis-strip h2 {
+    font-size: 3rem;
+  }
+
+  .synopsis-strip p {
+    font-size: 1.8rem;
+  }
+
+  .indiegogo-section {
+    max-width: 100%;
+    padding: 2rem 1rem;
+    background-color: #afbb98;
+  }
+
+  .indiegogo-text,
+  .indiegogo-video {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .indiegogo-text p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .indiegogo-button {
+    display: inline-block;
+    background-color: #cecdb9d2;
+    color: #22393e;
+    align-self: center;
+  }
+
+  footer {
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .brand span {
+    font-size: 12px;
+  }
 }
 

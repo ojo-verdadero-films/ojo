@@ -454,7 +454,7 @@ body.subpage {
     text-align: center !important;
     padding: 0.5rem 0 !important;
     font-size: 0.8rem !important;
-    background-color: #000; 
+    background-color: #000 !important; 
   }
 }
 

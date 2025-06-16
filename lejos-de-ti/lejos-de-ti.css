@@ -161,40 +161,30 @@ nav a,
 
 .top-content {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  gap: 1rem;               /* Space between video and cast/crew */
-  max-width: 1400px;       /* Limit total width */
-  margin: 0 auto 2rem;     /* Center and add bottom margin */
+  justify-content: center; /* center horizontally */
+  gap: 1rem;               /* space between video and cast/crew */
+  max-width: 1400px;       /* container max width */
+  margin: 0 auto 2rem;     /* center + bottom margin */
   box-sizing: border-box;
 }
 
+/* Video Frame styling */
 .video-frame {
   flex: 1 1 60%;
   padding: 1rem;
   background: #afbb98;
-  box-shadow: inset 0 0 30px 10px rgba(255, 255, 255, 0.6);
-  border-radius: 30px 10px 50px 5px; /* top-left, top-right, bottom-right, bottom-left */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  border-radius: 30px 10px 50px 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.video-frame iframe {
+.video-frame iframe,
+.video-frame video {
   width: 622px;
   height: 350px;
-  border-radius: 8px;
-  border: none;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
-}
-
-.video-frame video,
-.video-frame iframe {
-  width: 622px;
-  height: 350px;
-  object-fit: cover;
   border-radius: 8px;
   border: none;
   object-fit: cover;
@@ -229,19 +219,18 @@ nav a,
   display: block;
   border: none;
 }
-/* Cast and crew containers side-by-side */
+/* Cast and Crew Containers Side by Side */
 .cast-crew-columns {
-  flex: 1 1 40%;  /* Use rest of horizontal space */
+  flex: 1 1 40%;  /* take remaining space */
   display: flex;
   flex-direction: row;
   gap: 1rem;
   height: 100%;
-  max-width: 580px; /* 280 + 280 + gap, adjust if needed */
+  max-width: 580px; /* fixed width to fit two boxes */
 }
 
-/* Individual cast and crew boxes */
+/* Individual cast and crew boxes styling */
 .cast-box, .crew-box {
-  writing-mode: horizontal-tb;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 8px;
@@ -250,10 +239,8 @@ nav a,
   height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
   overflow-y: auto;
+  text-align: left;
 }
 
 .cast-box h2, .crew-box h2 {
@@ -271,20 +258,7 @@ nav a,
   letter-spacing: 1px;
 }
 
-.synopsis-strip {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1400px;   /* Stretch beyond your usual 1300px limit */
-  margin-left: auto;   /* Push left edge inward */
-  margin-right: 0;     /* Allow full extension to the right */
-  box-sizing: border-box;
-}
-
-/* Synopsis strip below everything */
+/* Synopsis strip - full width below */
 .synopsis-strip {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
@@ -292,8 +266,8 @@ nav a,
   text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-  width: calc(100% + 8rem); /* add left+right padding */
-  margin: 2rem -4rem 0 -4rem; /* pull left and right by padding amount */
+  width: calc(100% + 8rem); /* stretch beyond usual */
+  margin: 2rem -4rem 0 -4rem; /* pull edges out */
   box-sizing: border-box;
   max-width: none;
 }
@@ -309,11 +283,10 @@ nav a,
   font-size: 1.5rem;
   line-height: 1.6;
   text-align: justify;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   font-weight: 300;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Footer */

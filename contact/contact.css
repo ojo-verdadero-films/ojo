@@ -261,7 +261,6 @@ nav a,
   transform: translateY(-2px);
 }
 
-
 .flower-border-container {
   width: 100%;
   height: 10px;
@@ -312,6 +311,20 @@ footer {
 
 body, html {
   overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    padding: 1.5rem !important;
+    border: 5px solid red; /* temporary debug */
+  }
+
+  .hero-text {
+    font-size: 3rem !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 768px) {

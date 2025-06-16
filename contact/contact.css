@@ -163,6 +163,7 @@ nav a,
   background-position: center;  /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating */
   padding: 4rem 2rem;
+  align-items: center;
 }
 
 .hero-container {

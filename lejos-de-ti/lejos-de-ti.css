@@ -571,7 +571,7 @@ footer {
     max-width: 95%;
     padding: 2rem 1.5rem;     /* slightly less vertical padding */
     height: auto;             /* let height shrink to fit content */
-    margin: 2rem auto 2rem;   /* reduced top margin to bring it closer to synopsis */
+    margin: 1rem auto 2rem;   /* reduced top margin to bring it closer to synopsis */
   }
   .indiegogo-text,
   .indiegogo-video {
@@ -584,7 +584,7 @@ footer {
 
   /* Add space below video-frame so footer is not too close */
   .video-frame {
-    margin-bottom: 4rem;      /* space between video and footer */
+    margin-bottom: 2rem;      /* space between video and footer */
   }
 }
  footer {

@@ -319,33 +319,25 @@ footer {
     padding: 0.5rem 0 1rem;
     gap: 1rem;
   }
-
+  
   header {
+    background-color: #f4eee6;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .header-left {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .header-right nav {
-    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
     gap: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  nav a,
-  .dropbtn {
-    font-size: 22px;
   }
 
   .logo {
     height: 40px;
   }
 
+  .brand span {
+    font-size: 12px;
+    font-family: "nitti-typewriter-cameo", sans-serif;
+  }
+  
   .description-wrapper {
     transform: scale(1);
     padding: 2rem;

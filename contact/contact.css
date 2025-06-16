@@ -157,11 +157,16 @@ nav a,
 
 /* Hero Section */
 .hero {
-  background-image: url('../images/soft-background.png'); /* Adjust the path */
-  background-size: cover;       /* Makes the image cover the entire area */
-  background-position: center;  /* Centers the image */
-  background-repeat: no-repeat; /* Prevents repeating */
+  display: flex;
+  flex-direction: row;       /* side by side */
+  justify-content: center;   /* center horizontally */
+  align-items: flex-start;   /* align top edges */
+  gap: 2rem;                 /* space between text and form */
   padding: 4rem 2rem;
+  background-image: url('../images/soft-background.png'); 
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
 }
 
 

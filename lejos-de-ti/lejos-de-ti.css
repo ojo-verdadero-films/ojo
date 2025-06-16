@@ -564,14 +564,6 @@ footer {
     font-size: 12px;
     font-family: "nitti-typewriter-cameo", sans-serif;
   }
-
-  footer {
-    text-align: center !important;
-    padding: 0.5rem 0 !important;
-    font-size: 0.8rem !important;
-    background-color: #000 !important;
-    color: #fff !important;
-  }
  /* Make indiegogo container smaller and closer to synopsis */
   .indiegogo-section {
     flex-direction: column;
@@ -594,3 +586,10 @@ footer {
     margin-bottom: 4rem;      /* space between video and footer */
   }
 }
+ footer {
+    text-align: center !important;
+    padding: 0.5rem 0 !important;
+    font-size: 0.8rem !important;
+    background-color: #000 !important;
+    color: #fff !important;
+  }

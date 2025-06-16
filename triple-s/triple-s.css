@@ -294,7 +294,7 @@ nav a, .dropbtn {
 footer {
   background: #000;
   color: #fff;
-  width: 100vw;         /* full viewport width */
+  width: 100%;         /* full viewport width */
   padding: 0.6rem 0;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;

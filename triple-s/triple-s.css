@@ -8,9 +8,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-main {
-  flex: 1;
-}
 body {
   font-family: "ivymode", sans-serif;
   background: url('../images/soft-background.png') center/cover fixed no-repeat;

@@ -292,10 +292,9 @@ nav a, .dropbtn {
 
 /* Footer */
 footer {
-  position: relative; /* or absolute if you want fixed at bottom */
   bottom: 0;
   left: 0;
-  width: 100vw;
+  width: 100;
   background-color: #000;
   color: #fff;
   padding: 0.2rem 0;
@@ -416,7 +415,6 @@ footer {
   }
 
    footer {
-  position: static; /* remove absolute */
   width: 100%;
   background-color: #000;
   color: #fff;

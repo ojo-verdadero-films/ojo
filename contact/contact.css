@@ -184,6 +184,7 @@ nav a,
   font-family: "ivymode", sans-serif;
   font-style: bold;
   font-weight: 700;
+  justify-content: center;
 }
 
 .hero-text, .contact-form {

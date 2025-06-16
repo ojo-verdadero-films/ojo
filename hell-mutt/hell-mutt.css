@@ -410,8 +410,8 @@ footer {
 @media (max-width: 768px) {
   header {
     flex-direction: column !important;
-    align-items: flex-start;
-    padding: 1rem;
+    align-items: flex-start !important;
+    padding: 1rem !important;
   }
 
   .logo {

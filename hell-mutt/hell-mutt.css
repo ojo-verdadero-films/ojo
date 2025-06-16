@@ -378,6 +378,21 @@ body.subpage {
   font-weight: 300;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: #000;
+  color: #fff;
+  padding: 0.2rem 0;
+  user-select: none;
+  letter-spacing: 1px;
+  font-family: "ivymode", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   header {
     background-color: #f4eee6;

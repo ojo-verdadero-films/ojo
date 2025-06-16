@@ -519,7 +519,11 @@ footer {
   .synopsis-strip p {
     text-align: center !important;
   }
-
+  .indiegogo-section {
+  display: flex;
+  gap: 2.5rem;
+  background-color: #afbb98; /* soft olive-green tone */
+  }
   .logo {
     height: 40px;
   }

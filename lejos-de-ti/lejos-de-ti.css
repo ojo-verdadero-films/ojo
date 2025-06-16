@@ -315,6 +315,7 @@ nav a,
   margin: 2rem -4rem 0 -4rem; /* pull left and right by padding amount */
   box-sizing: border-box;
   max-width: none;
+  margin-bottom: 1.5rem;
 }
 
 .synopsis-strip h2 {

@@ -477,13 +477,6 @@ footer {
 /* Responsive: stack vertically on small screens */
 /* ========== MOBILE STYLES (Max Width: 768px) ========== */
 @media (max-width: 768px) {
-  /* Stack hero section vertically */
-  .top-content {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
-  }
-
   /* Stack cast and crew sections vertically */
   .cast-crew-columns {
     flex-direction: column;
@@ -496,20 +489,30 @@ footer {
     height: auto;
   }
 
-  /* Video sizing */
-  .video-frame,
-  .video-frame iframe,
-  .video-frame video,
-  .video-wrapper iframe {
-    width: 100% !important;
-    height: 230px !important;
+.video-frame {
+    padding: 0.5rem;
+    border-radius: 15px;
   }
 
-  /* Synopsis strip scaling */
+  .video-frame iframe,
+  .video-frame video {
+    width: 100%;
+    height: 200px;
+  }
+
+  .top-content {
+    padding: 1rem;
+    margin: 1rem auto;
+    gap: 1rem;
+  }
+
+    /* Synopsis section compress */
   .synopsis-strip {
     width: 100%;
     margin: 2rem 0;
     padding: 1.5rem;
+    border-radius: 12px;
+    box-sizing: border-box;
   }
 
   .synopsis-strip h2 {
@@ -517,7 +520,8 @@ footer {
   }
 
   .synopsis-strip p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.4;
   }
 
   /* Indiegogo section stacks vertically */

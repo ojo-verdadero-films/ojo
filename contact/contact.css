@@ -311,26 +311,31 @@ body, html {
   header {
     display: flex !important;
     flex-direction: column !important;
+    align-items: center !important;
     padding: 1rem !important;
-    align-items: center; /* to center children vertically */
+    gap: 1rem;
   }
 
-  .header-left, .header-right nav {
+  .header-left,
+  .header-right {
+    display: flex !important;
+    flex-direction: column;
     width: 100%;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-    display: flex; /* make sure these flex containers */
     align-items: center;
   }
 
   .header-right nav {
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
     font-size: 1.5rem;
+    justify-content: center;
   }
 
   .logo {
-    height: 60px;
+    height: 60px !important;
   }
 }
+
 
 

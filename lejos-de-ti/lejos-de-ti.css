@@ -1,3 +1,4 @@
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +14,11 @@ body {
   background-attachment: fixed; /* optional, for a nice parallax effect */
   color: #111;
   margin: 0;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 /* Header */
 header {
@@ -156,6 +159,34 @@ nav a,
   margin-left: auto;
   margin-right: auto;
 }
+.description-wrapper {
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 3rem 4rem;
+  font-family: "ivymode", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  color: #222;
+  flex: 1;
+  transform: scale(1.2);
+}
+
+.description-wrapper {
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 3rem 4rem;
+  font-family: "ivymode", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  color: #222;
+  flex: 1;
+  transform: scale(1.2);
+}
+
 /* Hero video */
 .description-wrapper {
   max-width: 1300px;
@@ -175,7 +206,7 @@ nav a,
   display: flex;
   justify-content: center; /* Center horizontally */
   gap: 1rem;               /* Space between video and cast/crew */
-  max-width: 600px;       /* Limit total width */
+  max-width: 1400px;       /* Limit total width */
   margin: 0 auto 2rem;     /* Center and add bottom margin */
   box-sizing: border-box;
 }
@@ -284,22 +315,16 @@ nav a,
 }
 
 .synopsis-strip {
-  .synopsis-strip {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-  width: calc(100% + 8rem);
-  margin: 2rem -4rem 0 -4rem;
+  width: 100%;
+  max-width: 1400px;   /* Stretch beyond your usual 1300px limit */
+  margin-left: auto;   /* Push left edge inward */
+  margin-right: 0;     /* Allow full extension to the right */
   box-sizing: border-box;
-  max-width: none;
-
-  font-family: "ivymode", sans-serif;
-  font-size: 2.2rem; /* example size for body text */
-  line-height: 1.5;   /* improve readability */
-  font-weight: 400;
 }
 
 
@@ -315,8 +340,9 @@ nav a,
   margin: 2rem -4rem 0 -4rem; /* pull left and right by padding amount */
   box-sizing: border-box;
   max-width: none;
-  margin-bottom: 1.5rem;
 }
+
+
 
 .synopsis-strip h2 {
   font-family: "ivymode", sans-serif;
@@ -325,8 +351,34 @@ nav a,
   font-weight: 700;
 }
 
+.synopsis-strip p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+
+@media (max-width: 768px) {
+  .top-content {
+    flex-direction: column;
+  }
+
+  .cast-crew-columns {
+    flex-direction: column;
+  }
+
+  .video-frame iframe {
+    height: 250px;
+  }
+}
+
 footer {
-  position: fixed;
+  position: fixed; /* or absolute if you want fixed at bottom */
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -339,7 +391,6 @@ footer {
   text-align: center;
   margin: 0;
   box-sizing: border-box;
-  padding-bottom: 50px;
 }
 .indiegogo-section {
   display: flex;
@@ -408,16 +459,35 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
-  width: 400px;  /* fixed width */
-  height: 400px; /* fixed height, square */
-  max-height: 550px; /* optional */
+  height: 100%;      /* fill container height */
+  padding: 1rem 2rem; /* reduce vertical padding to fit video */
 }
+
 .indiegogo-video iframe {
   width: 100%;
-  height: 100%;
+  height: 100%;     /* make iframe fill the video container vertically */
+  max-height: 550px; /* limit max height to keep some padding inside the section */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: none;
+}
+
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  .indiegogo-section {
+    flex-direction: column;
+    max-width: 95%;
+    padding: 3rem 1.5rem;
+  }
+
+  .indiegogo-text,
+  .indiegogo-video {
+    max-width: 100%;
+  }
+
+  .indiegogo-video iframe {
+    height: 250px;
+  }
 }
 

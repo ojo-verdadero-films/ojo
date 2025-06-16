@@ -292,17 +292,21 @@ nav a, .dropbtn {
 
 /* Footer */
 footer {
-  width: 100vw;          /* full viewport width */
-  position: relative;    /* ensure no fixed or absolute positioning */
-  left: 0;               /* align left edge */
   background: #000;
   color: #fff;
+  width: 100vw;         /* full viewport width */
   padding: 0.6rem 0;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  margin-top: 0;
+  margin: 0;
+}
+
+.footer-container {
+  max-width: 1300px;    /* or whatever max width you want */
+  margin: 0 auto;       /* center horizontally */
+  padding: 0 1.5rem;    /* optional horizontal padding */
 }
 
 

@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 body {
   font-family: "ivymode", sans-serif;
   background-image: url('../images/soft-background.png');
@@ -19,6 +19,7 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 }
+
 /* Header */
 header {
   position: relative;
@@ -35,7 +36,6 @@ header {
   margin-top: 0;
 }
 
-
 .header-left {
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ header {
 
 .logo {
   height: 100px;
-  margin-right: 0rem;
+  margin-right: 0;
 }
 
 .brand span {
@@ -67,7 +67,7 @@ header {
 }
 
 nav a, 
-.dropbtn { /*these are the Home and Contact buttons*/
+.dropbtn { /* these are the Home and Contact buttons */
   font-weight: bold;
   text-decoration: none;
   color: #000000;
@@ -103,7 +103,7 @@ nav a,
   display: inline-block;
 }
 
-.dropbtn { /*this is the Portfolio button*/
+.dropbtn { /* this is the Portfolio button */
   background: none;
   border: none;
   font-size: 26px;
@@ -127,11 +127,12 @@ nav a,
   display: block;
 }
 
-/* When hovering over the whole container, show the content */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* Flower border */
 .flower-border-container {
   position: relative;
   left: 50%;
@@ -147,6 +148,7 @@ nav a,
   background-color: #fac3bb;
 }
 
+/* Top content: video and cast/crew side by side */
 .top-content {
   font-family: 'Quattrocento', serif;
   color: #111;
@@ -163,6 +165,8 @@ nav a,
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
+/* Description wrapper */
 .description-wrapper {
   max-width: 1300px;
   margin: 5rem auto;
@@ -177,19 +181,7 @@ nav a,
   transform: scale(1.2);
 }
 
-.description-wrapper {
-  max-width: 1300px;
-  margin: 5rem auto;
-  padding: 3rem 4rem;
-  font-family: "ivymode", sans-serif;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50px;
-  color: #222;
-  flex: 1;
-  transform: scale(1.2);
-}
+/* Video frame */
 .video-frame {
   flex: 1 1 60%;
   padding: 1rem;
@@ -203,26 +195,17 @@ nav a,
   position: relative;
 }
 
-.video-frame iframe {
-  width: 622px;
-  height: 350px;
-  border-radius: 8px;
-  border: none;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
-}
-
-.video-frame video,
-.video-frame iframe {
+.video-frame iframe,
+.video-frame video {
   width: 622px;
   height: 350px;
   object-fit: cover;
   border-radius: 8px;
   border: none;
-  object-fit: cover;
   box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
 }
 
+/* Video wrapper video */
 .video-wrapper video {
   width: 100%;
   height: 100%;
@@ -231,6 +214,7 @@ nav a,
   border-radius: 10px;
 }
 
+/* Play button overlay */
 .play-button {
   position: absolute;
   top: 50%;
@@ -243,7 +227,7 @@ nav a,
   user-select: none;
 }
 
-
+/* Video wrapper iframe */
 .video-wrapper iframe {
   width: 100%;
   height: 100%;
@@ -251,6 +235,7 @@ nav a,
   display: block;
   border: none;
 }
+
 /* Cast and crew containers side-by-side */
 .cast-crew-columns {
   flex: 1 1 40%;  /* Use rest of horizontal space */
@@ -258,7 +243,7 @@ nav a,
   flex-direction: row;
   gap: 1rem;
   height: 100%;
-  max-width: 580px; /* 280 + 280 + gap, adjust if needed */
+  max-width: 580px; /* 280 + 280 + gap */
 }
 
 /* Individual cast and crew boxes */
@@ -293,20 +278,6 @@ nav a,
   letter-spacing: 1px;
 }
 
-.synopsis-strip {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1400px;   /* Stretch beyond your usual 1300px limit */
-  margin-left: auto;   /* Push left edge inward */
-  margin-right: 0;     /* Allow full extension to the right */
-  box-sizing: border-box;
-}
-
-
 /* Synopsis strip below everything */
 .synopsis-strip {
   background-color: rgba(255, 255, 255, 0.9);
@@ -320,8 +291,6 @@ nav a,
   box-sizing: border-box;
   max-width: none;
 }
-
-
 
 .synopsis-strip h2 {
   font-family: "ivymode", sans-serif;
@@ -340,48 +309,31 @@ nav a,
   box-sizing: border-box;
   font-weight: 300;
 }
+
+/* Footer */
 footer {
   background: #000;
   color: #fff;
-  padding: 0.6 rem 0;
+  padding: 0.5rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  margin-tops: 0rem;
-  user-select: none;
-}
-
-@media (max-width: 768px) {
-  .top-content {
-    flex-direction: column;
-  }
-
-  .cast-crew-columns {
-    flex-direction: column;
-  }
-
-  .video-frame iframe {
-    height: 250px;
-  }
-}
-
-footer {
-  position: absolute; /* or absolute if you want fixed at bottom */
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  background-color: #000;
-  color: #fff;
-  padding: 0.2rem 0;
-  user-select: none;
-  letter-spacing: 1px;
-  font-family: "ivymode", sans-serif;
-  text-align: center;
   margin: 0;
-  box-sizing: border-box;
 }
+
+/* Footer positioning for desktop */
+@media (min-width: 769px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+  }
+}
+
+/* Indiegogo section */
 .indiegogo-section {
   display: flex;
   gap: 2.5rem;
@@ -431,7 +383,7 @@ footer {
   font-size: 1.7rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 4px 6px rgba(34, 57, 62, 0.25);
-  align-self: center; /* ✨ this centers it horizontally in the flex column */
+  align-self: center; /* center horizontally in the flex column */
   text-align: center;
 }
 
@@ -457,62 +409,29 @@ footer {
 .indiegogo-video iframe {
   width: 100%;
   height: 100%;     /* make iframe fill the video container vertically */
-  max-height: 550px; /* limit max height to keep some padding inside the section */
+  max-height: 550px; /* limit max height */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: none;
 }
 
-
 /* Responsive: stack vertically on small screens */
 @media (max-width: 768px) {
-  .indiegogo-section {
-    flex-direction: column;
-    max-width: 95%;
-    padding: 3rem 1.5rem;
-  }
-
-  .indiegogo-text,
-  .indiegogo-video {
-    max-width: 100%;
-  }
-
-  .indiegogo-video iframe {
-    height: 250px;
-  }
-  header {
-    background-color: #f4eee6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    gap: 0.5rem;
-  }
-
   .top-content {
     flex-direction: column;
-    padding: 0.5rem 0 1rem;
-    gap: 1rem;
-    margin-top: 0;
-  }
-
-  .video-frame {
-  padding: 0.5rem;
-  border-radius: 20px;
-  padding-top: 1rem;
-  margin-bottom: 4rem; /* THIS IS THE GAP BELOW THE VIDEO */
-}
-  .video-frame iframe,
-  .video-frame video {
-    width: 100%;
-    height: 220px;
   }
 
   .cast-crew-columns {
     flex-direction: column;
     width: 100%;
     max-width: none;
-    gap: .2rem;
+    gap: 0.2rem;
+  }
+
+  .video-frame iframe,
+  .video-frame video {
+    width: 100%;
+    height: 220px;
   }
 
   .cast-box,
@@ -551,34 +470,37 @@ footer {
     font-size: 12px;
     font-family: "nitti-typewriter-cameo", sans-serif;
   }
- /* Make indiegogo container smaller and closer to synopsis */
+
+  /* Indiegogo section smaller and closer to synopsis */
   .indiegogo-section {
     flex-direction: column;
     max-width: 95%;
-    padding: 2rem 1.5rem;     /* slightly less vertical padding */
-    height: auto;             /* let height shrink to fit content */
-    margin: 2rem auto 2rem;   /* reduced top margin to bring it closer to synopsis */
+    padding: 2rem 1.5rem;
+    height: auto;
+    margin: 2rem auto 2rem;
   }
+
   .indiegogo-text,
   .indiegogo-video {
-   max-width: 100%;
+    max-width: 100%;
   }
 
   .indiegogo-video iframe {
-    height: 200px;            /* smaller iframe height */
+    height: 200px;
   }
 
- footer {
-  position: static; /* remove absolute */
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  padding: 0.5rem 0;
-  text-align: center;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  font-family: "ivymode", sans-serif;
-  user-select: none;
-  margin: 0;
-  box-sizing: border-box;
+  footer {
+    position: static; /* remove absolute */
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-family: "ivymode", sans-serif;
+    user-select: none;
+    margin: 0;
+    box-sizing: border-box;
+  }
 }

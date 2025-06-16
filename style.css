@@ -755,7 +755,8 @@ body, html {
     justify-content: space-between;
     align-items: center;
     background-color: #f4eee6;
-    width: 200vw;
+    width: 100vw;
+    box-sizing: border-box;
     margin: 0;
   }
 

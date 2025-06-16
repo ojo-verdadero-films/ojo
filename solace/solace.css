@@ -291,8 +291,7 @@ nav a, .dropbtn {
   font-weight: 300;
 }
 
-/* Footer */
-footer {
+ footer {
   width: 100vw;
   position: relative;
   left: 0;
@@ -301,13 +300,10 @@ footer {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
-
-}
-
 .footer-container {
   background: #000;
   color: #fff;
-  padding: 0.6rem 0;
+  padding: 0.5rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
@@ -315,8 +311,8 @@ footer {
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
+  font-size: 0.8rem;
 }
-
 /* Responsive */
 @media (max-width: 768px) {
   .top-content {
@@ -342,9 +338,6 @@ footer {
     width: 100%;
     margin: 2rem 0 0;
   }
-}
-
-@media (max-width: 768px) {
   header {
     background-color: #f4eee6;
     display: flex;
@@ -427,14 +420,10 @@ footer {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
-
-   
-}
-
 .footer-container {
   background: #000;
   color: #fff;
-  padding: 0.6rem 0;
+  padding: 0.5rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
@@ -442,5 +431,6 @@ footer {
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
+  font-size: 0.8rem;
 }
 

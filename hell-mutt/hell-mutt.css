@@ -391,8 +391,9 @@ body.subpage {
 
   .top-content {
     flex-direction: column;
-    padding: 1rem 0;
-    gap: 1rem;
+     padding: 0.5rem 0 1rem; /* reduced top padding */
+     gap: 1rem;
+     margin-top: 0; /* added */
   }
 
   .video-frame {
@@ -423,8 +424,9 @@ body.subpage {
 
    .description-wrapper {
     transform: scale(1);
-    padding: 2rem;
-  }
+  padding: 1rem 2rem; /* reduced from 2rem */
+  margin-top: 0.5rem;  /* added */
+}
 
   .synopsis-strip {
     margin: 1rem -1.5rem 0 -1.5rem;
@@ -454,9 +456,11 @@ body.subpage {
   font-family: "nitti-typewriter-cameo", sans-serif;
 }
   footer {
-    text-align: center !important;
-    padding: 0.5rem 0 !important;
-    font-size: 0.8rem !important;
-  }
+  text-align: center !important;
+  padding: 0.5rem 0 !important;
+  font-size: 0.8rem !important;
+  background-color: #000 !important;
+  color: #fff !important; /* <-- this was missing */
+}
 }
 

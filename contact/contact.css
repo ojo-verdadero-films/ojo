@@ -314,8 +314,6 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  /* mobile-only styles here */
-}
   header {
     display: flex; 
     flex-direction: column;

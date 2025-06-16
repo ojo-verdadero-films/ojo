@@ -407,3 +407,77 @@ footer {
   margin: 0;
   box-sizing: border-box;
 }
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 80px;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-right nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .dropbtn, nav a {
+    font-size: 22px;
+  }
+
+  .top-content {
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .video-frame {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
+
+  .video-frame iframe,
+  .video-frame video {
+    width: 100%;
+    height: 220px;
+  }
+
+  .cast-crew-columns {
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    gap: 1rem;
+  }
+
+  .cast-box,
+  .crew-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .description-wrapper {
+    transform: scale(1); /* remove zoom effect on small screens */
+    padding: 2rem;
+  }
+
+  .synopsis-strip {
+    margin: 1rem -1.5rem 0 -1.5rem;
+    width: calc(100% + 3rem);
+    padding: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .synopsis-strip h2 {
+    font-size: 2rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+  }
+}

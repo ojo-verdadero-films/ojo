@@ -284,16 +284,22 @@ nav a,
 }
 
 .synopsis-strip {
+  .synopsis-strip {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1400px;   /* Stretch beyond your usual 1300px limit */
-  margin-left: auto;   /* Push left edge inward */
-  margin-right: 0;     /* Allow full extension to the right */
+
+  width: calc(100% + 8rem);
+  margin: 2rem -4rem 0 -4rem;
   box-sizing: border-box;
+  max-width: none;
+
+  font-family: "ivymode", sans-serif;
+  font-size: 2.2rem; /* example size for body text */
+  line-height: 1.5;   /* improve readability */
+  font-weight: 400;
 }
 
 

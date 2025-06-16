@@ -468,7 +468,7 @@ header {
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: row;
   padding: 1rem 2rem;
   background-color: #f4eee6;
   z-index: 100;

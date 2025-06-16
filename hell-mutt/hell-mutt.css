@@ -432,4 +432,30 @@ body.subpage {
     height: auto;
   }
 
-  .description-wrapper {
+   .description-wrapper {
+    transform: scale(1);
+    padding: 2rem;
+  }
+
+  .synopsis-strip {
+    margin: 1rem -1.5rem 0 -1.5rem;
+    width: calc(100% + 3rem);
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center; /* <<< this was your original ask */
+  }
+
+  .synopsis-strip h2 {
+    font-size: 2rem;
+  }
+
+  .synopsis-strip p {
+    text-align: center !important; /* fixes the awkward justified spacing */
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+  }
+}
+

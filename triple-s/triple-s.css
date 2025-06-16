@@ -423,11 +423,10 @@ footer {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
-
 .footer-container {
   background: #000;
   color: #fff;
-  padding: 0.6rem 0;
+  padding: 0.5rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
@@ -435,7 +434,7 @@ footer {
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 

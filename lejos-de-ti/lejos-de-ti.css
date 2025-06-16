@@ -495,7 +495,87 @@ footer {
     font-size: 12px;
     font-family: "nitti-typewriter-cameo", sans-serif;
   }
+ .indiegogo-section {
+    display: flex;
+    gap: 2.5rem;
+    background-color: #afbb98;
+    color: #000;
+    font-family: "ivymode", sans-serif;
+    font-weight: 200;
+    border-radius: 12px;
+    height: 600px;
+    margin: 4rem auto;
+    box-shadow: 0 8px 20px rgba(175, 187, 152, 0.35);
+    align-items: center;
+    flex-direction: column;
+    max-width: 95%;
+    padding: 3rem 1.5rem;
+  }
 
+  .indiegogo-text {
+    flex: 2;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .indiegogo-text p {
+    font-size: 2.7rem;
+    font-style: oblique;
+    font-weight: 900;
+    background-color: rgba(223, 245, 253, 0.53);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .indiegogo-button {
+    display: inline-block;
+    background-color: #cecdb9d2;
+    color: #22393e;
+    font-weight: 1000;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.7rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(34, 57, 62, 0.25);
+    align-self: center;
+  }
+
+  .indiegogo-button:hover,
+  .indiegogo-button:focus {
+    background-color: #46707e;
+    color: #fff;
+    outline: none;
+    box-shadow: 0 6px 12px rgba(70, 112, 126, 0.6);
+    cursor: pointer;
+  }
+
+  .indiegogo-video {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .indiegogo-video iframe {
+    width: 100%;
+    height: 250px;
+    max-height: 550px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: none;
+  }
+}
    footer {
     text-align: center !important;
     padding: 0.5rem 0 !important;

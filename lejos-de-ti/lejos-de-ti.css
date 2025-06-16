@@ -366,16 +366,22 @@ nav a,
 @media (max-width: 768px) {
   .top-content {
     flex-direction: column;
+    align-items: center;
   }
 
   .cast-crew-columns {
     flex-direction: column;
   }
+  .cast-box, .crew-box {
+  width: 280px;
+  height: 400px;
+  height: auto;
+  }
 
   .video-frame iframe {
-    height: 250px;
+    width: 622px;
+    height: 350px;
   }
-}
 
 footer {
   position: static; /* or absolute if you want fixed at bottom */
@@ -475,6 +481,10 @@ footer {
 
 /* Responsive: stack vertically on small screens */
 @media (max-width: 768px) {
+  .video-frame iframe {
+    height: 250px;
+    width: 100%;
+  }
   .indiegogo-section {
     flex-direction: column;
     max-width: 95%;

@@ -1,4 +1,6 @@
-/* Reset & Base Styles */
+main {
+  flex-grow: 1; /* This expands main to fill leftover space pushing footer down */
+}
 * {
   margin: 0;
   padding: 0;
@@ -201,7 +203,7 @@ body.subpage {
   display: flex;
   justify-content: center; /* Center horizontally */
   gap: 1rem;               /* Space between video and cast/crew */
-  max-width: none !important;
+  max-width: 1200px;
   margin: 0 auto 2rem;     /* Center and add bottom margin */
   box-sizing: border-box;
 }
@@ -329,21 +331,6 @@ body.subpage {
   font-weight: 600;
   letter-spacing: 1px;
 }
-
-.synopsis-strip {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1400px;   /* Stretch beyond your usual 1300px limit */
-  margin-left: auto;   /* Push left edge inward */
-  margin-right: 0;     /* Allow full extension to the right */
-  box-sizing: border-box;
-}
-
-
 /* Synopsis strip below everything */
 .synopsis-strip {
   background-color: rgba(255, 255, 255, 0.9);
@@ -351,15 +338,11 @@ body.subpage {
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
   width: calc(100% + 8rem); /* add left+right padding */
   margin: 2rem -4rem 0 -4rem; /* pull left and right by padding amount */
   box-sizing: border-box;
   max-width: none;
 }
-
-
-
 .synopsis-strip h2 {
   font-family: "ivymode", sans-serif;
   font-size: 2.8rem;
@@ -381,13 +364,13 @@ body.subpage {
 footer {
   background: #000;
   color: #fff;
-  padding: 0.6 rem 0;
+  padding: 0.6rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  margin-tops: 0rem;
+  margin-top: 0rem;
   user-select: none;
 }
 

@@ -1,30 +1,27 @@
-/* Reset & Base */
+main {
+  flex-grow: 1; /* This expands main to fill leftover space pushing footer down */
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 body {
   font-family: "ivymode", sans-serif;
-  background: url('../images/soft-background.png') center/cover fixed no-repeat;
+  background-image: url('../images/soft-background.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; /* optional, for a nice parallax effect */
   color: #111;
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden;
 }
-
-body.sub-page {
-  font-family: 'Quattrocento', serif;
-  background-color: #fff;
-  padding: 0 1.5rem;
-  line-height: 1.6;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 /* Header */
 header {
   position: relative;
@@ -36,8 +33,11 @@ header {
   align-items: center;
   padding: 1.5rem 2rem;
   background-color: #f4eee6;
+  box-sizing: border-box;
   z-index: 100;
+  margin-top: 0;
 }
+
 
 .header-left {
   display: flex;
@@ -47,29 +47,33 @@ header {
 
 .logo {
   height: 100px;
+  margin-right: 0rem;
 }
 
 .brand span {
   display: block;
   font-size: 28px;
   line-height: 1.3;
-  color: #000;
+  color: #000000;
   font-family: "nitti-typewriter-cameo", sans-serif;
   font-weight: 100;
+  font-style: normal;
 }
 
-/* Navigation */
+/* Navigation Styles */
 .header-right nav {
   display: flex;
   gap: 1.5rem;
   font-size: 22px;
   align-items: center;
+  color: #000000;
 }
 
-nav a, .dropbtn {
+nav a, 
+.dropbtn { /*these are the Home and Contact buttons*/
   font-weight: bold;
   text-decoration: none;
-  color: #000;
+  color: #000000;
   font-size: 26px;
   font-family: 'Quattrocento', serif;
   cursor: pointer;
@@ -90,19 +94,24 @@ nav a, .dropbtn {
   transition: transform 0.3s ease;
 }
 
-.header-right nav a:hover::after {
+.header-right nav a:hover::after,
+.brand a:hover {
   transform: scaleX(1);
 }
 
-/* Dropdown */
+/* Dropdown Menu */
+/* Container needs to be relative for absolute positioning */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropbtn {
+.dropbtn { /*this is the Portfolio button*/
   background: none;
   border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000000;
 }
 
 .dropdown-content {
@@ -110,7 +119,7 @@ nav a, .dropbtn {
   position: absolute;
   background-color: #7e2513;
   min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
   z-index: 1000;
 }
 
@@ -121,46 +130,82 @@ nav a, .dropbtn {
   display: block;
 }
 
+/* When hovering over the whole container, show the content */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Decorative Flower Divider */
 .flower-border-container {
   position: relative;
   left: 50%;
+  right: 50%;
   margin-left: -50vw;
+  margin-right: -50vw;
   width: 100vw;
   height: 25px;
-  background: url('../images/flowers.jpg') center/cover repeat-x, #fac3bb;
+  background-image: url('../images/flowers.jpg');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+  background-color: #fac3bb;
 }
 
-/* Content Wrapper */
+body.subpage {
+  font-family: 'Quattrocento', serif;
+  background-color: #fff;
+  color: #111;
+  margin: 0;
+  padding: 0 1.5rem; /* horizontal padding for content */
+  line-height: 1.6;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero video */
+body.subpage {
+  font-family: 'Quattrocento', serif;
+  background-color: #fff;
+  color: #111;
+  margin: 0;
+  padding: 0 1.5rem; /* horizontal padding for content */
+  line-height: 1.6;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-content {
+  font-family: 'Quattrocento', serif;
+  color: #111;
+  margin: 0;
+  padding: 0 1.5rem; /* horizontal padding for content */
+  line-height: 1.6;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .description-wrapper {
   max-width: 1300px;
   margin: 5rem auto;
-  padding: 3rem 0rem;
+  padding: 3rem 4rem;
   font-family: "ivymode", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 50px;
   color: #222;
   flex: 1;
   transform: scale(1.2);
 }
 
-/* Top Section Layout */
 .top-content {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 1400px;
-  margin: 0 auto 2rem;
-  margin: 0;
-  line-height: 1.6;
+  justify-content: center; /* Center horizontally */
+  gap: 1rem;               /* Space between video and cast/crew */
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Quattrocento', serif;
-  color: #111;
+  margin: 0 auto 2rem;     /* Center and add bottom margin */
+  box-sizing: border-box;
 }
 
 .video-frame {
@@ -185,6 +230,26 @@ nav a, .dropbtn {
   box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
 }
 
+.video-frame {
+  flex: 1 1 60%;
+  padding: 1rem;
+  background: #afbb98;
+  box-shadow: inset 0 0 30px 10px rgba(255, 255, 255, 0.6);
+  border-radius: 30px 10px 50px 5px; /* top-left, top-right, bottom-right, bottom-left */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-frame iframe {
+  width: 622px;
+  height: 350px;
+  border-radius: 8px;
+  border: none;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
+}
 .video-frame video,
 .video-frame iframe {
   width: 622px;
@@ -225,32 +290,38 @@ nav a, .dropbtn {
   border: none;
 }
 
-/* Cast & Crew Boxes */
+/* Cast and crew containers side-by-side */
 .cast-crew-columns {
-  flex: 1 1 40%;
+  flex: 1 1 40%;  /* Use rest of horizontal space */
   display: flex;
+  flex-direction: row;
   gap: 1rem;
-  max-width: 580px;
+  height: 100%;
+  max-width: 580px; /* 280 + 280 + gap, adjust if needed */
 }
 
+/* Individual cast and crew boxes */
 .cast-box, .crew-box {
-  background: rgba(255, 255, 255, 0.8);
+  writing-mode: horizontal-tb;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 280px;
   height: 400px;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
+  text-align: left;
+  overflow-y: auto;
 }
 
 .cast-box h2, .crew-box h2 {
   font-family: "ivymode", sans-serif;
   font-size: 2rem;
-  font-weight: 700;
   margin-bottom: 0.3rem;
+  font-weight: 700;
 }
 
 .cast-box p, .crew-box p {
@@ -260,81 +331,50 @@ nav a, .dropbtn {
   font-weight: 600;
   letter-spacing: 1px;
 }
-
-/* Synopsis Strip */
+/* Synopsis strip below everything */
 .synopsis-strip {
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: calc(100% + 8rem);
-  margin: 2rem -4rem 0 -4rem;
+  width: calc(100% + 8rem); /* add left+right padding */
+  margin: 2rem -4rem 0 -4rem; /* pull left and right by padding amount */
   box-sizing: border-box;
+  max-width: none;
 }
-
 .synopsis-strip h2 {
   font-family: "ivymode", sans-serif;
   font-size: 2.8rem;
-  font-weight: 700;
   margin-bottom: 1.3rem;
+  font-weight: 700;
 }
 
 .synopsis-strip p {
   font-size: 1.5rem;
   line-height: 1.6;
   text-align: justify;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-weight: 300;
 }
 
- footer {
-  width: 100vw;
-  position: relative;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  left: 0
-}
-.footer-container {
+footer {
   background: #000;
   color: #fff;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
   box-sizing: border-box;
-  margin: 0 auto;
-  width: 100%;
-  font-size: 0.8rem;
+  margin-top: 0rem;
+  user-select: none;
 }
-/* Responsive */
+
 @media (max-width: 768px) {
-  .top-content {
-    flex-direction: column;
-  }
-
-  .cast-crew-columns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .video-frame iframe {
-    height: 250px;
-    width: 100%;
-  }
-
-  .description-wrapper {
-    padding: 2rem;
-    transform: none;
-  }
-
-  .synopsis-strip {
-    width: 100%;
-    margin: 2rem 0 0;
-  }
   header {
     background-color: #f4eee6;
     display: flex;
@@ -408,26 +448,11 @@ nav a, .dropbtn {
     font-family: "nitti-typewriter-cameo", sans-serif;
   }
 
- footer {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
-  margin: 0;
-  padding: 0;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-.footer-container {
-  background: #000;
-  color: #fff;
-  padding: 0.5rem 0;
-  user-select: none;
-  letter-spacing: 1px;
-  font-family: "ivymode", sans-serif;
-  text-align: center;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 100%;
-  font-size: 0.8rem;
+   footer {
+    text-align: center !important;
+    padding: 0.5rem 0 !important;
+    font-size: 0.8rem !important;
+    background-color: #000 !important;
+    color: #fff !important;
+  }
 }

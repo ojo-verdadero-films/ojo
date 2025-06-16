@@ -415,3 +415,29 @@ nav a, .dropbtn {
     box-sizing: border-box;
   }
 }
+
+  .cast-crew-columns {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+    max-width: 100%;
+  }
+
+  .cast-box, .crew-box {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .video-frame {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .synopsis-strip {
+    padding: 2rem 1.5rem;
+    font-size: 1.05rem;
+  

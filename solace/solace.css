@@ -373,9 +373,10 @@ footer {
   margin-top: 0rem;
   user-select: none;
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
-}
+  text-align: center !important;
+ }
 
 @media (max-width: 768px) {
   header {

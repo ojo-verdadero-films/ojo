@@ -361,7 +361,18 @@ nav a,
   box-sizing: border-box;
   font-weight: 300;
 }
-
+footer {
+  background: #000;
+  color: #fff;
+  padding: 0.6 rem 0;
+  user-select: none;
+  letter-spacing: 1px;
+  font-family: "ivymode", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  margin-tops: 0rem;
+  user-select: none;
+}
 
 @media (max-width: 768px) {
   .top-content {

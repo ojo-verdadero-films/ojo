@@ -815,36 +815,36 @@ body, html {
     padding: 0.75rem 0.5rem;
     text-align: center;
   }
-}
-header {
-    flex-direction: column;
+@media (max-width: 768px) {
+  header {
     padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4eee6;
   }
 
   .logo {
-    height: 70px;
-    margin-bottom: 0.5rem;
+    height: 65px;
+    margin-right: 0.5rem;
   }
 
   .brand span {
     font-size: 20px;
-    line-height: 1.2;
-    text-align: center;
+    line-height: 1.1;
   }
 
   .header-right nav {
+    display: flex;
     flex-direction: column;
     gap: 0.5rem;
     font-size: 18px;
-    margin-top: 0.5rem;
+    align-items: flex-end;
   }
 
   nav a,
   .dropbtn {
     font-size: 20px;
+    padding: 0.25rem 0;
   }
 }
-
-
-
-

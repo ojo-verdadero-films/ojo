@@ -400,8 +400,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem 1rem;
-    gap: 0.5rem;
+    padding: 1rem 2rem;
+    gap: 0.75rem;
     width: 100vw;
     position: relative;
     left: 0;
@@ -419,24 +419,49 @@ footer {
 
   /* Navigation */
   .header-right nav {
-    font-size: 18px;
+    display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
-    margin-top: 0.5rem;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 0.75rem;
+    width: 100%;
   }
 
   nav a,
   .dropbtn {
-    font-size: 18px;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
   }
 
   /* Video Frame responsive */
-  .video-frame iframe,
-  .video-frame video {
+  .video-wrapper {
     width: 100%;
-    height: auto;
-    max-height: 250px;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 100vw;
+    box-sizing: border-box;
   }
 
   /* Cast & Crew - stack vertically */
@@ -454,89 +479,69 @@ footer {
 
   /* Synopsis */
   .synopsis-strip {
-    width: 100%;
-    margin: 1rem 0 0;
+    width: 100vw;
     padding: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #f4eee6;
+    box-sizing: border-box;
+  }
+    .synopsis {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .synopsis img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
 
   /* Indiegogo */
-.indiegogo-section {
-  display: flex;
-  gap: 2.5rem;
-  background-color: #afbb98; /* soft olive-green tone */
-  padding: 2rem 2rem;
-  color: #000;
-  font-family: "ivymode", sans-serif;
-  font-weight: 200;
-  border-radius: 12px;
-  max-width: 1300px;
-  height: 600px;      /* container taller */
-  margin: 4rem auto;
-  box-shadow: 0 8px 20px rgba(175, 187, 152, 0.35);
-  align-items: center;
-}
+  .indiegogo-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    height: auto;
+    max-width: 100vw;
+    width: 100%;
+    padding: 2rem 1rem;
+    border-radius: 0;
+    margin: 2rem 0;
+    box-sizing: border-box;
+  }
 
-.indiegogo-text {
-  flex: 2;
-  max-width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* vertically center text + button */
-  height: 100%;             /* fill container height */
-}
+  .indiegogo-text {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
 
-.indiegogo-text p {
-  font-size: 2.7rem;
-  font-style: oblique;
-  font-weight: 900;
-  background-color: rgba(223, 245, 253, 0.53);
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;  /* some breathing room between text and button */
-  flex-grow: 1;         /* let paragraph fill available vertical space */
-  overflow-y: auto;     /* scroll if content is too long */
-}
+  .indiegogo-text p {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
 
-.indiegogo-button {
-  display: inline-block;
-  background-color: #cecdb9d2;
-  color: #22393e;
-  font-weight: 1000;
-  padding: 0.75rem 2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 1.7rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 4px 6px rgba(34, 57, 62, 0.25);
-  align-self: center; /* ✨ this centers it horizontally in the flex column */
-}
+  .indiegogo-button {
+    font-size: 1.3rem;
+    padding: 0.75rem 1.5rem;
+  }
 
-.indiegogo-button:hover,
-.indiegogo-button:focus {
-  background-color: #46707e;
-  color: #fff;
-  outline: none;
-  box-shadow: 0 6px 12px rgba(70, 112, 126, 0.6);
-  cursor: pointer;
-}
+  .indiegogo-video {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    height: auto;
+  }
 
-.indiegogo-video {
-  flex: 1;
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;      /* fill container height */
-  padding: 1rem 2rem; /* reduce vertical padding to fit video */
-}
-
-.indiegogo-video iframe {
-  width: 100%;
-  height: 100%;     /* make iframe fill the video container vertically */
-  max-height: 550px; /* limit max height to keep some padding inside the section */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border: none;
-}
+  .indiegogo-video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+  }
 

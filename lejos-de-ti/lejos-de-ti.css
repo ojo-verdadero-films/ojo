@@ -526,7 +526,7 @@ footer {
     flex-direction: column;
     width: 100%;
     max-width: none;
-    gap: .5rem;
+    gap: .2rem;
   }
 
   .cast-box,

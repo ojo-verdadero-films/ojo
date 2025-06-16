@@ -385,22 +385,6 @@ body.subpage {
     align-items: flex-start;
     padding: 1rem;
   }
-
-  .logo {
-    height: 80px;
-    margin-bottom: 0.5rem;
-  }
-
-  .header-right nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .dropbtn, nav a {
-    font-size: 22px;
-  }
-
   .top-content {
     flex-direction: column;
     padding: 1rem 0;
@@ -452,18 +436,10 @@ body.subpage {
   .synopsis-strip p {
     text-align: center !important; /* fixes the awkward justified spacing */
   }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 0.5rem 0;
-  }
-}
-@media (max-width: 768px) {
   .synopsis-strip p {
     text-align: center !important;
   }
-}
-header {
+ header {
   position: relative;
   width: 100vw;
   display: flex;
@@ -482,8 +458,6 @@ header {
   font-size: 24px;
   font-family: "nitti-typewriter-cameo", sans-serif;
 }
-
-@media (max-width: 768px) {
   footer {
     text-align: center !important;
     padding: 0.5rem 0 !important;

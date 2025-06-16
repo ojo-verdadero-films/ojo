@@ -217,12 +217,31 @@ nav a,
 
 /* Cast & Crew */
 .cast-crew-columns {
-  flex: 1 1 40%;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  height: 100%;
-  max-width: 580px;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.cast-column,
+.crew-column {
+  flex: 1 1 45%;
+}
+
+.cast-column h3,
+.crew-column h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.cast-column ul,
+.crew-column ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .cast-box, .crew-box {
@@ -233,7 +252,7 @@ nav a,
   width: 280px;
   height: 400px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
@@ -483,23 +502,28 @@ footer {
     gap: 2rem;
   }
 
+  .cast-crew-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
   .cast-column,
   .crew-column {
+    flex: 1 1 100%;
     width: 100%;
   }
 
   .cast-column h3,
   .crew-column h3 {
     font-size: 1.4rem;
-    margin-bottom: 0.5rem;
   }
 
   .cast-column ul,
   .crew-column ul {
     font-size: 1rem;
-    line-height: 1.5;
-    padding-left: 1rem;
   }
+  
   /* Indiegogo */
   .indiegogo-section {
     flex-direction: column;

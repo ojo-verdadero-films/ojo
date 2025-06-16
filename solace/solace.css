@@ -144,16 +144,29 @@ nav a, .dropbtn {
   background-color: #fac3bb;
 }
 
-body.subpage,
 .top-content {
   font-family: 'Quattrocento', serif;
-  background-color: #fff;
+
   color: #111;
-  padding: 0 1.5rem;
+  margin: 0;
+  padding: 0 1.5rem; /* horizontal padding for content */
   line-height: 1.6;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+.description-wrapper {
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 3rem 4rem;
+  font-family: "ivymode", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  color: #222;
+  flex: 1;
+  transform: scale(1.2);
 }
 
 .description-wrapper {
@@ -170,11 +183,27 @@ body.subpage,
   transform: scale(1.2);
 }
 
+/* Hero video */
+.description-wrapper {
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 3rem 4rem;
+  font-family: "ivymode", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  color: #222;
+  flex: 1;
+  transform: scale(1.2);
+}
+
 .top-content {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 0 auto 2rem;
+  justify-content: center; /* Center horizontally */
+  gap: 1rem;               /* Space between video and cast/crew */
+  max-width: 1400px;       /* Limit total width */
+  margin: 0 auto 2rem;     /* Center and add bottom margin */
   box-sizing: border-box;
 }
 
@@ -182,7 +211,8 @@ body.subpage,
   flex: 1 1 60%;
   padding: 1rem;
   background: #afbb98;
-  border-radius: 30px 10px 50px 5px;
+  box-shadow: inset 0 0 30px 10px rgba(255, 255, 255, 0.6);
+  border-radius: 30px 10px 50px 5px; /* top-left, top-right, bottom-right, bottom-left */
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   display: flex;
   justify-content: center;
@@ -190,8 +220,7 @@ body.subpage,
   position: relative;
 }
 
-.video-frame iframe,
-.video-frame video {
+.video-frame iframe {
   width: 622px;
   height: 350px;
   border-radius: 8px;
@@ -200,14 +229,23 @@ body.subpage,
   box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
 }
 
-.video-wrapper video,
-.video-wrapper iframe {
+.video-frame video,
+.video-frame iframe {
+  width: 622px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: none;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(126, 37, 19, 0.5);
+}
+
+.video-wrapper video {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
   border-radius: 10px;
-  border: none;
 }
 
 .play-button {
@@ -218,20 +256,31 @@ body.subpage,
   font-size: 4rem;
   color: white;
   text-shadow: 0 0 15px rgba(0,0,0,0.8);
-  pointer-events: none;
+  pointer-events: none; /* so clicks go through to the wrapper */
   user-select: none;
 }
 
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+/* Cast and crew containers side-by-side */
 .cast-crew-columns {
-  flex: 1 1 40%;
+  flex: 1 1 40%;  /* Use rest of horizontal space */
   display: flex;
   flex-direction: row;
   gap: 1rem;
   height: 100%;
-  max-width: 580px;
+  max-width: 580px; /* 280 + 280 + gap, adjust if needed */
 }
 
+/* Individual cast and crew boxes */
 .cast-box, .crew-box {
+  writing-mode: horizontal-tb;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 8px;
@@ -267,10 +316,29 @@ body.subpage,
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: calc(100% + 8rem);
-  margin: 2rem -4rem 0 -4rem;
+  width: 100%;
+  max-width: 1400px;   /* Stretch beyond your usual 1300px limit */
+  margin-left: auto;   /* Push left edge inward */
+  margin-right: 0;     /* Allow full extension to the right */
   box-sizing: border-box;
 }
+
+
+/* Synopsis strip below everything */
+.synopsis-strip {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  width: calc(100% + 8rem); /* add left+right padding */
+  margin: 2rem -4rem 0 -4rem; /* pull left and right by padding amount */
+  box-sizing: border-box;
+  max-width: none;
+}
+
+
 
 .synopsis-strip h2 {
   font-family: "ivymode", sans-serif;
@@ -283,33 +351,54 @@ body.subpage,
   font-size: 1.5rem;
   line-height: 1.6;
   text-align: justify;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-weight: 300;
 }
 
+
+@media (max-width: 768px) {
+  .top-content {
+    flex-direction: column;
+  }
+
+  .cast-crew-columns {
+    flex-direction: column;
+  }
+
+  .video-frame iframe {
+    height: 250px;
+  }
+}
+
 footer {
-  background: #000;
+  position: fixed; /* or absolute if you want fixed at bottom */
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #000;
   color: #fff;
-  padding: 0.6rem 0;
+  padding: 0.2rem 0;
   user-select: none;
   letter-spacing: 1px;
   font-family: "ivymode", sans-serif;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
 }
-
 .indiegogo-section {
   display: flex;
   gap: 2.5rem;
-  background-color: #afbb98;
-  padding: 2rem;
+  background-color: #afbb98; /* soft olive-green tone */
+  padding: 2rem 2rem;
   color: #000;
   font-family: "ivymode", sans-serif;
   font-weight: 200;
   border-radius: 12px;
   max-width: 1300px;
-  height: 600px;
+  height: 600px;      /* container taller */
   margin: 4rem auto;
   box-shadow: 0 8px 20px rgba(175, 187, 152, 0.35);
   align-items: center;
@@ -320,8 +409,8 @@ footer {
   max-width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  justify-content: center;  /* vertically center text + button */
+  height: 100%;             /* fill container height */
 }
 
 .indiegogo-text p {
@@ -332,9 +421,9 @@ footer {
   border-radius: 12px;
   padding: 1.5rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  flex-grow: 1;
-  overflow-y: auto;
+  margin-bottom: 2rem;  /* some breathing room between text and button */
+  flex-grow: 1;         /* let paragraph fill available vertical space */
+  overflow-y: auto;     /* scroll if content is too long */
 }
 
 .indiegogo-button {
@@ -348,7 +437,7 @@ footer {
   font-size: 1.7rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 4px 6px rgba(34, 57, 62, 0.25);
-  align-self: center;
+  align-self: center; /* ✨ this centers it horizontally in the flex column */
 }
 
 .indiegogo-button:hover,
@@ -366,14 +455,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 1rem 2rem;
+  height: 100%;      /* fill container height */
+  padding: 1rem 2rem; /* reduce vertical padding to fit video */
 }
 
 .indiegogo-video iframe {
   width: 100%;
-  height: 100%;
-  max-height: 550px;
+  height: 100%;     /* make iframe fill the video container vertically */
+  max-height: 550px; /* limit max height to keep some padding inside the section */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: none;

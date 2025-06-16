@@ -312,28 +312,45 @@ body, html {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 1rem !important;
-    gap: 1rem;
+    padding: 0.5rem 1rem !important;
+    gap: 0.5rem;
+    background-color: #f4eee6;
   }
 
-  .header-left,
+  .header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    height: 40px !important; /* Much smaller */
+    margin: 0;
+  }
+
+  .brand span {
+    font-size: 16px !important; /* Reduce brand text size */
+    line-height: 1.2;
+  }
+
   .header-right {
     display: flex !important;
-    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    align-items: center;
   }
 
   .header-right nav {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    font-size: 1.5rem;
+    gap: 0.8rem;
+    font-size: 1rem !important; /* Shrink nav text */
+    flex-wrap: wrap;
     justify-content: center;
   }
 
-  .logo {
-    height: 60px !important;
+  nav a, .dropbtn {
+    font-size: 1rem !important; /* Even smaller nav links */
+    padding: 0.25rem;
   }
 }
 

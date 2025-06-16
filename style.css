@@ -208,7 +208,6 @@ body .signature {
   padding: 2rem;
 }
 
-@media (max-width: 768px) {
   .photo-quote-container {
     flex-direction: column;
     text-align: center;

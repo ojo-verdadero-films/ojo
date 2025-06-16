@@ -592,4 +592,5 @@ footer {
     font-size: 0.8rem !important;
     background-color: #000 !important;
     color: #fff !important;
+    position: absolute;
   }

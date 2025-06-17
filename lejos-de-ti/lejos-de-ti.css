@@ -389,13 +389,18 @@ footer {
     flex-direction: column;
     padding: 1rem;
   }
-
+  
+  .brand span {
+  display: block;
+  font-size: 30px;
+  }
+  
   .logo {
-    height: 60px; /* smaller logo */
+    height: 40px; /* smaller logo */
   }
 
   .header-right nav {
-    font-size: 16px;
+    font-size: 20px;
     flex-wrap: wrap;
     gap: 0.8rem;
     justify-content: center;
@@ -467,6 +472,9 @@ footer {
 
   .indiegogo-video iframe {
     max-height: 220px;
+  }
+  .indiegogo-button {
+  align-self: center; /* ✨ this centers it horizontally in the flex column */
   }
 }
 

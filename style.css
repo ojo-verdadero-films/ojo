@@ -824,12 +824,14 @@ body, html {
 
   .flower-section {
     height: 500px;
+    width: 100%;
     background-image: url('../images/your-flower-image.jpg'); /* Update as needed */
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    display: block;
+    background-size: 100% auto;
   }
 
-}

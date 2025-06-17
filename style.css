@@ -264,4 +264,15 @@ body .signature {
     background-color: #000;
     color: #fff;
   }
+  .flower-border-container {
+  width: 100%;
+  height: 10px;
+  background-image: url('../images/flowers.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin-top: 0;
+  background-color: #fac3bb;
+  background-size: 100% auto
+}
   

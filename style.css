@@ -756,6 +756,10 @@ body, html {
     width: 700vw; /* full viewport width */
     overflow-x: hidden;
   }
+  .flower-border-container {
+  border: 10px solid transparent;
+  border-image: 30 stretch;
+}
 
   /* If flower-border-container and plaid-border-container hold images, make sure they fill */
   .flower-border-container,

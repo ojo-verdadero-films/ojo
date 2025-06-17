@@ -683,14 +683,14 @@ body, html {
   }
 
   .signature {
-    align-self: center;
+    align-items: center;
     font-size: 3rem;
   }
 
   .photo-content {
-    max-width: 100%;
+    max-width: 95%;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
   }
 
   .portfolio-section {

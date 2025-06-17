@@ -760,6 +760,14 @@ body, html {
   .email-signup button {
     width: 100%;
   }
-
+  .flower-section {
+  height: 80vh; /* Adjust as needed */
+  background-image: url('../images/your-flower-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
 }
 

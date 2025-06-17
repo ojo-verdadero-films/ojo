@@ -338,7 +338,8 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;  /* some breathing room between text and button */
   flex-grow: 1;         /* let paragraph fill available vertical space */
-  overflow-y: auto;     /* scroll if content is too long */
+  overflow-y: auto;  
+  align-text: center;/* scroll if content is too long */
 }
 
 .indiegogo-button {

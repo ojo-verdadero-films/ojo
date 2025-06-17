@@ -691,7 +691,12 @@ body, html {
     width: 100%;
   }
 
- .portfolio-item img {
+  .portfolio-section {
+  height: auto;         /* Allow content to grow */
+  overflow: visible;    /* Make sure it doesn't get clipped */
+}
+ 
+  .portfolio-item img {
   width: 100%;
   height: 480px; /* was 420px */
   object-fit: contain;
@@ -817,6 +822,10 @@ body, html {
   background-image: url('path-to-your-plaid-image.png');
   background-repeat: repeat-x; /* or no-repeat depending on your pattern */
   background-size: contain; /* or adjust based on your image */
+}
+  .main-content-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 }

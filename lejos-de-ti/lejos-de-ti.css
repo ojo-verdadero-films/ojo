@@ -417,32 +417,23 @@ footer {
     padding: 1rem;
   }
 
- .video-frame {
-  width: 100vw;
-  margin-left: calc(-1 * (100vw - 100%) / 2);
-  box-sizing: border-box;
-}
-
   .video-frame iframe {
     width: 100%;
     height: 200px;
   }
 
-  .cast-crew-columns {
-  width: 100vw;
-  margin-left: calc(-1 * (100vw - 100%) / 2);
-  box-sizing: border-box;
-}
-
   .cast-box, .crew-box {
     width: 100%;
     height: auto;
   }
-
-  /* Synopsis strip */
- .synopsis-strip {
-  width: 100vw;         /* Take full viewport width */
-  margin-left: calc(-1 * (100vw - 100%) / 2); /* Remove container padding if needed */
+  
+.video-frame,
+.cast-crew-columns,
+.synopsis-strip {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 

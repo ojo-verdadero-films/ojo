@@ -112,41 +112,6 @@
   });
 </script>
 
-
-  <section class="sponsorships-section">
-  <h2>Sponsorships and Collaborations</h2>
-  <div class="logo-wrapper">
-    <img src="images/Triple-S Logo.png" alt="Sponsor 1" class="sponsor-logo" />
-    <img src="images/Sony Logo.png" alt="Sponsor 2" class="sponsor-logo" />
-  </div>
-</section>
-
- <section class="quote-block fade-in" id="quote-section">
-  <div class="photo-quote-container">
-    <img src="images/Paola_3.jpg" alt="Paola Chavez" class="profile-photo" />
-    <div class="quote-text">
-      <p class="quote-line">"The stories have to come from deep within, and that takes time because for me, writing is suffering. Writing is the wound and filmmaking is the knife.  But once it’s on the page and you’re on set, something shifts. I become almost masochistic. It’s where you come to know the pain most intimately. It has to become a friend so you can push harder — because to get it right on camera, you have to keep bleeding."</em></p>
-      <p class="quote-credit">– Paola Chavez</p>
-    </div>
-</section>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const fadeInElements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.2
-    });
-
-    fadeInElements.forEach(el => observer.observe(el));
-  });
-</script>
-
  <section class="contact-section" id="contact">
   <div class="marquee">
     <span>

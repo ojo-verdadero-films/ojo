@@ -788,6 +788,7 @@ body, html {
     display: flex; 
     flex-direction: column;
     align-items: center;
+    height: auto;
     padding: 0.5rem 1rem;
     gap: 0.5rem;
     background-color: #f4eee6; /* same as desktop */

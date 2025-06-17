@@ -456,15 +456,18 @@ footer {
     font-size: 12px;
     font-family: "nitti-typewriter-cameo", sans-serif;
   }
-
-   footer {
-    text-align: center;
-    padding: 0.5rem 0;
-    font-size: 0.8rem;
+  
+  footer {
+    position: static;
+    width: 100vw;
     background-color: #000;
     color: #fff;
+    padding: 0.4rem 0;
+    font-family: "ivymode", sans-serif;
+    text-align: center;
+    z-index: 999;
   }
-
+  
   .indiegogo-section {
   display: flex;
   flex-direction: column;

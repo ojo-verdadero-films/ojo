@@ -809,7 +809,7 @@ body, html {
 }
 
 .plaid-border-container {
-  position: relative;
+  position: absolute;
   bottom: 0; /* Stick it to bottom of plaid-section */
   left: 0;
   width: 100%;

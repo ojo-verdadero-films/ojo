@@ -655,11 +655,17 @@ body, html {
   .dropdown-content a:hover {
     text-decoration: underline;
   }
+  
   .bottom-wrapper {
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem;
+    padding: 1rem 0;  
     text-align: center;
+    width: 100%
+    width: 100vw;          /* full viewport width */
+    max-width: none;       /* prevent restriction */
+    margin: 0 auto;        /* center if needed */
+    box-sizing: border-box;
   }
 
   .text-side {
@@ -690,8 +696,10 @@ body, html {
  .portfolio-item img {
   width: 100%;
   height: 480px; /* was 420px */
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  max-height: 600px; /* or whatever looks good */
+  object-position: center; /* ensures focus is centered */
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -707,12 +715,12 @@ body, html {
   }
 
   .philosophy-section h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .philosophy-text {
-    font-size: 1.2rem;
-    text-align: left;
+    font-size: 2rem;
+    text-align: center;
   }
 
   .contact-heading {

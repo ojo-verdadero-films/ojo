@@ -822,7 +822,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 300px;
-    background-image: url('../images/your-plaid-image.png'); /* Update path */
+    background-image: url('../images/your-plaid-image.png'); /* Update as needed */
     background-repeat: repeat-x;
     background-size: contain;
   }
@@ -834,7 +834,7 @@ body, html {
 
   .flower-section {
     height: 120px;
-    background-image: url('../images/your-flower-image.jpg'); /* Update path */
+    background-image: url('../images/your-flower-image.jpg'); /* Update as needed */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

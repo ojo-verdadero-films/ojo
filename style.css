@@ -659,8 +659,7 @@ body, html {
   .bottom-wrapper {
     flex-direction: column; 
     text-align: center;
-    width: 100%
-    width: 100vw;          /* full viewport width */
+    width: 100%;
     max-width: none;       /* prevent restriction */
     margin-bottom: 0;
     padding-bottom: 0;      /* center if needed */

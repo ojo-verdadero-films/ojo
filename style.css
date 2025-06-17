@@ -793,6 +793,9 @@ body, html {
     gap: 0.5rem;
     background-color: #f4eee6; /* same as desktop */
   }
+  header, nav {
+    overflow: visible;
+  }
   .hero-text {
     text-align: center;
   }
@@ -924,6 +927,28 @@ body, html {
     right: 1.5rem;
     padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
+  }
+  nav a.portfolio {
+    display: block;      /* full width */
+    width: 100%;         /* fill container */
+    padding: 1rem;       /* consistent padding */
+    font-size: 1.1rem;   /* adjust font size if needed */
+  }
+  /* Dropdown inside nav item */
+  nav li .dropdown {
+    position: relative;  /* stack dropdown below */
+    top: 0;
+    left: 0;
+    width: 100%;         /* full width of parent */
+    box-shadow: none;    /* no shadow on mobile */
+    background: #fff;
+    display: none;       /* hidden by default */
+  }
+
+  /* Show dropdown when parent is active (or hovered if you use hover) */
+  nav li.active .dropdown,
+  nav li:hover .dropdown {
+    display: block;
   }
 }
 

@@ -126,17 +126,19 @@ nav a,
 }
 
 .bottom-wrapper {
-  max-width: 2000px;     /* a reasonable max width */
-  min-height: 700px;
-  margin: 0rem auto;     /* vertical margin + auto center horizontally */
-  display: flex;
-  gap: 5rem;
-  align-items: center;
-  background-color: #fbcfc9;
-  padding: 0 2rem;       /* padding inside so content doesn’t hug edges */
-  box-sizing: border-box;
-  justify-content: center; /* center flex children horizontally */
-}
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center horizontally */
+    text-align: center;     /* center text inside */
+    padding: 1rem;          /* some padding around */
+    gap: 1rem;              /* spacing between child elements */
+  }
+
+  /* Make sure the children inside bottom-wrapper take full width */
+  .bottom-wrapper > * {
+    width: 100%;
+    max-width: 100%;
+  }
 
 .text-side {
   flex: 1 1 600px;
@@ -777,24 +779,44 @@ body, html {
   /* Bottom wrapper stacks vertically on mobile */
   .bottom-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center horizontally */
+    text-align: center;     /* center text inside */
     padding: 1rem;
     gap: 1rem;
+    box-sizing: border-box; /* consistent box model */
   }
 
-  .text-side,
+  /* Text side: full width, keep box styling */
+  .text-side {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Signature styling (assuming inside text-side or separate class) */
+  .signature {
+    margin-top: 1.5rem;
+    font-family: 'Cursive', sans-serif; /* or your chosen signature font */
+    font-size: 1.1rem;
+    color: #b33; /* example romantic pink/red */
+  }
+
+  /* Photo content: full width with consistent box style */
   .photo-content {
     width: 100%;
     max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 
   .photo-content img {
     width: 100%;
     height: auto;
+    border-radius: 8px; /* same radius as other pages */
     object-fit: cover;
-    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow for consistency */
   }
 
   /* Header adjustments */

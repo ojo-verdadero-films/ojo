@@ -805,7 +805,7 @@ body, html {
   .wave-container {
     margin-top: 0;
     padding-top: 0;
-    height: 500px;
+    height: 200px;
     overflow: hidden;
     display: block;
     background-size: contain;

@@ -684,6 +684,7 @@ body, html {
 
   .signature {
     align-items: center;
+    text-align: center;
     font-size: 3rem;
   }
 
@@ -826,7 +827,7 @@ body, html {
   }
 
   .flower-section {
-    height: 500px;
+    height: 200px;
     width: 100%;
     background-image: url('../images/your-flower-image.jpg'); /* Update as needed */
     background-size: contain;

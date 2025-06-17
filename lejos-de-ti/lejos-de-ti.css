@@ -312,7 +312,8 @@ footer {
   font-weight: 200;
   border-radius: 12px;
   max-width: 1300px;
-  height: 600px;      /* container taller */
+  min-height: 600px; /* optional floor */
+  height: auto;       /* allows it to grow with content */
   margin: 4rem auto;
   box-shadow: 0 8px 20px rgba(175, 187, 152, 0.35);
   align-items: center;

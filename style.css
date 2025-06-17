@@ -469,7 +469,7 @@ body .signature {
   width: 100%;
   white-space: nowrap;
   font-family: "rl-limo", sans-serif;
-  font-size: 10rem;
+  font-size: 15rem;
   line-height: 0.85; /* Prevents overflow from descenders */
   color: #66021f;
   opacity: 0.10;

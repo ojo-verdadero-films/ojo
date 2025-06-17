@@ -496,7 +496,7 @@ footer {
 .indiegogo-text p {
   overflow: visible;
   max-height: none;
-  text-align: justify;
+  text-align: center;
 }
 
 .indiegogo-video {

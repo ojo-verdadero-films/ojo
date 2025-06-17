@@ -657,9 +657,7 @@ body, html {
   }
   
   .bottom-wrapper {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem 0;  
+    flex-direction: column; 
     text-align: center;
     width: 100%
     width: 100vw;          /* full viewport width */
@@ -796,20 +794,6 @@ body, html {
   gap: 1.5rem;             /* Spacing between icons */
   flex-wrap: wrap;         /* Optional: wrap on small screens */
   margin-bottom: 2rem;
-}
-
-  .flower-section {
-  height: 120vh; /* Adjust as needed */
-  background-image: url('../images/your-flower-image.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
-    text-align: center;
 }
   .wave-container {
   height: 120px;

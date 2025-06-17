@@ -597,7 +597,7 @@ body, html {
 @media (max-width: 768px) {
 
   header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 1rem 1.2rem;
@@ -605,7 +605,7 @@ body, html {
   }
 
   .header-left {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 0.25rem;
   }
@@ -621,7 +621,7 @@ body, html {
   }
 
   .header-right nav {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.25rem;
     margin-top: 0.5rem;
   }
@@ -799,6 +799,24 @@ body, html {
   .wave-container {
   height: 120px;
   overflow: hidden;
+}
+  .plaid-section {
+  position: relative;
+  width: 100%;
+  height: 180px; /* Increase this for taller wave */
+  margin-top: 2rem; /* Push it down from the previous section */
+  overflow: hidden;
+}
+
+.plaid-border-container {
+  position: absolute;
+  bottom: 0; /* Stick it to bottom of plaid-section */
+  left: 0;
+  width: 100%;
+  height: 180px; /* Match height of plaid-section */
+  background-image: url('path-to-your-plaid-image.png');
+  background-repeat: repeat-x; /* or no-repeat depending on your pattern */
+  background-size: contain; /* or adjust based on your image */
 }
 
 }

@@ -428,7 +428,7 @@ body .signature {
   line-height: 1.8;
   color: #f6e3db;
   font-family: "ivymode", sans-serif;
-  text-align: justify;
+  text-align: center;
 }
 .contact-section {
   position: relative;
@@ -753,7 +753,7 @@ body, html {
   .plaid-section {
     margin: 0;
     padding: 0;
-    width: 100vw; /* full viewport width */
+    width: 700vw; /* full viewport width */
     overflow-x: hidden;
   }
 

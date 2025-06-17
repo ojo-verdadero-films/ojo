@@ -826,30 +826,49 @@ body, html {
     align-items: center; /* keep vertical centering */
     color: #000000;
   }
-  nav a, 
-  .dropbtn {
-    font-weight: bold;
-    text-decoration: none;
-    color: #000000;
-    font-size: 16px;
-    font-family: 'Quattrocento', serif;
-    cursor: pointer;
-    padding: 0.25rem 0;
-    position: relative;
-  }
+  /* Make dropdown content hidden by default on mobile */
+.dropdown-content {
+  display: none;
+  position: static; /* so it flows naturally in the mobile layout */
+  background-color: #f4eee6; /* keep consistent bg */
+  width: 100%; /* full width for easier tap */
+  box-shadow: none; /* simpler style on mobile */
+  padding: 0; /* reset any desktop padding */
+  margin-top: 0.25rem;
+  border-radius: 0;
 }
 
-  .dropdown-content {
-    position: static; /* so dropdown doesn't overlap awkwardly */
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    background: none;
-    box-shadow: none;
-  }
-  .dropbtn {
-    cursor: pointer;
-  }
+/* Show dropdown content when parent is active (you’ll need to add a class with JS on click) */
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Dropdown button styling for mobile */
+.dropbtn {
+  cursor: pointer;
+  width: 100%; /* full width so easy to tap */
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border: none;
+  background: none;
+  color: #000;
+}
+
+/* Optional: style links inside dropdown on mobile */
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
 
   /* Portfolio grid: 1 or 2 columns max */
   .portfolio-grid {

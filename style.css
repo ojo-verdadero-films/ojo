@@ -833,8 +833,8 @@ body, html {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
     display: block;
     background-size: 100% auto;
   }

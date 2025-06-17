@@ -473,7 +473,7 @@ footer {
   margin: 0 auto 2rem auto;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: #fbcfc9; /* or whatever pink you’re using */
+  bbackground-color: #afbb98; /* soft olive-green tone */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   gap: 1.5rem;
@@ -487,12 +487,18 @@ footer {
   padding: 0;
   box-sizing: border-box;
 }
+  
+.indiegogo-text p {
+  overflow: visible;
+  max-height: none;
+  text-align: justify;
+}
 
 .indiegogo-video {
   width: 100%;
   max-width: 100%;
   height: auto;
-  padding: 0;
+  padding: 1rem;
   display: flex;
   justify-content: center;
 }

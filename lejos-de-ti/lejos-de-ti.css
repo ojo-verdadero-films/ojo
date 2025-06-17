@@ -412,12 +412,11 @@ footer {
     padding: 1rem;
   }
 
-  .video-frame {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin-bottom: 1.5rem;
-  }
+ .video-frame {
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  box-sizing: border-box;
+}
 
   .video-frame iframe {
     width: 100%;
@@ -425,10 +424,10 @@ footer {
   }
 
   .cast-crew-columns {
-    flex-direction: column;
-    max-width: 100%;
-    gap: 1rem;
-  }
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  box-sizing: border-box;
+}
 
   .cast-box, .crew-box {
     width: 100%;
@@ -436,12 +435,11 @@ footer {
   }
 
   /* Synopsis strip */
-  .synopsis-strip {
-    width: 100%;
-    margin: 2rem 0 0 0;
-    padding: 1rem;
-    border-radius: 12px;
-  }
+ .synopsis-strip {
+  width: 100vw;         /* Take full viewport width */
+  margin-left: calc(-1 * (100vw - 100%) / 2); /* Remove container padding if needed */
+  box-sizing: border-box;
+}
 
   /* Indiegogo section */
   .indiegogo-section {

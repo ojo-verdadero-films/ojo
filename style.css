@@ -44,7 +44,7 @@ header {
 
 .brand span {
   display: block;
-  font-size: 14px;
+  font-size: 28px;
   line-height: 1.3;
   color: #000000;
   font-family: "nitti-typewriter-cameo", sans-serif;
@@ -56,7 +56,7 @@ header {
 .header-right nav {
   display: flex;
   gap: 1.5rem;
-  font-size: 28px;
+  font-size: 22px;
   align-items: center;
   color: #000000;
 }

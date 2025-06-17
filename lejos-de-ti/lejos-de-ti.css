@@ -469,20 +469,22 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 700px;
+  max-width: 90px;
   margin: 0 auto 2rem auto;
-  padding: 1rem;
+  padding: 1.5rem;
   box-sizing: border-box;
   background: #fff; /* match the other boxes if needed */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .indiegogo-text {
   width: 100%;
-  font-size: 1.8rem;
-  text-align: justify;
+  font-size: 1.9rem;
+  text-align: center;
+  overflow: visible; /* ensures full content shows */
+  max-height: none;
 }
 
 .indiegogo-video {

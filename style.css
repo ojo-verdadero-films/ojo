@@ -651,8 +651,6 @@ body, html {
 .dropbtn {
   font-size: 1rem;
   text-align: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.25rem;
   font-weight: bold;
   color: #000;
@@ -661,7 +659,7 @@ body, html {
 
 /* Dropdown behavior on mobile */
 .dropdown-content {
-  display: none;
+  display: flex;
   flex-direction: column;
   box-shadow: none;
   padding: 0;
@@ -675,99 +673,166 @@ body, html {
   font-size: 1rem;
   text-decoration: none;
 }
-  .text-content,
-  .philosophy-text,
-  .stay-close-left p {
-    font-size: 1.25rem;
-  }
-  .dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: flex;
+
+.dropdown-content a:hover {
+  text-decoration: underline;
 }
-  .signature,
-  .philosophy-section h2,
-  .stay-close-left h2 {
+
+
+  .bottom-wrapper {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    background-color: pink; /* remove after debugging */
+  }
+
+  .text-side {
+    align-items: center;
+    text-align: center;
     font-size: 2rem;
   }
 
+  .text-content {
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .signature {
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .photo-content {
+    max-width: 95%;
+    margin-top: 0;
+    margin-bottom: 0rem;
+  }
+
+  .portfolio-item {
+    width: 100%;
+  }
+
   .portfolio-item img {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
+    height: 500px;
+    width: 350px; /* fixed width for a narrower container */
+    margin: 1rem auto; /* centers horizontally */
+  }
+
+  .portfolio-item:nth-child(1) img,
+  .portfolio-item:nth-child(2) img,
+  .portfolio-item:nth-child(3) img,
+  .portfolio-item:nth-child(4) img {
+    height: 500px;
+  }
+
+  .philosophy-section {
+    padding: 1rem;
+  }
+
+  .philosophy-section h2 {
+    font-size: 3rem;
+  }
+
+  .philosophy-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
   }
 
   .marquee {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 
   .contact-button {
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .stay-close-section {
+    padding: 2rem 1rem;
+  }
+
+  .stay-close-left h2 {
+    font-size: 3rem;
+  }
+
+  .stay-close-left p {
+    font-size: 1.4rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
   }
 
   .newsletter-form input,
   .newsletter-form button {
-    height: 38px;
-    font-size: 0.95rem;
+    width: 100%;
   }
 
-  .flower-border-container,
-  .wave-border,
-  .plaid-border-container {
-    height: 50px;
+  .stay-close-right {
+    flex-direction: column;
+    gap: 1rem;
   }
-  .wave-border {
+
+  .social-icons {
+  display: flex;
+  flex-wrap: nowrap;  /* Prevent wrapping */
+  gap: 1rem;          /* Space between icons */
+  align-items: center; /* Vertically center icons */
+  justify-content: flex-start; /* Align to left; use center or space-between if you want */
+}
+
+  .newsletter-form { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* add some space between input and button */
+  }
+
+  .newsletter-form input,
+.newsletter-form button {
   width: 100%;
-  height: 40px; /* adjust this as needed */
+  height: 40px; /* fixed height, adjust as needed */
+  font-size: 1rem;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+  
+  .flower-border-container {
+  height: 40px; /* You can adjust this */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fac3bb;
+}
+  .wave-border {
+    width: 100%;
+    height: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    background-color: #fac3bb;
+    display: block;
+  }
+}
+.plaid-border-container {
+  width: 100%;
+  height: 10px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; /* or contain, depending on your design */
+  background-size: 100% auto;
+  background-color: #fac3bb;
   display: block;
-}
-  .botom-wrapper {
-    font-size: 1rem;
-    justify-content: center;
-}
-.text-side {
-  display: flex;
-  flex-direction: column;  /* stack text and signature vertically */
-  align-items: flex-start; /* align all left, can be center if you want */
-  text-align: left;        /* text aligns left */
-  padding: 1rem;
-  font-size: 2rem;
-  box-sizing: border-box;
-  font-family: "ivymode", sans-serif;
-  justify-content: center;
-}
-
-.text-content {
-  font-family: "ivymode", sans-serif;
-  font-weight: 300;
-  font-size: 1rem ;
-  color: #333;
-  text-align: center;
-}
-
-body .signature {
-  font-family: "novantique-script", sans-serif; 
-  font-weight: 500 !important;
-  font-size: 2.5rem;
-  color: #000;
-  margin: 0;
-  align-items: center;
-}
-.photo-content {
-  flex: 1 1 250px;
-  max-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.photo-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 100% / 100% 100% 0 0;
-  object-fit: cover;
-  display: block;
+  margin-top: 0;
 }

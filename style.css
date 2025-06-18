@@ -773,20 +773,84 @@ body, html {
   font-size: 2rem;
 }
 
-.marquee {
-    position: relative;
-    height: 120px; /* slightly reduced height */
-    font-size: 5rem; /* smaller text size for mobile */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+.marquee-wrapper {
+  position: relative;
+  height: 9rem; /* Slightly smaller than font-size to account for descenders */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgb(0, 0, 0);
+}
 
-  .marquee span {
-    padding-left: 100%;
-    animation: scroll-left 40s linear infinite;
-    white-space: nowrap;
+.marquee {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-55%); /* Slightly more than 50% to nudge up */
+  width: 100%;
+  white-space: nowrap;
+  font-family: "rl-limo", sans-serif;
+  font-size: 10rem;
+  line-height: 0.85; /* Prevents overflow from descenders */
+  color: #66021f;
+  opacity: 0.10;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+
+
+.marquee span {
+  display: inline-block;
+  animation: marquee-scroll 200s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.contact-button-wrapper {
+  position: absolute;
+  z-index: 1;
+}
+
+.contact-button {
+  background-color: #ffe9ec;
+  color: #a26e75;
+  font-family: "rl-limo", sans-serif;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transform: translateY(-50%);
+}
+
+.rolling-banner {
+  background-color: #f9f3f1;
+  padding: 6rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.banner-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #847e52;
+  animation: scrollText 15s linear infinite;
+}
 
   .contact-button {
     position: absolute;

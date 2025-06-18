@@ -973,18 +973,11 @@ body, html {
   background-color: #fac3bb;
 }
 .wave-border {
-  display: block;
-  width: 100%;
-  height: 40px; /* adjust based on your image's real height */
-  background-image: url('/images/waves-orange.svg'); /* ✅ Check this path */
-  background-repeat: no-repeat;
+  height: 40px; /* You can adjust this */
+  background-size: cover;
   background-position: center;
-  background-color: #fbcfc9;  /* match higher section background exactly */
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-  border: none;
-}
+  background-repeat: no-repeat;
+  background-color: #fac3bb;
 
 .plaid-border-container {
   width: 100%;

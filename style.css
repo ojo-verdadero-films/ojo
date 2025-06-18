@@ -889,14 +889,14 @@ body, html {
 .wave-border {
   display: block;
   width: 100%;
-  height: 30px; /* or whatever size you want */
-  background-image: url('/images/wave-orange.svg'); /* ✅ check this path */
+  height: 30px; /* Adjust depending on your wave image’s real height */
+  background-image: url('/images/waves-orange.svg'); /* ✅ Check this path */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%; /* ⬅️ STRETCHES to fill container */
-  background-color: #e78e6f; /* match adjacent section exactly */
-  padding: 0;
+  background-size: 100% 100%;  /* ⬅️ fully stretch the image to fill */
+  background-color: transparent; /* fallback in case image fails */
   margin: 0;
+  padding: 0;
   line-height: 0;
 }
 

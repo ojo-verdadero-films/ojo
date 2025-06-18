@@ -1016,7 +1016,412 @@ body, html {
 }
 
   @media (max-width: 375px) {
-  .wave-border {
+  .text-content {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+  header {
+    display: flex;
+    flex-direction: column;     /* Stack vertically */
+    align-items: center;        /* Center horizontally */
+    justify-content: center;    /* Center vertically */
+    gap: 0.75rem;
+    height: auto;
+    margin-top: 0rem;
+    padding-top: 1rem;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;        /* Logo and brand side by side */
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .logo {
+    height: 90px;
+    margin: 0;
+  }
+
+  .brand span {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .header-right nav {
+    display: flex;
+    flex-direction: row;        /* Nav links side by side */
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav a,
+.dropbtn {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.25rem;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Quattrocento', serif;
+}
+
+/* Dropdown behavior on mobile */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  padding: 0;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Hide dropdown initially */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #5a1e1e;
+  min-width: 160px;
+  z-index: 1;
+  flex-direction: column;
+  padding: 0;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Show on hover (desktop fallback) */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Show on click – JavaScript required for mobile */
+
+
+  .bottom-wrapper {
+    flex-direction: column;
+    text-align: justify;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .text-side {
+    align-items: center;
+    text-align: justify;
+    font-size: 2rem;
+  }
+
+  .text-content {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .signature {
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.25rem; /* tighter spacing */
+  }
+
+  .photo-content {
+  max-width: 400px;     /* Reduce size */
+  margin-bottom: 1rem;  /* Give space before wave border */
+  margin-top: 0; /* prevent added space */
+}
+
+.photo-content img {
+  max-height: 500px;    /* Optional cap on height */
+  object-fit: cover;
+}
+.portfolio-item {
+  width: 380px;
+  height: 600px; /* your reference size */
+  background: #d1a48194;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+  font-family: 'Quattrocento', serif;
+  color: #111;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top:2rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* fills space, crops if needed */
+  object-position: top;        /* crops from top instead of center */
+  display: block;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.portfolio-item p {
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+}
+  .philosophy-section {
+    padding: 1rem;
+  }
+
+  .philosophy-section h2 {
+  font-size: 2.2rem;        /* down from 3rem */
+  margin-bottom: 1rem;
+}
+
+.philosophy-text {
+  font-size: 1.4rem;        /* down from 2rem */
+  line-height: 1.4;         /* tighter lines */
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ .contact-heading {
+  font-size: 2rem;
+}
+
+.marquee-wrapper {
+  position: relative;
+  height: 9rem; /* Slightly smaller than font-size to account for descenders */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.marquee {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-55%); /* Slightly more than 50% to nudge up */
+  width: 100%;
+  white-space: nowrap;
+  font-family: "rl-limo", sans-serif;
+  font-size: 10rem;
+  line-height: 0.85; /* Prevents overflow from descenders */
+  color: #66021f;
+  opacity: 0.10;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+
+
+.marquee span {
+  display: inline-block;
+  animation: marquee-scroll 200s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.contact-button-wrapper {
+  position: absolute;
+  z-index: 1;
+}
+
+.contact-button {
+  background-color: #ffe9ec;
+  color: #a26e75;
+  font-family: "rl-limo", sans-serif;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transform: translateY(-50%);
+}
+
+.rolling-banner {
+  background-color: #f9f3f1;
+  padding: 6rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.banner-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #847e52;
+  animation: scrollText 15s linear infinite;
+}
+
+  .contact-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;          /* ⬅️ smaller button text */
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    background-color: #fce4e4;
+    color: #7e4561;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .stay-close-section {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically (if you want) */
+  flex-direction: column;    /* stack children vertically */
+  padding: 2rem 1rem;
+  text-align: center;        /* also centers text inside h2 and p */
+}
+
+  .stay-close-left h2 {
+    font-size: 3rem;
+  }
+
+  .stay-close-left p {
+    font-size: 1.4rem;
+  }
+
+  .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ✅ centers both input and button */
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;           /* ✅ centers the form container */
+}
+
+.newsletter-form input[type="email"] {
+  width: 100%;
+  height: 48px;                /* ⬅️ slightly taller */
+  font-size: 1rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  border: 1px solid #7e2513;
+  box-sizing: border-box;
+  font-family: 'Quattrocento', serif;
+}
+
+.newsletter-form button {
+  padding: 0.6rem 1.5rem;       /* ⬅️ shorter and more compact */
+  font-size: 1.1rem;
+  background-color: #7e2513;
+  color: #fff;
+  border: none;
+  border-radius: 12px;          /* ⬅️ more rounded */
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Quattrocento', serif;
+  transition: background-color 0.3s ease;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
+}
+
+.newsletter-form button:hover {
+  background-color: #5a1a0f;
+}
+  .stay-close-right {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .social-icons {
+  display: flex;
+  flex-direction: row;     /* ⬅️ force horizontal layout */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;              /* space between icons */
+  margin-top: 1.5rem;
+}
+
+ .newsletter-form { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 20px;
+}
+
+.newsletter-form input {
+  height: 15px; /* slightly taller input */
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.newsletter-form button {
+  height: 36px; /* shorter, chubbier */
+  font-size: 1rem;
+  padding: 0 1.25rem;
+  border-radius: 999px; /* pill shape like the marquee */
+  border: none;
+  background-color: #e88364; /* or your brand color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #cf6b4d;
+}
+  
+  .flower-border-container {
+  height: 40px; /* You can adjust this */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fac3bb;
+}
+
+.plaid-border-container {
+  width: 100%;
+  height: 80px; /* ⬅️ Make this larger so the plaid is visible */
+  background-image: url('/images/plaid.png'); /* ✅ Make sure this path is correct */
+  background-repeat: repeat-x; /* repeat horizontally */
+  background-position: center;
+  background-size: auto 100%; /* ⬅️ Keeps the height full, auto-scales width */
+  background-color: #fac3bb;  /* optional: matches surrounding sections */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+  body {
+  margin: 0;
+  padding: 0;
+}
+  }
+    .wave-border {
     height: 80px; /* or larger — experiment with 50–80px */
     background-size: cover; /* maintain aspect ratio */
     margin-bottom: 0rem;

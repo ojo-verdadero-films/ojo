@@ -939,7 +939,7 @@ body, html {
 }
 
 .newsletter-form input {
-  height: 60px; /* slightly taller input */
+  height: 15px; /* slightly taller input */
   width: 100%;
   font-size: 1.1rem;
   padding: 0 1rem;

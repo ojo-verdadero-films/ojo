@@ -319,56 +319,45 @@ body .signature {
 }
 
 .marquee {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-55%); /* Slightly more than 50% to nudge up */
-  width: 100%;
-  white-space: nowrap;
-  font-family: "rl-limo", sans-serif;
+  position: relative;
+  height: 160px; /* or however tall your marquee should be */
+  overflow: hidden;
+  background-color: #fddbd3;
   font-size: 10rem;
-  line-height: 0.85; /* Prevents overflow from descenders */
-  color: #66021f;
-  opacity: 0.10;
-  z-index: 1;
-  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-
-
 
 .marquee span {
   display: inline-block;
-  animation: marquee-scroll 200s linear infinite;
+  padding-left: 100%;
+  animation: scroll-left **60s** linear infinite; /* ⬅️ slowed from 20s to 60s */
+}
+
   white-space: nowrap;
 }
 
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
-.contact-button-wrapper {
-  position: absolute;
-  z-index: 1;
+@keyframes scroll-left {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 
 .contact-button {
-  background-color: #ffe9ec;
-  color: #a26e75;
-  font-family: "rl-limo", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 1.8rem;
   padding: 1rem 2rem;
-  font-size: 2rem;
-  font-weight: bold;
-  border-radius: 8px;
+  background-color: #fce4e4;
   border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transform: translateY(-50%);
+  border-radius: 12px;
+  color: #7e4561;
+  font-weight: bold;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .rolling-banner {

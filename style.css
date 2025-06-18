@@ -608,9 +608,13 @@ body, html {
 
 @media (max-width: 768px) {
   body {
-    font-size: 14px; /* smaller base size */
-    padding: 0.5rem;
-  }
+  padding: 0.5rem 1rem; /* Add horizontal padding */
+}
+
+.text-content {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
   header {
     display: flex;
     flex-direction: column;     /* Stack vertically */
@@ -667,16 +671,25 @@ body, html {
   align-items: center;
 }
 
-.dropdown-content a {
-  padding: 0.5rem 0;
-  color: #000;
-  font-size: 1rem;
-  text-decoration: none;
+/* Hide dropdown initially */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #5a1e1e;
+  min-width: 160px;
+  z-index: 1;
+  flex-direction: column;
+  padding: 0;
+  gap: 0.25rem;
+  align-items: center;
 }
 
-.dropdown-content a:hover {
-  text-decoration: underline;
+/* Show on hover (desktop fallback) */
+.dropdown:hover .dropdown-content {
+  display: flex;
 }
+
+/* Show on click – JavaScript required for mobile */
 
 
   .bottom-wrapper {

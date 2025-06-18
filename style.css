@@ -769,58 +769,39 @@ body, html {
   text-align: center;
 }
 
-  .contact-section {
-  display: flex;
-  align-items: center;      /* vertically center both children */
-  justify-content: space-between;
-  padding: 2rem;
-  gap: 2rem;
-  flex-wrap: wrap;          /* allow stacking on smaller screens */
-  background-color: #fddbd3; /* or whatever your color is */
-}
-  .contact-heading {
-    font-size: 2rem;
+ .contact-heading {
+  font-size: 2rem;
 }
 
 .marquee {
-  position: relative;
-  height: 160px; /* or however tall your marquee should be */
-  overflow: hidden;
-  background-color: #fddbd3;
-  font-size: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+    position: relative;
+    height: 120px; /* slightly reduced height */
+    font-size: 5rem; /* smaller text size for mobile */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll-left 20s linear infinite;
-  white-space: nowrap;
-}
+  .marquee span {
+    padding-left: 100%;
+    animation: scroll-left 40s linear infinite;
+    white-space: nowrap;
+  }
 
-@keyframes scroll-left {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
-}
-
-.contact-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  font-size: 1.8rem;
-  padding: 1rem 2rem;
-  background-color: #fce4e4;
-  border: none;
-  border-radius: 12px;
-  color: #7e4561;
-  font-weight: bold;
-  white-space: nowrap;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+  .contact-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;          /* ⬅️ smaller button text */
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    background-color: #fce4e4;
+    color: #7e4561;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
 
   .stay-close-section {
     padding: 2rem 1rem;

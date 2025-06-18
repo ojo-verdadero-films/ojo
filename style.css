@@ -781,18 +781,58 @@ body, html {
   text-align: center;
 }
 
+  .contact-section {
+  display: flex;
+  align-items: center;      /* vertically center both children */
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;          /* allow stacking on smaller screens */
+  background-color: #fddbd3; /* or whatever your color is */
+}
   .contact-heading {
     font-size: 2rem;
   }
 
   .marquee {
-    font-size: 12rem;
+  flex: 1 1 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  font-size: 8rem;           /* make it huge */
+  line-height: 1;
+  animation: scroll-left 20s linear infinite;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+  .contact-button-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;  /* vertically center within section */
+}
 
-  .contact-button {
-    font-size: 1.5rem;
-    padding: 0.75rem 1.5rem;
-  }
+.contact-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Center the button */
+  z-index: 2;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  background-color: #fce4e4;
+  border: none;
+  border-radius: 12px;
+  color: #7e4561;
+  font-weight: bold;
+  cursor: pointer;
+}
 
   .stay-close-section {
     padding: 2rem 1rem;
@@ -822,10 +862,11 @@ body, html {
 
   .social-icons {
   display: flex;
-  flex-wrap: nowrap;  /* Prevent wrapping */
-  gap: 1rem;          /* Space between icons */
-  flex-direction: row;
-  justify-content: flex-start; /* Align to left; use center or space-between if you want */
+  flex-direction: row;     /* ⬅️ force horizontal layout */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;              /* space between icons */
+  margin-top: 1rem;
 }
 
   .newsletter-form { 
@@ -834,8 +875,13 @@ body, html {
     align-items: center;
     gap: 1rem; /* add some space between input and button */
   }
-
-  .newsletter-form input,
+  .newsletter-form input {
+  height: 40px;         /* match button height */
+  width: 100%;
+  font-size: 1rem;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
 .newsletter-form button {
   width: 100%;
   height: 40px; /* fixed height, adjust as needed */

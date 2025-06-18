@@ -989,7 +989,7 @@ body, html {
 
 .plaid-border-container {
   width: 100%;
-  height: 40px; /* ⬅️ Make this larger so the plaid is visible */
+  height: 80px; /* ⬅️ Make this larger so the plaid is visible */
   background-image: url('/images/plaid.png'); /* ✅ Make sure this path is correct */
   background-repeat: repeat-x; /* repeat horizontally */
   background-position: center;

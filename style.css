@@ -618,7 +618,7 @@ body, html {
     padding: 2rem 2rem 1.5rem 2rem; /* ⬅️ top padding increased */
     gap: 0.75rem;
     height: auto;
-    margin-top: 0;
+    margin-top: 1rem;
     padding-top: 0;
   }
 
@@ -874,6 +874,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     gap: 1rem; /* add some space between input and button */
+    height: 40px;         /* match button height */
   }
   .newsletter-form input {
   height: 40px;         /* match button height */
@@ -901,7 +902,7 @@ body, html {
   display: block;
   width: 100%;
   height: 30px; /* or whatever size you want */
-  background-image: url('/images/wave-border.png'); /* ✅ check this path */
+  background-image: url('/images/wave-orange.svg'); /* ✅ check this path */
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%; /* ⬅️ STRETCHES to fill container */
@@ -913,7 +914,7 @@ body, html {
 
 .plaid-border-container {
   width: 100%;
-  height: 60px; /* ⬅️ Make this larger so the plaid is visible */
+  height: 40px; /* ⬅️ Make this larger so the plaid is visible */
   background-image: url('/images/plaid.png'); /* ✅ Make sure this path is correct */
   background-repeat: repeat-x; /* repeat horizontally */
   background-position: center;

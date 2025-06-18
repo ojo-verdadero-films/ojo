@@ -673,12 +673,6 @@ body, html {
   font-size: 1rem;
   text-decoration: none;
 }
-
-.dropdown-content a:hover {
-  text-decoration: underline;
-}
-
-
   .text-content,
   .philosophy-text,
   .stay-close-left p {

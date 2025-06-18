@@ -901,8 +901,8 @@ body, html {
   background-image: url('/images/waves-orange.svg'); /* ✅ Check this path */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%; /* ⬅️ stretches image to fill container */
-  background-color: #e78e6f;  /* match lower section background exactly */
+  background-size: 100% 120%; /* ⬅️ stretches image to fill container */
+  background-color: #fbcfc9;  /* match higher section background exactly */
   margin: 0;
   padding: 0;
   line-height: 0;

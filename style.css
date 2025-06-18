@@ -887,9 +887,10 @@ body, html {
 
   .newsletter-form {
   display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
   width: 100%;
   max-width: 400px; /* optional cap for layout control */
 }
@@ -916,6 +917,8 @@ body, html {
   font-weight: bold;
   font-family: 'Quattrocento', serif;
   transition: background-color 0.3s ease;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
 }
 
 .newsletter-form button:hover {

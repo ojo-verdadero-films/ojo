@@ -214,6 +214,7 @@ body .signature {
 
 .portfolio-item {
   width: 380px;
+  height: 600px; /* Standard poster card height */
   background: #d1a48194;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -228,7 +229,6 @@ body .signature {
   font-style: italic;
   letter-spacing: 1px;
   cursor: pointer;
-  height: auto; /* Let it grow based on content */
 }
 
 .portfolio-item:hover {
@@ -237,8 +237,7 @@ body .signature {
 
 .portfolio-item img {
   width: 100%;
-  height: auto; /* Remove hard height */
-  max-height: 600px; /* Set a max if needed */
+  height: 100%;
   object-fit: contain; /* Preserve poster aspect ratio */
   display: block;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -248,14 +247,6 @@ body .signature {
   padding: 1rem;
   font-weight: bold;
   color: #000000;
-}
-
-/* Specific portfolio item image heights */
-.portfolio-item:nth-child(1) img,
-.portfolio-item:nth-child(2) img,
-.portfolio-item:nth-child(3) img,
-.portfolio-item:nth-child(4) img {
-  height: 600px;
 }
 
 /* Portfolio Section Heading */

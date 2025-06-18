@@ -1014,3 +1014,10 @@ body, html {
   padding: 0;
 }
 
+  @media (max-width: 480px) {
+  .wave-border {
+    height: 50px; /* or larger — experiment with 50–80px */
+    background-size: cover; /* maintain aspect ratio */
+  }
+}
+

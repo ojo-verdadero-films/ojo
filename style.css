@@ -140,7 +140,7 @@ nav a,
   min-height: 700px;
   margin: 0rem auto;     /* vertical margin + auto center horizontally */
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
   align-items: center;
   background-color: #fbcfc9;
   padding: 0 2rem;       /* padding inside so content doesn’t hug edges */
@@ -167,7 +167,8 @@ nav a,
   font-size: 2.8rem ;
   color: #333;
   margin: 3rem 0 1.5rem 0;
-  text-align: center;
+  align-items: center;     /* center horizontally */
+  text-align: center;      /* center text */      
 }
 
 body .signature {
@@ -176,14 +177,15 @@ body .signature {
   font-size: 4.5rem;
   color: #000;
   margin: 0;
-  align-items: center;
+  align-items: center;     /* center horizontally */
+  text-align: center;      /* center text */       
 }
 .photo-content {
   flex: 1 1 450px;
   max-width: 500px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;     /* center horizontally */
 }
 
 .photo-content img {

@@ -742,19 +742,25 @@ body, html {
   object-fit: cover;
 }
   .portfolio-item {
+  width: 100%;
+  max-width: 360px;
+  height: 540px;                  /* 👈 Fixed height */
+  margin: 1.5rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f6e3db;      /* fallback background if images don’t fill */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
-  
-  .portfolio-item img {
+
+.portfolio-item img {
   width: 100%;
-  height: auto;            /* Let height scale naturally */
-  object-fit: contain;     /* No cropping */
+  height: 100%;
+  object-fit: contain;           /* 👈 Show whole image, even if space around it */
+  border-radius: 0;              /* if you want to keep the edges clean */
   display: block;
-  border-radius: 20px;     /* Optional: match rounded frame */
-  max-width: 400px;
-  margin: 0 auto;
 }
 
   .portfolio-item:nth-child(1) img,

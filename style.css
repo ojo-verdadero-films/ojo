@@ -781,5 +781,14 @@ body, html {
     align-items: center;
     height: 50%
   }
+  .flower-border-container {
+  height: 40px; /* You can adjust this */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fac3bb;
+  margin-top: 1rem;
+}
+
 
 }

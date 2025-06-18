@@ -869,8 +869,13 @@ body, html {
   }
 
   .stay-close-section {
-    padding: 2rem 1rem;
-  }
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically (if you want) */
+  flex-direction: column;    /* stack children vertically */
+  padding: 2rem 1rem;
+  text-align: center;        /* also centers text inside h2 and p */
+}
 
   .stay-close-left h2 {
     font-size: 3rem;

@@ -741,12 +741,21 @@ body, html {
   max-height: 500px;    /* Optional cap on height */
   object-fit: cover;
 }
+  .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   
   .portfolio-item img {
-    height: 500px;
-    width: 350px; /* fixed width for a narrower container */
-    margin: 1rem auto; /* centers horizontally */
-  }
+  width: 100%;
+  height: auto;            /* Let height scale naturally */
+  object-fit: contain;     /* No cropping */
+  display: block;
+  border-radius: 20px;     /* Optional: match rounded frame */
+  max-width: 400px;
+  margin: 0 auto;
+}
 
   .portfolio-item:nth-child(1) img,
   .portfolio-item:nth-child(2) img,

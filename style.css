@@ -625,7 +625,6 @@ body, html {
   .brand span {
     font-size: 28px;
     text-align: center;
-    word-break: break-word;
   }
 
   .header-right nav {

@@ -793,32 +793,29 @@ body, html {
 }
   .contact-heading {
     font-size: 2rem;
-  }
+}
 
-  .marquee {
+.marquee {
   position: relative;
+  height: 160px; /* or however tall your marquee should be */
   overflow: hidden;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* can be flex-start or center depending on your text */
-  height: 150px; /* or your desired height */
   background-color: #fddbd3;
   font-size: 10rem;
-  line-height: 1;
-}
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-  .contact-button-wrapper {
-  flex: 0 0 auto;
   display: flex;
-  align-items: center;  /* vertically center within section */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 
 .contact-button {
@@ -834,8 +831,8 @@ body, html {
   border-radius: 12px;
   color: #7e4561;
   font-weight: bold;
-  text-align: center;
   white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
   .stay-close-section {
@@ -901,28 +898,30 @@ body, html {
   background-repeat: no-repeat;
   background-color: #fac3bb;
 }
-  .wave-border {
-    width: 100%;
-    height: 10px;                  /* Make it a little taller */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
-    background-color: transparent;
-    display: block;
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-  }
+.wave-border {
+  display: block;
+  width: 100%;
+  height: 30px; /* or whatever size you want */
+  background-image: url('/images/wave-border.png'); /* ✅ check this path */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; /* ⬅️ STRETCHES to fill container */
+  background-color: #e78e6f; /* match adjacent section exactly */
+  padding: 0;
+  margin: 0;
+  line-height: 0;
 }
+
 .plaid-border-container {
   width: 100%;
-  height: 50px; /* ⬅️ Increase this as needed */
-  background-repeat: repeat-x;
+  height: 60px; /* ⬅️ Make this larger so the plaid is visible */
+  background-image: url('/images/plaid.png'); /* ✅ Make sure this path is correct */
+  background-repeat: repeat-x; /* repeat horizontally */
   background-position: center;
-  background-size: contain; /* or use "auto 100%" if you want vertical stretch */
-  background-image: url('/images/plaid.png'); /* make sure the path is right */
-  background-color: #fac3bb; /* fallback color if image doesn't cover */
+  background-size: auto 100%; /* ⬅️ Keeps the height full, auto-scales width */
+  background-color: #fac3bb;  /* optional: matches surrounding sections */
   display: block;
   margin: 0;
   padding: 0;
 }
+

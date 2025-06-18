@@ -702,7 +702,6 @@ body, html {
     padding: 1rem;
     box-sizing: border-box;
     display: flex;
-    background-color: pink; /* remove after debugging */
   }
 
   .text-side {
@@ -725,7 +724,7 @@ body, html {
   }
 
   .photo-content {
-    max-width: 95%;
+    max-width: 120%;
     margin-top: 0;
     margin-bottom: 0rem;
   }
@@ -803,7 +802,7 @@ body, html {
   display: flex;
   flex-wrap: nowrap;  /* Prevent wrapping */
   gap: 1rem;          /* Space between icons */
-  align-items: center; /* Vertically center icons */
+  flex-direction: row;
   justify-content: flex-start; /* Align to left; use center or space-between if you want */
 }
 
@@ -838,6 +837,7 @@ body, html {
     background-size: 100% auto;
     background-color: #fac3bb;
     display: block;
+    margin-top: 1rem;
   }
 }
 .plaid-border-container {

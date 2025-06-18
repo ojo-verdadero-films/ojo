@@ -816,14 +816,41 @@ body, html {
   }
 
   .newsletter-form {
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* optional cap for layout control */
+}
 
-  .newsletter-form input,
-  .newsletter-form button {
-    width: 100%;
-  }
+.newsletter-form input[type="email"] {
+  width: 100%;
+  height: 48px;                /* ⬅️ slightly taller */
+  font-size: 1rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  border: 1px solid #7e2513;
+  box-sizing: border-box;
+  font-family: 'Quattrocento', serif;
+}
 
+.newsletter-form button {
+  padding: 0.6rem 1.5rem;       /* ⬅️ shorter and more compact */
+  font-size: 1.1rem;
+  background-color: #7e2513;
+  color: #fff;
+  border: none;
+  border-radius: 12px;          /* ⬅️ more rounded */
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Quattrocento', serif;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #5a1a0f;
+}
   .stay-close-right {
     flex-direction: row;
     gap: 1rem;
@@ -870,15 +897,16 @@ body, html {
 .wave-border {
   display: block;
   width: 100%;
-  height: 30px; /* Adjust depending on your wave image’s real height */
+  height: 40px; /* adjust based on your image's real height */
   background-image: url('/images/waves-orange.svg'); /* ✅ Check this path */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;  /* ⬅️ fully stretch the image to fill */
-  background-color: transparent; /* fallback in case image fails */
+  background-size: 100% 100%; /* ⬅️ stretches image to fill container */
+  background-color: #e78e6f;  /* match lower section background exactly */
   margin: 0;
   padding: 0;
   line-height: 0;
+  border: none;
 }
 
 .plaid-border-container {

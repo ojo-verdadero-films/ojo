@@ -796,14 +796,16 @@ body, html {
   }
 
   .marquee {
-  flex: 1 1 auto;
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   display: flex;
   align-items: center;
-  font-size: 8rem;           /* make it huge */
+  justify-content: flex-start; /* can be flex-start or center depending on your text */
+  height: 150px; /* or your desired height */
+  background-color: #fddbd3;
+  font-size: 10rem;
   line-height: 1;
-  animation: scroll-left 20s linear infinite;
 }
 @keyframes scroll-left {
   0% {
@@ -823,7 +825,7 @@ body, html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);  /* Center the button */
+  transform: translate(-50%, -50%);
   z-index: 2;
   font-size: 1.8rem;
   padding: 1rem 2rem;
@@ -832,7 +834,8 @@ body, html {
   border-radius: 12px;
   color: #7e4561;
   font-weight: bold;
-  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
 }
 
   .stay-close-section {
@@ -904,18 +907,22 @@ body, html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
-    background-color: #fac3bb;
+    background-color: transparent;
     display: block;
-    margin-top: 0rem;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
   }
 }
 .plaid-border-container {
   width: 100%;
-  height: 10px;
-  background-repeat: no-repeat;
+  height: 50px; /* ⬅️ Increase this as needed */
+  background-repeat: repeat-x;
   background-position: center;
-  background-size: 100% auto;
-  background-color: #fac3bb;
+  background-size: contain; /* or use "auto 100%" if you want vertical stretch */
+  background-image: url('/images/plaid.png'); /* make sure the path is right */
+  background-color: #fac3bb; /* fallback color if image doesn't cover */
   display: block;
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }

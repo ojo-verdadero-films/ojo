@@ -604,11 +604,10 @@ body, html {
     flex-direction: column;     /* Stack vertically */
     align-items: center;        /* Center horizontally */
     justify-content: center;    /* Center vertically */
-    padding: 2rem 2rem 1.5rem 2rem; /* ⬅️ top padding increased */
     gap: 0.75rem;
     height: auto;
     margin-top: 1rem;
-    padding-top: 0;
+    padding-top: 1rem;
   }
 
   .header-left {
@@ -845,7 +844,7 @@ body, html {
   }
 
   .stay-close-right {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
   }
 
@@ -863,7 +862,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     gap: 1rem; /* add some space between input and button */
-    height: 40px;         /* match button height */
+    height: 50px;         /* match button height */
   }
   .newsletter-form input {
   height: 40px;         /* match button height */

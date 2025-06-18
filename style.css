@@ -730,9 +730,9 @@ body, html {
   max-height: 500px;    /* Optional cap on height */
   object-fit: cover;
 }
-  .portfolio-item {
+.portfolio-item {
   width: 380px;
-  height: 600px;                   /* ⬅️ fixed height */
+  height: 600px; /* your reference size */
   background: #d1a48194;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -748,13 +748,13 @@ body, html {
   font-style: italic;
   letter-spacing: 1px;
   cursor: pointer;
-  height: 650px; /* ⬆️ a little taller to allow for caption */
 }
 
 .portfolio-item img {
   width: 100%;
-  height: 500px;
-  object-fit: contain;           /* shows full image inside fixed space */
+  height: 100%;
+  object-fit: cover;           /* fills space, crops if needed */
+  object-position: top;        /* crops from top instead of center */
   display: block;
   border-radius: 0.5rem 0.5rem 0 0;
 }

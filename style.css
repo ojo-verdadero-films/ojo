@@ -620,7 +620,7 @@ body, html {
   }
 
   .logo {
-    height: 40px;
+    height: 60px;
     margin: 0;
   }
 
@@ -637,29 +637,41 @@ body, html {
     align-items: center;
     justify-content: center;
   }
-
+  
   nav a,
-  .dropbtn {
-    font-size: 20px;
-    text-align: center;
-  }
+.dropbtn {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.25rem;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Quattrocento', serif;
+}
 
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    background-color: transparent;
-    padding: 0;
-  }
+/* Dropdown behavior on mobile */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  gap: 0.25rem;
+  align-items: center;
+}
 
-  .dropdown-content a {
-    padding: 0.5rem 0;
-    background-color: transparent;
-    color: #000;
-  }
+.dropdown-content a {
+  padding: 0.5rem 0;
+  color: #000;
+  background-color: transparent;
+  font-size: 1rem;
+  text-decoration: none;
+}
 
-  .dropdown-content a:hover {
-    text-decoration: underline;
-  }
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
 
   .bottom-wrapper {
     flex-direction: column;
@@ -783,7 +795,7 @@ body, html {
     height: 50%
   }
   .flower-border-container {
-  height: 40px; /* You can adjust this */
+  height: 60px; /* You can adjust this */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

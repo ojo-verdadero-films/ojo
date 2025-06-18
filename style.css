@@ -162,7 +162,7 @@ nav a,
   font-size: 2.8rem ;
   color: #333;
   margin: 3rem 0 1.5rem 0;
-  text-align: justify;
+  text-align: center;
 }
 
 body .signature {
@@ -171,7 +171,7 @@ body .signature {
   font-size: 4.5rem;
   color: #000;
   margin: 0;
-  align-self: flex-start; 
+  align-items: center;
 }
 .photo-content {
   flex: 1 1 450px;

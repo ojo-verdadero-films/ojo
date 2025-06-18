@@ -32,6 +32,7 @@ header {
   z-index: 100; 
   flex-direction: row;
   margin-bottom: 0rem;
+  margin-top: 0.5rem; /* add space below top edge */
 }
 
 .header-left {
@@ -98,15 +99,21 @@ nav a,
 /* Container needs to be relative for absolute positioning */
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: flex;          /* aligns with nav items */
+  align-items: center;    /* vertical centering */
 }
 
 .dropbtn { /*this is the Portfolio button*/
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
   color: #000000;
+  font-size: 26px;
+  font-family: 'Quattrocento', serif;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .dropdown-content {

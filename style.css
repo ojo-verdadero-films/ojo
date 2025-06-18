@@ -125,8 +125,13 @@ nav a,
   display: block;
 }
 
-/* When hovering over the whole container, show the content */
-.dropdown:hover .dropdown-content {
+/* Initially hidden */
+.dropdown-content {
+  display: none;
+}
+
+/* When active class added, show menu */
+.dropdown.active .dropdown-content {
   display: block;
 }
 

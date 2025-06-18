@@ -659,7 +659,7 @@ body, html {
 
 /* Dropdown behavior on mobile */
 .dropdown-content {
-  display: flex;
+  display: none;
   flex-direction: column;
   box-shadow: none;
   padding: 0;
@@ -678,7 +678,10 @@ body, html {
   .stay-close-left p {
     font-size: 1.25rem;
   }
-
+  .dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: flex;
+}
   .signature,
   .philosophy-section h2,
   .stay-close-left h2 {

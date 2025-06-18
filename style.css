@@ -691,7 +691,7 @@ body, html {
 
   .text-side {
     align-items: center;
-    text-align: center;
+    text-align: justify;
     font-size: 2rem;
   }
 
@@ -705,12 +705,14 @@ body, html {
   .signature {
     align-items: center;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-top: 0.25rem; /* tighter spacing */
   }
 
   .photo-content {
   max-width: 400px;     /* Reduce size */
   margin-bottom: 1rem;  /* Give space before wave border */
+  margin-top: 0; /* prevent added space */
 }
 
 .photo-content img {

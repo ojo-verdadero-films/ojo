@@ -600,8 +600,8 @@ body, html {
 }
 
 @media (max-width: 768px) {
-
-  align-items: center;
+  .header {
+  align-items: column;
     justify-content: center;
     padding: 1rem 1.2rem;
     gap: 0.75rem;
@@ -615,12 +615,12 @@ body, html {
   }
 
   .logo {
-    height: 60px;
+    height: 40px;
     margin: 0;
   }
 
   .brand span {
-    font-size: 22px;
+    font-size: 28px;
     text-align: center;
     word-break: break-word;
   }

@@ -651,6 +651,8 @@ body, html {
 .dropbtn {
   font-size: 1rem;
   text-align: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
   padding: 0.25rem;
   font-weight: bold;
   color: #000;
@@ -712,7 +714,7 @@ body, html {
   .flower-border-container,
   .wave-border,
   .plaid-border-container {
-    height: 20px;
+    height: 50px;
   }
   .wave-border {
   width: 100%;
@@ -722,5 +724,50 @@ body, html {
   background-size: cover; /* or contain, depending on your design */
   display: block;
 }
+  .botom-wrapper {
+    font-size: 1rem;
+    justify-content: center;
+}
+.text-side {
+  display: flex;
+  flex-direction: column;  /* stack text and signature vertically */
+  align-items: flex-start; /* align all left, can be center if you want */
+  text-align: left;        /* text aligns left */
+  padding: 1rem;
+  font-size: 2rem;
+  box-sizing: border-box;
+  font-family: "ivymode", sans-serif;
+  justify-content: center;
+}
 
+.text-content {
+  font-family: "ivymode", sans-serif;
+  font-weight: 300;
+  font-size: 1rem ;
+  color: #333;
+  text-align: center;
+}
+
+body .signature {
+  font-family: "novantique-script", sans-serif; 
+  font-weight: 500 !important;
+  font-size: 2.5rem;
+  color: #000;
+  margin: 0;
+  align-items: center;
+}
+.photo-content {
+  flex: 1 1 250px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 100% / 100% 100% 0 0;
+  object-fit: cover;
+  display: block;
 }

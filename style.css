@@ -889,12 +889,12 @@ body, html {
 
   .newsletter-form {
   display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;
   flex-direction: column;
-  gap: 1rem;
+  align-items: center;     /* ✅ centers both input and button */
+  justify-content: center;
   width: 100%;
-  max-width: 400px; /* optional cap for layout control */
+  max-width: 400px;
+  margin: 0 auto;           /* ✅ centers the form container */
 }
 
 .newsletter-form input[type="email"] {

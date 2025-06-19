@@ -245,12 +245,17 @@ body .signature {
 }
 
 .portfolio-item p {
+  font-size: 1rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   text-align: center;
   font-weight: bold;
   color: #000;
   font-style: italic;
-  font-size: 1rem;
+  font-family: 'Quattrocento', serif;
 }
 
 /* Portfolio Section Heading */

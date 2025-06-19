@@ -823,7 +823,7 @@ body, html {
 
 .marquee span {
   display: inline-block;
-  animation: marquee-scroll 60s linear infinite; /* ✅ Slower for mobile */
+  animation: marquee-scroll 90s linear infinite; /* ✅ Slower for mobile */
   white-space: nowrap;
 }
 

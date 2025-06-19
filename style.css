@@ -133,16 +133,6 @@ nav a,
 }
 
 .bottom-wrapper {
-  display: flex;
-  flex-direction: row;       /* Text and photo side by side */
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-  gap: 5rem;
-  flex-wrap: nowrap;
-}
-
-.bottom-wrapper {
   max-width: 2000px;     /* a reasonable max width */
   min-height: 700px;
   margin: 0rem auto;     /* vertical margin + auto center horizontally */

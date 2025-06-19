@@ -754,10 +754,10 @@ body, html {
   .wave-border {
   background-image: url('/images/waves-orange.svg');
   background-color: #fcbcb2;
-  margin-top: -10px;       /* ⬅️ Tucks into top section *//
+  margin-top: -13px;       /* ⬅️ Tucks into top section *//
   margin-bottom: -10px; /* tucks into the next section */
   width: 105vw;                     /* Slightly wider for safe bleed */
-  height: 110px;
+  height: 115px;
 }
 
   @media (max-width: 375px) {

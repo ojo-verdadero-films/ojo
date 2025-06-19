@@ -298,11 +298,10 @@ body .signature {
 
 .marquee-wrapper {
   position: relative;
-  height: 9rem; /* Slightly smaller than font-size to account for descenders */
+  height: 11rem; /* Slightly smaller than font-size to account for descenders */
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border: 2px solid rgb(0, 0, 0);
 }
 
 .marquee {
@@ -320,8 +319,6 @@ body .signature {
   z-index: 1;
   box-sizing: border-box;
 }
-
-
 
 .marquee span {
   display: inline-block;
@@ -357,6 +354,7 @@ body .signature {
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
+  font-family: "rl-limo", sans-serif;
 }
 
 .rolling-banner {
@@ -423,7 +421,7 @@ body, html {
 .wave-border {
   display: block;
   width: 100vw;                            /* Full viewport width */
-  height: 40px;                            /* Make it tall enough for full wave shape */
+  height: 45px;                            /* Make it tall enough for full wave shape */
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;

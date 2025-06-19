@@ -377,7 +377,7 @@ body .signature {
 }
 
 .rolling-banner {
-  background-color: #f9f3f1;
+  background-color: #847e52;
   padding: 6rem 0;
   overflow: hidden;
   position: relative;
@@ -446,7 +446,7 @@ body, html {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  background-color: #ec8168;
+  background-color: #fbcfc9;
   margin: 0;
   padding: 0;
   border: none;
@@ -1140,7 +1140,7 @@ body, html {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  background-color: #fcbcb2;
+  background-color: #fbcfc9;
   margin-top: -20px;               /* ⬅️ Pull wave UP into top section */
   margin-bottom: -20px;            /* ⬅️ Push wave DOWN into next section */
   padding: 0;

@@ -98,7 +98,6 @@ nav a,
 /* Container needs to be relative for absolute positioning */
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .dropbtn { /*this is the Portfolio button*/
@@ -115,7 +114,10 @@ nav a,
   background-color: #7e2513;
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1000;
+  z-index: 100;
+  top: 100%;             /* 👈 makes it appear directly *below* the button */
+  left: 0;
+  flex-direction: column;
 }
 
 .dropdown-content a {

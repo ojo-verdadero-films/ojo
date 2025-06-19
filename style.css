@@ -1186,7 +1186,7 @@ body, html {
 
 .marquee-wrapper {
   position: relative;
-  height: 6rem;                     /* ⬅️ Shorter for mobile */
+  height: 5.5rem;                     /* ⬅️ Shorter for mobile */
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -1201,7 +1201,7 @@ body, html {
   width: 100%;
   white-space: nowrap;
   font-family: "rl-limo", sans-serif;
-  font-size: 5rem;                  /* ⬅️ Reduce font size for mobile */
+  font-size: 4.2rem;                  /* ⬅️ Reduce font size for mobile */
   line-height: 1;
   color: #66021f;
   opacity: 0.10;

@@ -976,18 +976,21 @@ body, html {
 }
 .wave-border {
   display: block;
-  width: 100%;
-  height: 40px; /* adjust based on your image's real height */
-  background-image: url('/images/waves-orange.svg'); /* ✅ Check this path */
+  width: 100vw;                            /* Full viewport width */
+  height: 80px;                            /* Make it tall enough for full wave shape */
+  background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
-  background-position: center;
-  background-color: #fbcfc9;  /* match higher section background exactly */
+  background-position: bottom center;
+  background-color: #ec8168;              /* Match section below the wave */
+  background-size: cover;                 /* Maintain wave proportions */
   margin: 0;
   padding: 0;
-  line-height: 0;
   border: none;
-  background-size: 100% 100%; /* ⬅️ This stretches it */
+  line-height: 0;
+  position: relative;
+  left: 0;
 }
+
 
 .plaid-border-container {
   width: 100%;

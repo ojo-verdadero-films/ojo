@@ -144,49 +144,57 @@ nav a,
 
 .bottom-wrapper {
   display: flex;
-  flex-direction: column;     /* Stack everything vertically */
-  align-items: center;        /* Center content horizontally */
+  flex-direction: row;       /* Text and photo side by side */
+  align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: 2rem;
-  padding: 2rem 1.5rem;
-  }
-
-.hero-text {
-    max-width: 90%;
-    font-size: 1.8rem;
-    text-align: center;
-    line-height: 1.5;
-  }
-
-.text-content {
-  font-family: "ivymode", sans-serif;
-  font-weight: 300;
-  font-size: 2.8rem ;
-  color: #333;
-  margin: 3rem 0 1.5rem 0;
-  align-items: center;     /* center horizontally */
-  text-align: center;      /* center text */      
+  padding: 3rem;
+  gap: 5rem;
+  flex-wrap: nowrap;
 }
 
-.body-signature {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2rem;
-  }
+.bottom-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+  text-align: justify;
+  font-size: 7rem;
+  letter-spacing: 1px;
+  font-family: "ivymode", sans-serif;
+  font-style: bold;
+  font-weight: 700;
+}
 
-  .photo-content {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.bottom-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "novantique-script", sans-serif;
+}
 
-  .photo-content img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 50%; /* Optional: if you want that circle shape */
-  }
+.signature {
+  font-size: 2.4rem;
+  text-align: left;
+  margin-top: 1.5rem;
+  font-family: "novantique-script", sans-serif;
+}
+
+.photo-content {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  height: auto;
+}
+
+.photo-content img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%; /* optional if you had a circular crop */
+}
+
+
 
 /* Portfolio Grid */
 .portfolio-grid {
@@ -652,6 +660,52 @@ body, html {
     background-repeat: no-repeat;
     background-color: #fac3bb;
   }
+
+  .bottom-wrapper {
+  display: flex;
+  flex-direction: column;     /* Stack everything vertically */
+  align-items: center;        /* Center content horizontally */
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  }
+
+.hero-text {
+    max-width: 90%;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+.text-content {
+  font-family: "ivymode", sans-serif;
+  font-weight: 300;
+  font-size: 2.8rem ;
+  color: #333;
+  margin: 3rem 0 1.5rem 0;
+  align-items: center;     /* center horizontally */
+  text-align: center;      /* center text */      
+}
+
+.body-signature {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .photo-content {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo-content img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%; /* Optional: if you want that circle shape */
+  }
   
   .wave-border {
   background-image: url('/images/waves-orange.svg');
@@ -659,6 +713,8 @@ body, html {
   margin-top: -10px;       /* ⬅️ Tucks into top section *//
   margin-bottom: -10px; /* tucks into the next section */
 }
+
+  
 
   @media (max-width: 375px) {
   .text-content {

@@ -213,8 +213,8 @@ body .signature {
 }
 
 .portfolio-item {
-  width: 380px;
-  height: 600px; /* Fixed height to ensure consistency */
+  width: 400px;               
+  height: 630px;            
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -228,6 +228,8 @@ body .signature {
   font-style: italic;
   letter-spacing: 1px;
   cursor: pointer;
+  align-items: center;
+  text-align: center;
 }
 .portfolio-item:hover {
   transform: translateY(-5px);

@@ -1008,7 +1008,7 @@ body, html {
   background-position: bottom center;
   background-size: cover;
   background-color: #ec8168;
-  margin-top: -10px;  /* pulls it down slightly */
+  margin-top: -5px;  /* pulls it down slightly */
   margin-bottom: -5px; /* tucks into the next section */
   padding: 0;
   border: none;

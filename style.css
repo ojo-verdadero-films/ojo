@@ -610,6 +610,69 @@ body, html {
   color: #7e2513;
 }
 
+@media (max-width: 768px) {
+   header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;               /* Slightly more breathing room */
+    height: auto;
+    margin-top: 0;
+    padding-top: 1.5rem;     /* Slightly more spacing */
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;             /* More space between logo & brand */
+  }
+
+  .logo {
+    height: 100px;          /* Slightly larger logo for tablet */
+    margin: 0;
+  }
+
+  .brand span {
+    font-size: 32px;        /* Bump up font for bigger screen */
+    text-align: center;
+  }
+
+  .header-right nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;           /* Space between nav links */
+    margin-top: 0.75rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav a,
+  .dropbtn {
+    font-size: 1.1rem;      /* Slightly larger for easier tapping */
+    text-align: center;
+    padding: 0.3rem;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Quattrocento', serif;
+  }
+  
+  .flower-border-container {
+    height: 60px; /* ⬅️ Slightly taller for larger screens */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fac3bb;
+  }
+  
+  .wave-border {
+  background-image: url('/images/waves-orange.svg');
+  background-color: #ec8168;
+  margin-top: -5px;       /* ⬅️ Tucks into top section *//
+  margin-bottom: -5px; /* tucks into the next section */
+}
+
   @media (max-width: 375px) {
   .text-content {
   padding: 0 1rem;

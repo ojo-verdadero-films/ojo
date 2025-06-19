@@ -642,11 +642,13 @@ body, html {
 
   .header-right nav {
     display: flex;
-    flex-direction: row;
-    gap: 0.75rem;           /* Space between nav links */
-    margin-top: 0.75rem;
+    flex-direction: row;         /* horizontal row */
+    justify-content: center;     /* center the items */
     align-items: center;
-    justify-content: center;
+    gap: 2rem;                   /* spacing between links */
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.25rem;          /* larger font for mobile */
   }
 
   .dropdown {

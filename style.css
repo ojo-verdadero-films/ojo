@@ -670,8 +670,8 @@ body, html {
   .wave-border {
   background-image: url('/images/waves-orange.svg');
   background-color: #ec8168;
-  margin-top: -5px;       /* ⬅️ Tucks into top section *//
-  margin-bottom: -5px; /* tucks into the next section */
+  margin-top: -10px;       /* ⬅️ Tucks into top section *//
+  margin-bottom: -10px; /* tucks into the next section */
 }
 
   @media (max-width: 375px) {

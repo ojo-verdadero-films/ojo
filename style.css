@@ -649,6 +649,12 @@ body, html {
     justify-content: center;
   }
 
+  .dropdown {
+    position: relative; /* 👈 Anchor for absolute dropdown */
+    width: 100%;
+    text-align: center;
+  }
+
   nav a,
   .dropbtn {
     font-size: 1.1rem;      /* Slightly larger for easier tapping */
@@ -661,7 +667,7 @@ body, html {
 
   .dropdown-content {
     display: none;
-    position: static;
+    position: absolute;
     background-color: #7e2513;
     width: 100%;
     padding: 0.5rem 0;

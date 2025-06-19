@@ -961,6 +961,9 @@ body, html {
 
   .banner-track {
     font-size: 1.25rem; /* Reduce text size */
+    display: flex;              /* make it a flex container */
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
   }
 
   .contact-form {

@@ -236,7 +236,7 @@ body .signature {
 
 .portfolio-item img {
   width: 100%;
-  height: 80%;
+  height: 90%;
   object-fit: cover;
   object-position: bottom; /* Focus on bottom (e.g. Hell Mutt title) */
   display: block;

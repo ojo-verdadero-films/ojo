@@ -983,7 +983,7 @@ body, html {
   justify-content: center;   /* center horizontally */
   align-items: center;       /* center vertically (if you want) */
   flex-direction: column;    /* stack children vertically */
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   text-align: center;        /* also centers text inside h2 and p */
 }
 

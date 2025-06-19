@@ -735,7 +735,7 @@ body, html {
   
   .wave-border {
   background-image: url('/images/waves-orange.svg');
-  background-color: #fcbcb2;
+  background-color: #fbcfc9;
   margin-top: -13px;       /* ⬅️ Tucks into top section *//
   margin-bottom: -10px; /* tucks into the next section */
   width: 105vw;                     /* Slightly wider for safe bleed */
@@ -1161,9 +1161,6 @@ body, html {
   z-index: 1;
 }
 
-    // Toggle dropdown in mobile
-document.querySelector('.dropbtn').addEventListener('click', function () {
-  this.parentElement.classList.toggle('active');
-});
+   
 
 

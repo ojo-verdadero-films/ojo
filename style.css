@@ -741,7 +741,7 @@ body, html {
   background-position: bottom center;
   background-size: cover;
   background-color: #fbcfc9; /* Match the section it's sitting ON */
-  margin-top: -15px;          /* Pull into the section above */
+  margin-top: 0px;          /* Pull into the section above */
   margin-bottom: -6px;        /* Pull into the section below */
   padding: 0;
   border: none;

@@ -424,15 +424,21 @@ body, html {
 }
 .wave-border {
   display: block;
+  width: 100%;
+  height: 130px; /* ⬅️ make this tall enough to see the wave */
+  background-image: url('/images/waves-orange.svg'); /* ✅ double check the path */
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: cover;
-  width: 100%;
-  height: 130px; /* Try 200px or 150px if you still don’t see it */
-  margin-bottom: 0px;
-  background-size: 110% auto; /* wider, but keeps proportions */
-
+  background-color: #ec8168;  /* match the section below */
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  border: none;
+  background-size: 100% 100%; /* stretch to fill area */
+  z-index: 2;
+  position: relative;
 }
+
 .flower-border-container {
   background-image: url('images/flowers.jpg'); 
   background-repeat: no-repeat;
@@ -450,7 +456,7 @@ body, html {
   background-position: center;
   background-size: contain;
   width: 100%;
-  height: 60px;
+  height: 68px;
   display: block;
   background-color: #ec8168; /* TEMP test color to see it */
 }

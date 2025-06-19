@@ -213,11 +213,11 @@ body .signature {
 }
 
 .portfolio-item {
-  width: 400px;               
-  height: 630px;            
+  width: 380px;
+  height: 750px; /* taller to fit everything */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   background: #d1a48194;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -228,28 +228,30 @@ body .signature {
   font-style: italic;
   letter-spacing: 1px;
   cursor: pointer;
-  align-items: center;
-  text-align: center;
 }
+
 .portfolio-item:hover {
   transform: translateY(-5px);
 }
 
 .portfolio-item img {
-  height: 500px;           /* Fixed height */
+  height: 600px;             /* tall enough to show full poster */
   width: 100%;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 0.5rem 0.5rem 0 0;
+  object-fit: contain;       /* don't crop the image */
+  object-position: bottom;   /* align from the bottom (shows title) */
   display: block;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
+
 
 .portfolio-item p {
   padding: 1rem;
   text-align: center;
   font-weight: bold;
   color: #000;
+  margin-top: auto; /* pushes it to the bottom if space exists */
 }
+
 
 /* Portfolio Section Heading */
 .portfolio-section h2 {

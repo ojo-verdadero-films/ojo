@@ -1,18 +1,26 @@
-/* ------------------------------ */
-/* 🎯 Base Desktop Styles (≥768px) */
-/* ------------------------------ */
-body, html {
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
   width: 100%;
+  overflow-x: hidden; /* Prevents side-scroll */
   height: 100%;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+/* Base Styles */
+body {
   font-family: 'Quattrocento', serif;
-  color: #111;
   background-color: #fff;
+  color: #111;
   line-height: 1.6;
 }
 
+/* Header Layout */
 header {
   display: flex;
   justify-content: space-between;
@@ -21,8 +29,9 @@ header {
   background-color: #f4eee6;
   width: 100%;
   box-sizing: border-box;
-  z-index: 100;
+  z-index: 100; 
   flex-direction: row;
+  margin-bottom: 0rem;
 }
 
 .header-left {
@@ -33,30 +42,33 @@ header {
 
 .logo {
   height: 100px;
-  margin-right: 0;
+  margin-right: 0rem;
 }
 
 .brand span {
   display: block;
   font-size: 28px;
   line-height: 1.3;
-  color: #000;
+  color: #000000;
   font-family: "nitti-typewriter-cameo", sans-serif;
   font-weight: 100;
+  font-style: normal;
 }
 
+/* Navigation Styles */
 .header-right nav {
   display: flex;
   gap: 1.5rem;
   font-size: 30px;
   align-items: center;
-  color: #000;
+  color: #000000;
 }
 
-nav a, .dropbtn {
+nav a, 
+.dropbtn { /*these are the Home and Contact buttons*/
   font-weight: bold;
   text-decoration: none;
-  color: #000;
+  color: #000000;
   font-size: 30px;
   font-family: 'Quattrocento', serif;
   cursor: pointer;
@@ -82,11 +94,26 @@ nav a, .dropbtn {
   transform: scaleX(1);
 }
 
+/* Dropdown Menu */
+/* Container needs to be relative for absolute positioning */
 .dropdown {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: flex;          /* aligns with nav items */
+  align-items: center; 
+  font-size: 30px;/* vertical centering */
+}
+
+.dropbtn { /*this is the Portfolio button*/
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
   font-size: 30px;
+  font-family: 'Quattrocento', serif;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .dropdown-content {
@@ -96,7 +123,6 @@ nav a, .dropbtn {
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
-  flex-direction: column;
 }
 
 .dropdown-content a {
@@ -106,68 +132,80 @@ nav a, .dropbtn {
   display: block;
 }
 
+/* Initially hidden */
+.dropdown-content {
+  display: none;
+}
+
+/* When active class added, show menu */
 .dropdown.active .dropdown-content {
   display: block;
 }
 
 .bottom-wrapper {
-  max-width: 2000px;
+  max-width: 2000px;     /* a reasonable max width */
   min-height: 700px;
-  margin: 0 auto;
+  margin: 0rem auto;     /* vertical margin + auto center horizontally */
   display: flex;
   gap: 3rem;
   align-items: center;
   background-color: #fbcfc9;
-  padding: 0 2rem;
-  justify-content: center;
+  padding: 0 2rem;       /* padding inside so content doesn’t hug edges */
+  box-sizing: border-box;
+  justify-content: center; /* center flex children horizontally */
 }
 
 .text-side {
   flex: 1 1 600px;
   max-width: 600px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* stack text and signature vertically */
   align-items: center;
-  text-align: left;
+  text-align: left;        /* text aligns left */
   padding: 1rem;
   font-size: 2.5rem;
+  box-sizing: border-box;
   font-family: "ivymode", sans-serif;
 }
 
 .text-content {
+  font-family: "ivymode", sans-serif;
   font-weight: 300;
-  font-size: 2.8rem;
+  font-size: 2.8rem ;
   color: #333;
-  margin: 3rem 0 1.5rem;
-  text-align: center;
+  margin: 3rem 0 1.5rem 0;
+  align-items: center;     /* center horizontally */
+  text-align: center;      /* center text */      
 }
 
-.signature {
-  font-family: "novantique-script", sans-serif;
-  font-weight: 500;
+body .signature {
+  font-family: "novantique-script", sans-serif; 
+  font-weight: 500 !important;
   font-size: 4.5rem;
   color: #000;
-  text-align: center;
+  margin: 0;
+  align-items: center;     /* center horizontally */
+  text-align: center;      /* center text */       
 }
-
 .photo-content {
   flex: 1 1 450px;
   max-width: 500px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;     /* center horizontally */
 }
 
 .photo-content img {
   width: 100%;
   height: auto;
-  border-radius: 100% 100% 0 0;
+  border-radius: 100% / 100% 100% 0 0;
   object-fit: cover;
   display: block;
 }
-
+/* Portfolio Grid */
 .portfolio-grid {
   display: flex;
+  background:transparent;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 2rem;
@@ -176,25 +214,33 @@ nav a, .dropbtn {
 
 .portfolio-item {
   width: 380px;
-  min-height: 600px;
+  min-height: 600px;         /* ⬅️ use min-height instead of fixed height */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* ⬅️ push description to bottom */
   background: #d1a48194;
   border-radius: 1.5rem;
   overflow: hidden;
+  transition: transform 0.3s ease;
   padding-bottom: 1rem;
   font-family: 'Quattrocento', serif;
+  color: #111;
+  font-weight: 300;
   font-style: italic;
   letter-spacing: 1px;
   cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
 }
 
 .portfolio-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: top;  /* ⬅️ this tells it to crop from the top */
+  display: block;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -205,41 +251,383 @@ nav a, .dropbtn {
   color: #000;
 }
 
+/* Portfolio Section Heading */
 .portfolio-section h2 {
   font-size: 2rem;
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
+/* Philosophy Section */
+.philosophy-section {
+  background-color: #ec8168;
+  position: relative;
+  padding: 0 3rem 4rem 3rem; /* top 0, right 1rem, bottom 4rem, left 1rem */
+  margin-top: 0px;
+  margin-bottom: 0rem;
+  overflow: visible;
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  z-index: 1;
+}
+.philosophy-section h2 { /*this is the title*/
+  font-family: "ivymode", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+  color: #f6e3db;
+  margin-bottom: 1rem;      /* reduce gap between title and body */
+}
+
+.philosophy-text { /*this is the body text*/
+  font-size: 1.5rem;
+  max-width: 1500px;
+  padding: 0;               /* no padding here */
+  margin: 0 auto 0;         /* keep bottom margin zero */
+  line-height: 1.8;
+  color: #f6e3db;
+  font-family: "ivymode", sans-serif;
+  text-align: justify;
+}
+.contact-section {
+  position: relative;
+  background-color: #f4c2ae;
+  font-size: 10rem;
+  height: 11rem; /* Adjust for the size you want */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+/* Large Heading */
+.contact-heading {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.marquee-wrapper {
+  height: 10rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "rl-limo", sans-serif;
+  font-size: 10rem;
+  line-height: 1;
+  opacity: 0.1;
+  color: #66021f;
+  animation: marquee-scroll 60s linear infinite;
+  padding-left: 100%;
+  box-sizing: border-box;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left **60s** linear infinite; /* ⬅️ slowed from 20s to 60s */
+}
+
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.contact-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  background-color: #fce4e4;
+  border: none;
+  border-radius: 12px;
+  color: #7e4561;
+  font-weight: bold;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rolling-banner {
+  background-color: #f9f3f1;
+  padding: 6rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.banner-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #847e52;
+  animation: scrollText 15s linear infinite;
+}
+
+.contact-form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0rem 0rem;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "ivymode", sans-serif;
+  user-select: none;
+  margin-top: 0rem;
+  letter-spacing: 1px;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #66021f;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-family: "rl-limo", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+  opacity: 0.8;
+  z-index: 1000;
+  display: none;
+}
+
+#backToTop:hover {
+  opacity: 1;
+}
+body, html {
+  overflow-x: hidden;
+}
 .wave-border {
   display: block;
   width: 100%;
-  height: 130px;
-  background-image: url('/images/waves-orange.svg');
+  height: 130px; /* ⬅️ make this tall enough to see the wave */
+  background-image: url('/images/waves-orange.svg'); /* ✅ double check the path */
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-color: #ec8168;
-  background-size: 100% 100%;
+  background-color: #ec8168;  /* match the section below */
+  margin: 0;
+  padding: 0;
   line-height: 0;
+  border: none;
+  background-size: 100% 100%; /* stretch to fill area */
+  z-index: 2;
   position: relative;
 }
 
-/* Re-add all other styles here as needed */
+.flower-border-container {
+  background-image: url('images/flowers.jpg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 23px;              /* Adjust based on the SVG’s ideal height */
+  width: 100%;
+  margin: 0;
+  display: block;
+  background-size: 100% auto;
+}
+.plaid-border-container {
+  background-image: url('images/plaid.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 68px;
+  display: block;
+  background-color: #ec8168; /* TEMP test color to see it */
+}
+.plaid-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0;
+}
+.stay-close-section {
+  background: #fce9e3;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
 
-/* ------------------------------ */
-/* 📱 Ultra Small Mobile Override (≤375px) */
-/* ------------------------------ */
-@media (max-width: 375px) {
+.stay-close-container {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stay-close-left h2 {
+  font-family: "novantique-script", sans-serif;
+  font-size: 4.2rem;
+  margin-bottom: 0.5rem;
+  color: #7e2513;
+}
+
+.stay-close-left p {
+  font-size: 1.8rem;
+  font-style: bold;
+  line-height: 1.6;
+  color: #4a2e24;
+  margin-bottom: 2rem;
+  font-family: "ivymode", sans-serif;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;  /* centers the items horizontally */
+  gap: 1rem;                /* space between input and button */
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  flex: 1 1 300px;          /* lets the input take available space with a min width */
+  max-width: 400px;         /* optional max width */
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #7e2513;
+  border-radius: 6px;
+}
+
+.newsletter-form button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #7e2513;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #af6652;
+}
+
+.stay-close-right {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2.5rem; /* space between icons */
+  justify-content: center;
+  width: 100%;
+}
+
+.stay-close-right a:hover img {
+  transform: scale(1.1);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+  box-shadow: none;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: block;
+}
+
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.email-signup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.email-signup input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #7e2513;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.email-signup button {
+  background-color: #7e2513;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.email-signup button:hover {
+  background-color: #5c1b0f;
+}
+
+.signature {
+  font-style: italic;
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5rem;
+  color: #7e2513;
+}
+
+@media (max-width: 768px) {
+.text-content {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
   header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;     /* Stack vertically */
+    align-items: center;        /* Center horizontally */
+    justify-content: center;    /* Center vertically */
     gap: 0.75rem;
+    height: auto;
+    margin-top: 0rem;
     padding-top: 1rem;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;        /* Logo and brand side by side */
+    align-items: center;
+    gap: 0.25rem;
   }
 
   .logo {
     height: 90px;
+    margin: 0;
   }
 
   .brand span {
@@ -247,72 +635,802 @@ nav a, .dropbtn {
     text-align: center;
   }
 
+  .header-right nav {
+    display: flex;
+    flex-direction: row;        /* Nav links side by side */
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav a,
+.dropbtn {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.25rem;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Quattrocento', serif;
+}
+
+/* Dropdown behavior on mobile */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  padding: 0;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Hide dropdown initially */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #5a1e1e;
+  min-width: 160px;
+  z-index: 1;
+  flex-direction: column;
+  padding: 0;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Show on hover (desktop fallback) */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Show on click – JavaScript required for mobile */
+
+
+  .bottom-wrapper {
+    flex-direction: column;
+    text-align: justify;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .text-side {
+    align-items: center;
+    text-align: justify;
+    font-size: 2rem;
+  }
+
   .text-content {
     font-size: 2rem;
-    margin: 1rem 0;
+    margin: 1rem 0 1rem 0;
     text-align: center;
     max-width: 90%;
   }
 
   .signature {
+    align-items: center;
+    text-align: center;
     font-size: 1rem;
-    margin-top: 0.25rem;
+    margin-top: 0.25rem; /* tighter spacing */
   }
 
   .photo-content {
-    max-width: 400px;
-    margin-bottom: 1rem;
+  max-width: 400px;     /* Reduce size */
+  margin-bottom: 1rem;  /* Give space before wave border */
+  margin-top: 0; /* prevent added space */
+}
+
+.photo-content img {
+  max-height: 500px;    /* Optional cap on height */
+  object-fit: cover;
+}
+.portfolio-item {
+  width: 380px;
+  height: 600px; /* your reference size */
+  background: #d1a48194;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+  font-family: 'Quattrocento', serif;
+  color: #111;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top:2rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* fills space, crops if needed */
+  object-position: top;        /* crops from top instead of center */
+  display: block;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.portfolio-item p {
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+}
+  .philosophy-section {
+    padding: 1rem;
   }
 
-  .portfolio-item {
-    width: 100%;
-    max-width: 380px;
-    height: auto;
-    margin: 1rem auto;
-  }
+  .philosophy-section h2 {
+  font-size: 2.2rem;        /* down from 3rem */
+  margin-bottom: 1rem;
+}
 
-  .portfolio-item img {
-    object-fit: cover;
-    object-position: top;
-    width: 100%;
-    height: auto;
-  }
+.philosophy-text {
+  font-size: 1.4rem;        /* down from 2rem */
+  line-height: 1.4;         /* tighter lines */
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  .newsletter-form {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-  }
+ .contact-heading {
+  font-size: 2rem;
+}
 
-  .newsletter-form input[type="email"] {
-    width: 100%;
-    height: 40px;
-    font-size: 1rem;
-    padding: 0 1rem;
-    border-radius: 8px;
-    border: 1px solid #7e2513;
-  }
+.marquee-wrapper {
+  position: relative;
+  height: 9rem; /* Slightly smaller than font-size to account for descenders */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgb(0, 0, 0);
+}
 
-  .newsletter-form button {
-    width: auto;
-    height: 36px;
-    font-size: 1rem;
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    background-color: #e88364;
-    color: white;
-  }
+.marquee {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-55%); /* Slightly more than 50% to nudge up */
+  width: 100%;
+  white-space: nowrap;
+  font-family: "rl-limo", sans-serif;
+  font-size: 10rem;
+  line-height: 0.85; /* Prevents overflow from descenders */
+  color: #66021f;
+  opacity: 0.10;
+  z-index: 1;
+  box-sizing: border-box;
+}
 
-  .marquee {
-    font-size: 2.5rem;
-    padding-left: 100%;
-  }
 
-  .marquee-wrapper {
-    height: auto;
-    overflow: hidden;
-    padding: 1.5rem 0;
+
+.marquee span {
+  display: inline-block;
+  animation: marquee-scroll 200s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
+
+.contact-button-wrapper {
+  position: absolute;
+  z-index: 1;
+}
+
+.contact-button {
+  background-color: #ffe9ec;
+  color: #a26e75;
+  font-family: "rl-limo", sans-serif;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transform: translateY(-50%);
+}
+
+.rolling-banner {
+  background-color: #f9f3f1;
+  padding: 6rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.banner-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #847e52;
+  animation: scrollText 15s linear infinite;
+}
+
+  .contact-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;          /* ⬅️ smaller button text */
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    background-color: #fce4e4;
+    color: #7e4561;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .stay-close-section {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically (if you want) */
+  flex-direction: column;    /* stack children vertically */
+  padding: 2rem 1rem;
+  text-align: center;        /* also centers text inside h2 and p */
+}
+
+  .stay-close-left h2 {
+    font-size: 3rem;
+  }
+
+  .stay-close-left p {
+    font-size: 1.4rem;
+  }
+
+  .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ✅ centers both input and button */
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;           /* ✅ centers the form container */
+}
+
+.newsletter-form input[type="email"] {
+  width: 100%;
+  height: 48px;                /* ⬅️ slightly taller */
+  font-size: 1rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  border: 1px solid #7e2513;
+  box-sizing: border-box;
+  font-family: 'Quattrocento', serif;
+}
+
+.newsletter-form button {
+  padding: 0.6rem 1.5rem;       /* ⬅️ shorter and more compact */
+  font-size: 1.1rem;
+  background-color: #7e2513;
+  color: #fff;
+  border: none;
+  border-radius: 12px;          /* ⬅️ more rounded */
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Quattrocento', serif;
+  transition: background-color 0.3s ease;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
+}
+
+.newsletter-form button:hover {
+  background-color: #5a1a0f;
+}
+  .stay-close-right {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .social-icons {
+  display: flex;
+  flex-direction: row;     /* ⬅️ force horizontal layout */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;              /* space between icons */
+  margin-top: 1.5rem;
+}
+
+ .newsletter-form { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 20px;
+}
+
+.newsletter-form input {
+  height: 15px; /* slightly taller input */
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.newsletter-form button {
+  height: 36px; /* shorter, chubbier */
+  font-size: 1rem;
+  padding: 0 1.25rem;
+  border-radius: 999px; /* pill shape like the marquee */
+  border: none;
+  background-color: #e88364; /* or your brand color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #cf6b4d;
+}
+  
+  .flower-border-container {
+  height: 40px; /* You can adjust this */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fac3bb;
+}
+.wave-border {
+  display: block;
+  width: 100%;
+  height: 40px; /* adjust based on your image's real height */
+  background-image: url('/images/waves-orange.svg'); /* ✅ Check this path */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fbcfc9;  /* match higher section background exactly */
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  border: none;
+  background-size: 100% 100%; /* ⬅️ This stretches it */
+}
+
+.plaid-border-container {
+  width: 100%;
+  height: 80px; /* ⬅️ Make this larger so the plaid is visible */
+  background-image: url('/images/plaid.png'); /* ✅ Make sure this path is correct */
+  background-repeat: repeat-x; /* repeat horizontally */
+  background-position: center;
+  background-size: auto 100%; /* ⬅️ Keeps the height full, auto-scales width */
+  background-color: #fac3bb;  /* optional: matches surrounding sections */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+  body {
+  margin: 0;
+  padding: 0;
+}
+
+  @media (max-width: 375px) {
+  .text-content {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+  header {
+    display: flex;
+    flex-direction: column;     /* Stack vertically */
+    align-items: center;        /* Center horizontally */
+    justify-content: center;    /* Center vertically */
+    gap: 0.75rem;
+    height: auto;
+    margin-top: 0rem;
+    padding-top: 1rem;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;        /* Logo and brand side by side */
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .logo {
+    height: 90px;
+    margin: 0;
+  }
+
+  .brand span {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .header-right nav {
+    display: flex;
+    flex-direction: row;        /* Nav links side by side */
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav a,
+.dropbtn {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.25rem;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Quattrocento', serif;
+}
+
+/* Dropdown behavior on mobile */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  padding: 0;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Hide dropdown initially */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #5a1e1e;
+  min-width: 160px;
+  z-index: 1;
+  flex-direction: column;
+  padding: 0;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Show on hover (desktop fallback) */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Show on click – JavaScript required for mobile */
+
+
+  .bottom-wrapper {
+    flex-direction: column;
+    text-align: justify;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .text-side {
+    align-items: center;
+    text-align: justify;
+    font-size: 2rem;
+  }
+
+  .text-content {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .signature {
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.25rem; /* tighter spacing */
+  }
+
+  .photo-content {
+  max-width: 400px;     /* Reduce size */
+  margin-bottom: 1rem;  /* Give space before wave border */
+  margin-top: 0; /* prevent added space */
+}
+
+.photo-content img {
+  max-height: 500px;    /* Optional cap on height */
+  object-fit: cover;
+}
+.portfolio-item {
+  width: 380px;
+  height: 600px; /* your reference size */
+  background: #d1a48194;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+  font-family: 'Quattrocento', serif;
+  color: #111;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top:2rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* fills space, crops if needed */
+  object-position: top;        /* crops from top instead of center */
+  display: block;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.portfolio-item p {
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+}
+  .philosophy-section {
+    padding: 1rem;
+  }
+
+  .philosophy-section h2 {
+  font-size: 2.2rem;        /* down from 3rem */
+  margin-bottom: 1rem;
+}
+
+.philosophy-text {
+  font-size: 1.4rem;        /* down from 2rem */
+  line-height: 1.4;         /* tighter lines */
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ .contact-heading {
+  font-size: 2rem;
+}
+
+.marquee-wrapper {
+  position: relative;
+  height: 9rem; /* Slightly smaller than font-size to account for descenders */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.marquee {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-55%); /* Slightly more than 50% to nudge up */
+  width: 100%;
+  white-space: nowrap;
+  font-family: "rl-limo", sans-serif;
+  font-size: 10rem;
+  line-height: 0.85; /* Prevents overflow from descenders */
+  color: #66021f;
+  opacity: 0.10;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+
+
+.marquee span {
+  display: inline-block;
+  animation: marquee-scroll 200s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.contact-button-wrapper {
+  position: absolute;
+  z-index: 1;
+}
+
+.contact-button {
+  background-color: #ffe9ec;
+  color: #a26e75;
+  font-family: "rl-limo", sans-serif;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transform: translateY(-50%);
+}
+
+.rolling-banner {
+  background-color: #f9f3f1;
+  padding: 6rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.banner-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #847e52;
+  animation: scrollText 15s linear infinite;
+}
+
+  .contact-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;          /* ⬅️ smaller button text */
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    background-color: #fce4e4;
+    color: #7e4561;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .stay-close-section {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically (if you want) */
+  flex-direction: column;    /* stack children vertically */
+  padding: 2rem 1rem;
+  text-align: center;        /* also centers text inside h2 and p */
+}
+
+  .stay-close-left h2 {
+    font-size: 3rem;
+  }
+
+  .stay-close-left p {
+    font-size: 1.4rem;
+  }
+
+  .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ✅ centers both input and button */
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;           /* ✅ centers the form container */
+}
+
+.newsletter-form input[type="email"] {
+  width: 100%;
+  height: 48px;                /* ⬅️ slightly taller */
+  font-size: 1rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  border: 1px solid #7e2513;
+  box-sizing: border-box;
+  font-family: 'Quattrocento', serif;
+}
+
+.newsletter-form button {
+  padding: 0.6rem 1.5rem;       /* ⬅️ shorter and more compact */
+  font-size: 1.1rem;
+  background-color: #7e2513;
+  color: #fff;
+  border: none;
+  border-radius: 12px;          /* ⬅️ more rounded */
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Quattrocento', serif;
+  transition: background-color 0.3s ease;
+  justify-content: center;   /* center horizontally */
+  align-items: center;
+}
+
+.newsletter-form button:hover {
+  background-color: #5a1a0f;
+}
+  .stay-close-right {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .social-icons {
+  display: flex;
+  flex-direction: row;     /* ⬅️ force horizontal layout */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;              /* space between icons */
+  margin-top: 1.5rem;
+}
+
+ .newsletter-form { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 20px;
+}
+
+.newsletter-form input {
+  height: 15px; /* slightly taller input */
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.newsletter-form button {
+  height: 36px; /* shorter, chubbier */
+  font-size: 1rem;
+  padding: 0 1.25rem;
+  border-radius: 999px; /* pill shape like the marquee */
+  border: none;
+  background-color: #e88364; /* or your brand color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #cf6b4d;
+}
+  
+  .flower-border-container {
+  height: 40px; /* You can adjust this */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fac3bb;
+}
+
+.plaid-border-container {
+  width: 100%;
+  height: 80px; /* ⬅️ Make this larger so the plaid is visible */
+  background-image: url('/images/plaid.png'); /* ✅ Make sure this path is correct */
+  background-repeat: repeat-x; /* repeat horizontally */
+  background-position: center;
+  background-size: contain;
+  background-color: #fac3bb;  /* optional: matches surrounding sections */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+  body {
+  margin: 0;
+  padding: 0;
+}
+  }
+    .wave-border {
+    height: 80px; /* or larger — experiment with 50–80px */
+    background-size: cover; /* maintain aspect ratio */
+    margin-bottom: 0rem;
+  }
+}

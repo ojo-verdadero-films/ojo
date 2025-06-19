@@ -409,19 +409,19 @@ body, html {
 }
 .wave-border {
   display: block;
-  width: 100%;
-  height: 130px; /* ⬅️ make this tall enough to see the wave */
-  background-image: url('/images/waves-orange.svg'); /* ✅ double check the path */
+  width: 100vw;                            /* Full viewport width */
+  height: 80px;                            /* Make it tall enough for full wave shape */
+  background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-color: #ec8168;  /* match the section below */
+  background-color: #ec8168;              /* Match section below the wave */
+  background-size: cover;                 /* Maintain wave proportions */
   margin: 0;
   padding: 0;
-  line-height: 0;
   border: none;
-  background-size: 100% 100%; /* stretch to fill area */
-  z-index: 2;
+  line-height: 0;
   position: relative;
+  left: 0;
 }
 
 .flower-border-container {

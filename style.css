@@ -410,7 +410,7 @@ body, html {
 .wave-border {
   display: block;
   width: 100vw;                            /* Full viewport width */
-  height: 70px;                            /* Make it tall enough for full wave shape */
+  height: 60px;                            /* Make it tall enough for full wave shape */
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -801,15 +801,6 @@ body, html {
   display: inline-block;
   animation: marquee-scroll 200s linear infinite;
   white-space: nowrap;
-}
-
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 
@@ -1223,16 +1214,6 @@ body, html {
   animation: marquee-scroll 60s linear infinite; /* ⬅️ Slower is smoother */
   white-space: nowrap;
 }
-
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 
 .contact-button-wrapper {
   position: absolute;

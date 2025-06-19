@@ -812,7 +812,7 @@ body, html {
 
 .marquee span {
   display: inline-block;
-  animation: marquee-scroll 200s linear infinite;
+  animation: marquee-scroll 15s linear infinite;
   white-space: nowrap;
 }
 

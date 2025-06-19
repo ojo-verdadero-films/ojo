@@ -1406,10 +1406,17 @@ body, html {
   margin: 0;
   padding: 0;
 }
-  }
-    .wave-border {
-    height: 90px; /* or larger — experiment with 50–80px */
-    background-size: cover; /* maintain aspect ratio */
-    margin-bottom: 0rem;
-  }
+  .wave-border {
+  display: block;
+  width: 100%;
+  height: 80px; /* ⬅️ Increase this if needed: try 90–100px */
+  background-image: url('/images/waves-orange.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center; /* ⬅️ Use bottom instead of center */
+  background-color: #fbcfc9;  /* match the section above it */
+  background-size: 100% 100%; /* stretch both width & height */
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  border: none;
 }

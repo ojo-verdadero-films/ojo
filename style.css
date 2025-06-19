@@ -1070,18 +1070,19 @@ body, html {
     
 .wave-border {
   display: block;
-  width: 105vw;
-  height: 90px; /* or tweak as needed */
+  width: 105vw;                     /* Slightly wider for safe bleed */
+  height: 90px;
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center center; /* better balance for overlap */
   background-size: cover;
   background-color: #ec8168;
-  margin-top: 0px;       /* ⬅️ Tucks into top section *//
-  margin-bottom: -5px; /* tucks into the next section */
+  margin-top: -20px;               /* ⬅️ Pull wave UP into top section */
+  margin-bottom: -20px;            /* ⬅️ Push wave DOWN into next section */
   padding: 0;
   border: none;
   line-height: 0;
   position: relative;
   z-index: 1;
 }
+

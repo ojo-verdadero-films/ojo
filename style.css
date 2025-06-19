@@ -673,7 +673,6 @@ body, html {
     font-family: 'Quattrocento', serif;
   }
 
-  @media (max-width: 768px) {
   .dropdown-content {
     display: none;
     position: static;
@@ -758,8 +757,6 @@ body, html {
   height: 110px;
 }
 
-  
-
   @media (max-width: 375px) {
   .text-content {
   padding: 0 1rem;
@@ -813,7 +810,7 @@ body, html {
 }
 
 .dropdown-content {
-  display: flex;
+  display: none;
   flex-direction: column;      /* Stack vertically */
   align-items: center;         /* Center the links */
   justify-content: center;

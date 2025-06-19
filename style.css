@@ -735,7 +735,7 @@ body, html {
 .wave-border {
   display: block;
   width: 100vw;
-  height: 115px;
+  height: 120px;
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;

@@ -324,7 +324,7 @@ body .signature {
 
 .marquee span {
   display: inline-block;
-  animation: marquee-scroll 20s linear infinite;
+  animation: marquee-scroll 200s linear infinite;
   white-space: nowrap;
 }
 
@@ -847,7 +847,7 @@ body, html {
   font-size: 2rem;
   font-weight: bold;
   color: #847e52;
-  animation: scrollText 15s linear infinite;
+  animation: scrollText 200s linear infinite;
 }
 
   .contact-button {

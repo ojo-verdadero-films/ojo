@@ -814,7 +814,7 @@ body, html {
 
 .marquee span {
   display: inline-block;
-  animation: marquee-scroll 15s linear infinite; /* ⬅️ Slower is smoother */
+  animation: marquee-scroll 60s linear infinite; /* ✅ Slower for mobile */
   white-space: nowrap;
 }
 

@@ -420,8 +420,8 @@ body, html {
 
 .wave-border {
   display: block;
-  width: 100vw;                            /* Full viewport width */
-  height: 80px;                            /* Adjust as needed */
+  width: 105vw;                            /* Full viewport width */
+  height: 90px;                            /* Adjust as needed */
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -432,8 +432,9 @@ body, html {
   border: none;
   line-height: 0;
   position: relative;
-  left: 0;
   z-index: 1;
+  margin-bottom: -5px;            /* Tuck into the next section */
+  margin-top: -2px;              /* Tuck into the top section */
 }
 
 .flower-border-container {

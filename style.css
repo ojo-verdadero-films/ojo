@@ -242,16 +242,13 @@ body .signature {
   display: block;
   border-radius: 0.5rem 0.5rem 0 0;
 }
+
 .portfolio-item:nth-child(1) img,
 .portfolio-item:nth-child(2) img,
+.portfolio-item:nth-child(3) img,
 .portfolio-item:nth-child(4) img {
-  object-position: center;
+  height: 600px;
 }
-
-.portfolio-item:nth-child(3) img {
-  object-position: bottom; /* For Hell Mutt */
-}
-
 
 .portfolio-item p {
   padding: 1rem;

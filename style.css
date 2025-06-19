@@ -731,7 +731,14 @@ body, html {
   object-fit: cover;
   display: block;
 }
-  
+  .stay-close-section {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically (if you want) */
+  flex-direction: column;    /* stack children vertically */
+  padding: 2rem 3.5rem;
+  text-align: center;        /* also centers text inside h2 and p */
+}
 .wave-border {
   display: block;
   width: 100vw;

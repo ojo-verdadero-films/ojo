@@ -214,15 +214,14 @@ body .signature {
 
 .portfolio-item {
   width: 380px;
-  min-height: 600px;         /* ⬅️ use min-height instead of fixed height */
+  height: 600px; /* Fixed height to ensure consistency */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* ⬅️ push description to bottom */
+  justify-content: space-between;
   background: #d1a48194;
   border-radius: 1.5rem;
   overflow: hidden;
   transition: transform 0.3s ease;
-  padding-bottom: 1rem;
   font-family: 'Quattrocento', serif;
   color: #111;
   font-weight: 300;
@@ -230,18 +229,17 @@ body .signature {
   letter-spacing: 1px;
   cursor: pointer;
 }
-
 .portfolio-item:hover {
   transform: translateY(-5px);
 }
 
 .portfolio-item img {
+  height: 500px;           /* Fixed height */
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  object-position: top;  /* ⬅️ this tells it to crop from the top */
-  display: block;
+  object-position: top;
   border-radius: 0.5rem 0.5rem 0 0;
+  display: block;
 }
 
 .portfolio-item p {

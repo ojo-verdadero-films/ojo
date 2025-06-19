@@ -433,7 +433,7 @@ body, html {
   line-height: 0;
   position: relative;
   z-index: 1;
-  margin-bottom: -5px;            /* Tuck into the next section */
+  margin-bottom: -2px;            /* Tuck into the next section */
   margin-top: -2px;              /* Tuck into the top section */
 }
 

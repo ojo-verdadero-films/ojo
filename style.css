@@ -98,55 +98,36 @@ nav a,
 /* Container needs to be relative for absolute positioning */
 .dropdown {
   position: relative;
-  display: grid;;          
-  align-items: center; 
-  font-size: 30px;/* vertical centering */
+  display: inline-block;
 }
 
 .dropbtn { /*this is the Portfolio button*/
-  font-weight: bold;
-  text-decoration: none;
-  color: #000000;
-  font-size: 30px;
-  font-family: 'Quattrocento', serif;
+  background: none;
+  border: none;
+  font-size: 26px;
   cursor: pointer;
-  padding: 0.25rem 0;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
+  color: #000000;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #7e2513;
-  min-width: 200px;
-  z-index: 100;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
 .dropdown-content a {
-  display: none;
-  position: static;
-  flex-direction: column;
   color: #f6e3db;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-/* Initially hidden */
-.dropdown-content {
-  display: none;
-}
-
 /* Show on hover */
 .dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: block;
 }
 
 .bottom-wrapper {

@@ -1195,40 +1195,38 @@ body, html {
 
 .marquee-wrapper {
   position: relative;
-  height: 9rem; /* Slightly smaller than font-size to account for descenders */
+  height: 6rem;                     /* ⬅️ Shorter for mobile */
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border: 2px solid rgb(0, 0, 0);
+  border: none;                     /* ⬅️ Remove debug border */
 }
 
 .marquee {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-55%); /* Slightly more than 50% to nudge up */
+  transform: translateY(-50%);      /* Center vertically */
   width: 100%;
   white-space: nowrap;
   font-family: "rl-limo", sans-serif;
-  font-size: 10rem;
-  line-height: 0.85; /* Prevents overflow from descenders */
+  font-size: 5rem;                  /* ⬅️ Reduce font size for mobile */
+  line-height: 1;
   color: #66021f;
   opacity: 0.10;
   z-index: 1;
   box-sizing: border-box;
 }
 
-
-
 .marquee span {
   display: inline-block;
-  animation: marquee-scroll 200s linear infinite;
+  animation: marquee-scroll 60s linear infinite; /* ⬅️ Slower is smoother */
   white-space: nowrap;
 }
 
 @keyframes marquee-scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);

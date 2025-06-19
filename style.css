@@ -103,7 +103,7 @@ nav a,
 .dropbtn { /*this is the Portfolio button*/
   background: none;
   border: none;
-  font-size: 26px;
+  font-size: 30px;
   cursor: pointer;
   color: #000000;
 }

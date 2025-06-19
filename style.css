@@ -423,7 +423,7 @@ body, html {
 .wave-border {
   display: block;
   width: 100%;
-  height: 100px; /* ⬅️ Try increasing this */
+  height: 50px; /* ⬅️ Try increasing this */
   background-image: url('/images/waves-orange.svg'); /* ✅ path */
   background-repeat: no-repeat;
   background-position: bottom center;

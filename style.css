@@ -969,6 +969,7 @@ body, html {
   z-index: 1;
   box-sizing: border-box;
   background-color: #847e52;
+  height: 6.5rem;
 }
 
 .marquee span {

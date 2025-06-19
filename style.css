@@ -98,7 +98,7 @@ nav a,
 /* Container needs to be relative for absolute positioning */
 .dropdown {
   position: relative;
-  display: flex;          /* aligns with nav items */
+  display: grid;;          
   align-items: center; 
   font-size: 30px;/* vertical centering */
 }
@@ -738,7 +738,7 @@ body, html {
 
 /* Hide dropdown initially */
 .dropdown-content {
-  display: none;
+  display: grid;
   position: absolute;
   background-color: #5a1e1e;
   min-width: 160px;
@@ -770,6 +770,7 @@ body, html {
 
   .text-side {
     align-items: center;
+    flex-direction: column;
     text-align: justify;
     font-size: 2rem;
   }
@@ -792,6 +793,7 @@ body, html {
   max-width: 400px;     /* Reduce size */
   margin-bottom: 1rem;  /* Give space before wave border */
   margin-top: 0; /* prevent added space */
+  flex-direction: column;
 }
 
 .photo-content img {

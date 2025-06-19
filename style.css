@@ -732,14 +732,25 @@ body, html {
   display: block;
 }
   
-  .wave-border {
-  background-image: url('/images/waves-orange.svg');
-  background-color: #fbcfc9;
-  margin-top: -13px;       /* ⬅️ Tucks into top section *//
-  margin-bottom: -10px; /* tucks into the next section */
-  width: 105vw;                     /* Slightly wider for safe bleed */
+.wave-border {
+  display: block;
+  width: 100%;
   height: 115px;
+  background-image: url('/images/waves-orange.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-color: #ec8168;  /* Match the section it's sitting ON */
+  margin-top: -15px;          /* Pull into the section above */
+  margin-bottom: -6px;        /* Pull into the section below */
+  padding: 0;
+  border: none;
+  line-height: 0;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
 }
+
 
   @media (max-width: 375px) {
   .text-content {

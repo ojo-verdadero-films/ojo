@@ -660,21 +660,24 @@ body, html {
   }
 
   .dropdown-content {
-  display: none;
-  position: static;
-  flex-direction: column;
-  padding: 0.5rem;
-  background-color: #732A16;
-  width: 100%;
-}
+    display: none;
+    position: static;
+    background-color: #7e2513;
+    width: 100%;
+    padding: 0.5rem 0;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none; /* remove desktop shadow if desired */
+  }
 
 .dropdown.active .dropdown-content {
   display: flex;
 }
 
   .dropdown-content a {
-    text-align: left;
-    padding: 0.5rem 0;
+    text-align: center;
+    padding: 0.5rem 1rem;
   }
   
   .flower-border-container {

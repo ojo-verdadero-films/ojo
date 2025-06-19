@@ -237,9 +237,10 @@ body .signature {
 
 .portfolio-item img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4; /* ⬅️ Ensures consistent image sizing */
+  height: 100%;
   object-fit: cover;
+  object-position: top;  /* ⬅️ this tells it to crop from the top */
+  display: block;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 

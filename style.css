@@ -712,6 +712,8 @@ body, html {
   background-color: #ec8168;
   margin-top: -10px;       /* ⬅️ Tucks into top section *//
   margin-bottom: -10px; /* tucks into the next section */
+  width: 105vw;                     /* Slightly wider for safe bleed */
+  height: 110px;
 }
 
   
@@ -1117,7 +1119,7 @@ body, html {
 .wave-border {
   display: block;
   width: 105vw;                     /* Slightly wider for safe bleed */
-  height: 90px;
+  height: 110px;
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;

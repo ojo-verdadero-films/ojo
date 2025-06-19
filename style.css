@@ -756,8 +756,7 @@ body, html {
 
 /* Show on click – JavaScript required for mobile */
 
-
-  .bottom-wrapper {
+ .bottom-wrapper {
     flex-direction: column;
     text-align: justify;
     width: 100%;
@@ -799,6 +798,7 @@ body, html {
   max-height: 500px;    /* Optional cap on height */
   object-fit: cover;
 }
+    
 .portfolio-item {
   width: 400px;
   height: 600px; /* your reference size */

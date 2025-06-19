@@ -724,13 +724,13 @@ body, html {
   text-align: center;      /* center text */      
 }
 
-.signature {
-  font-size: 2rem;
+.signature-text {
   text-align: center;
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  }
+  width: 100%;
+  display: block;
+  margin: 1rem auto 2rem auto;
+}
+
 
   .photo-content {
     margin-top: 1.5rem;

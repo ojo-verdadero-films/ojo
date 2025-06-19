@@ -711,10 +711,11 @@ body, html {
   text-align: center;      /* center text */      
 }
 
-.body-signature {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2rem;
+.signature {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  display: block;
   }
 
   .photo-content {

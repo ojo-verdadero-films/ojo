@@ -410,7 +410,7 @@ body, html {
 .wave-border {
   display: block;
   width: 100vw;                            /* Full viewport width */
-  height: 80px;                            /* Make it tall enough for full wave shape */
+  height: 70px;                            /* Make it tall enough for full wave shape */
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -441,7 +441,7 @@ body, html {
   background-position: center;
   background-size: auto 100%;               /* ⬅️ Scale vertically, auto width */
   width: 100%;
-  height: 100px;                            /* ⬅️ Make it bigger as needed */
+  height: 90px;                            /* ⬅️ Make it bigger as needed */
   display: block;
   background-color: #ec8168;                /* ⬅️ Match surrounding section */
 }

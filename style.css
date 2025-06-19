@@ -214,10 +214,10 @@ body .signature {
 
 .portfolio-item {
   width: 380px;
-  height: 750px; /* taller to fit everything */
+  height: 600px; /* Ensures uniform size */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   background: #d1a48194;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -235,21 +235,30 @@ body .signature {
 }
 
 .portfolio-item img {
-  height: 600px;             /* tall enough to show full poster */
   width: 100%;
-  object-fit: contain;       /* don't crop the image */
-  object-position: bottom;   /* align from the bottom (shows title) */
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
   border-radius: 0.5rem 0.5rem 0 0;
+}
+.portfolio-item:nth-child(1) img,
+.portfolio-item:nth-child(2) img,
+.portfolio-item:nth-child(4) img {
+  object-position: center;
+}
+
+.portfolio-item:nth-child(3) img {
+  object-position: bottom; /* For Hell Mutt */
 }
 
 
 .portfolio-item p {
   padding: 1rem;
   text-align: center;
+  font-size: 2rem;
   font-weight: bold;
   color: #000;
-  margin-top: auto; /* pushes it to the bottom if space exists */
 }
 
 

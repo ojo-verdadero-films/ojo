@@ -941,93 +941,43 @@ body, html {
   text-align: center;
 }
 
- .contact-heading {
-  font-size: 2rem;
-}
+@media (max-width: 375px) {
+  .contact-heading {
+    font-size: 2rem; /* Slightly smaller for small screens */
+  }
 
-.marquee-wrapper {
-  position: relative;
-  height: 6.5rem;                     /* ⬅️ Shorter for mobile */
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  border: none;                     /* ⬅️ Remove debug border */
-}
+  .marquee-wrapper {
+    height: 7rem; /* Reduce height to fit mobile */
+  }
 
-.marquee {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);      /* Center vertically */
-  width: 100%;
-  white-space: nowrap;
-  font-family: "rl-limo", sans-serif;
-  font-size: 5rem;                  /* ⬅️ Reduce font size for mobile */
-  line-height: 1;
-  color: #66021f;
-  opacity: 0.10;
-  z-index: 1;
-  box-sizing: border-box;
-  background-color: #847e52;
-  height: 6.5rem;
-}
+  .marquee {
+    font-size: 6rem; /* Scale down marquee text */
+    transform: translateY(-60%); /* Nudge for better vertical centering */
+  }
 
-.marquee span {
-  display: inline-block;
-  animation: marquee-scroll 90s linear infinite; /* ✅ Slower for mobile */
-  white-space: nowrap;
-}
-
-.contact-button-wrapper {
-  position: absolute;
-  z-index: 1;
-}
-
-.contact-button {
-  background-color: #ffe9ec;
-  color: #a26e75;
-  font-family: "rl-limo", sans-serif;
-  padding: 1rem 2rem; 
-  font-size: 2rem;
-  font-weight: bold;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transform: translateY(-50%);
-}
-
-.rolling-banner {
-  background-color: #f9f3f1;
-  padding: 6rem 0;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.banner-track {
-  display: inline-block;
-  white-space: nowrap;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #847e52;
-  animation: scrollText 200s linear infinite;
-}
+  .contact-button-wrapper {
+    top: 55%; /* Adjust vertical position slightly */
+  }
 
   .contact-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2rem;          /* ⬅️ smaller button text */
-    padding: 0.6rem 1.2rem;
-    border-radius: 12px;
-    background-color: #fce4e4;
-    color: #7e4561;
-    font-weight: bold;
-    white-space: nowrap;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
   }
+
+  .rolling-banner {
+    padding: 3rem 0; /* Less vertical padding */
+  }
+
+  .banner-track {
+    font-size: 1.25rem; /* Reduce text size */
+  }
+
+  .contact-form {
+    margin-top: 0.5rem;
+    padding: 0 1rem; /* Add side padding if needed */
+  }
+}
 
   .stay-close-section {
   display: flex;

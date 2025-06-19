@@ -1076,7 +1076,7 @@ body, html {
   background-position: bottom center;
   background-size: cover;
   background-color: #ec8168;
-  margin-top: -5px;       /* ⬅️ Tucks into top section *//
+  margin-top: 0px;       /* ⬅️ Tucks into top section *//
   margin-bottom: -5px; /* tucks into the next section */
   padding: 0;
   border: none;

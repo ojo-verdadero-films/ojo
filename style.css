@@ -311,23 +311,23 @@ body .signature {
 }
 
 .marquee-wrapper {
-  position: relative;
-  height: 9rem; /* Slightly smaller than font-size to account for descenders */
+  height: 10rem;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
-  border: 2px solid rgb(0, 0, 0);
+  position: relative;
+  width: 100%;
 }
 
 .marquee {
-  position: relative;
-  height: 160px; /* or however tall your marquee should be */
-  overflow: hidden;
-  background-color: #fddbd3;
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "rl-limo", sans-serif;
   font-size: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  line-height: 1;
+  opacity: 0.1;
+  color: #66021f;
+  animation: marquee-scroll 60s linear infinite;
+  padding-left: 100%;
+  box-sizing: border-box;
 }
 
 .marquee span {

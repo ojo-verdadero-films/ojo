@@ -420,22 +420,24 @@ body, html {
 
 .wave-border {
   display: block;
-  width: 100vw; /* Changed from 105vw to prevent overflow scrollbars */
-  height: 90px; /* Slightly taller to remove white line at seams */
+  position: relative;
+  z-index: 1;
+
+  width: 100%;                  /* Use container width instead of forcing vw */
+  height: 90px;
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;  /* Force full stretch */
-  background-color: #ec8168;   /* Match the NEXT section background exactly */
-  margin: 0;
+  background-position: bottom center;
+  background-size: cover;
+  background-color: #ec8168;
+
+  margin: -1px 0 -5px 0;        /* Slight overlap on top/bottom */
   padding: 0;
   border: none;
   line-height: 0;
-  position: relative;
-  z-index: 1;
-  margin-bottom: -5px; /* Overlap slightly into next section */
-  margin-top: -5px;    /* Overlap slightly into top section */
+  box-sizing: border-box;
 }
+
 
 .flower-border-container {
   background-image: url('images/flowers.jpg'); 

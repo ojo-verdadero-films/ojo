@@ -143,30 +143,21 @@ nav a,
 }
 
 .bottom-wrapper {
-  max-width: 2000px;     /* a reasonable max width */
-  min-height: 700px;
-  margin: 0rem auto;     /* vertical margin + auto center horizontally */
   display: flex;
-  gap: 3rem;
-  align-items: center;
-  background-color: #fbcfc9;
-  padding: 0 2rem;       /* padding inside so content doesn’t hug edges */
-  box-sizing: border-box;
-  justify-content: center; /* center flex children horizontally */
-}
+  flex-direction: column;     /* Stack everything vertically */
+  align-items: center;        /* Center content horizontally */
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  }
 
-.text-side {
-  flex: 1 1 600px;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;  /* stack text and signature vertically */
-  align-items: center;
-  text-align: left;        /* text aligns left */
-  padding: 1rem;
-  font-size: 2.5rem;
-  box-sizing: border-box;
-  font-family: "ivymode", sans-serif;
-}
+.hero-text {
+    max-width: 90%;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.5;
+  }
 
 .text-content {
   font-family: "ivymode", sans-serif;
@@ -178,30 +169,25 @@ nav a,
   text-align: center;      /* center text */      
 }
 
-body .signature {
-  font-family: "novantique-script", sans-serif; 
-  font-weight: 500 !important;
-  font-size: 4.5rem;
-  color: #000;
-  margin: 0;
-  align-items: center;     /* center horizontally */
-  text-align: center;      /* center text */       
-}
-.photo-content {
-  flex: 1 1 450px;
-  max-width: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;     /* center horizontally */
-}
+.body-signature {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
 
-.photo-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 100% / 100% 100% 0 0;
-  object-fit: cover;
-  display: block;
-}
+  .photo-content {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo-content img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%; /* Optional: if you want that circle shape */
+  }
+
 /* Portfolio Grid */
 .portfolio-grid {
   display: flex;

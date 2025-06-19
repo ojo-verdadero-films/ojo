@@ -726,27 +726,29 @@ body, html {
   font-family: 'Quattrocento', serif;
 }
 
-/* Dropdown behavior on mobile */
 .dropdown-content {
   display: flex;
-  flex-direction: column;
-  box-shadow: none;
-  padding: 0;
-  gap: 0.25rem;
-  align-items: center;
+  flex-direction: column;      /* Stack vertically */
+  align-items: center;         /* Center the links */
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #5a1e1e;
+  padding: 1rem;
+  width: 100%;                 /* Full width, or set a max-width */
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+  top: 100%;                   /* Show just below the button */
+  left: 0;
+  right: 0;
 }
 
-/* Hide dropdown initially */
-.dropdown-content {
-  display: grid;
-  position: absolute;
-  background-color: #5a1e1e;
-  min-width: 160px;
-  z-index: 1;
-  flex-direction: column;
-  padding: 0;
-  gap: 0.25rem;
-  align-items: center;
+.dropdown-content a {
+  white-space: nowrap;         /* Prevents “Lejos De Ti” from breaking */
+  font-size: 1.1rem;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 1rem;
 }
 
 /* Show on hover (desktop fallback) */

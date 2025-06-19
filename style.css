@@ -182,7 +182,7 @@ body .signature {
   font-weight: 500 !important;
   font-size: 4.5rem;
   color: #000;
-  margin: 0;
+  margin-bottom: .5rem;
   align-self: flex-start; 
 }
 
@@ -431,7 +431,7 @@ body, html {
 .wave-border {
   display: block;
   width: 100vw;                            /* Full viewport width */
-  height: 90px;                            /* Adjust as needed */
+  height: 95px;                            /* Adjust as needed */
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;

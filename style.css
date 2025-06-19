@@ -1007,13 +1007,13 @@ body, html {
 .wave-border {
   display: block;
   width: 105vw;
-  height: 80px; /* or tweak as needed */
+  height: 90px; /* or tweak as needed */
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
   background-color: #ec8168;
-  margin-top: 0px !important;  /* pulls it down slightly */
+  margin-top: -5px;       /* ⬅️ Tucks into top section *//
   margin-bottom: -5px; /* tucks into the next section */
   padding: 0;
   border: none;

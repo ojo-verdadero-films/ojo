@@ -420,22 +420,14 @@ body, html {
 
 .wave-border {
   display: block;
-  position: relative;
-  z-index: 1;
-
-  width: 100%;                  /* Use container width instead of forcing vw */
-  height: 90px;
-  background-image: url('/images/waves-orange.svg');
+  background-image: url('images/waves-orange.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  background-color: #ec8168;
-
-  margin: -1px 0 -5px 0;        /* Slight overlap on top/bottom */
-  padding: 0;
-  border: none;
-  line-height: 0;
-  box-sizing: border-box;
+  width: 100%;
+  height: 130px; /* Try 200px or 150px if you still don’t see it */
+  margin-bottom: 0px;
+  background-size: 110% auto; /* wider, but keeps proportions */
 }
 
 

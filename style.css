@@ -1076,7 +1076,7 @@ body, html {
   height: 90px;
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
-  background-position: center center; /* better balance for overlap */
+  background-position: bottom center;
   background-size: cover;
   background-color: #ec8168;
   margin-top: -20px;               /* ⬅️ Pull wave UP into top section */

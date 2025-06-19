@@ -1410,7 +1410,7 @@ body, html {
 }
   }
     .wave-border {
-    height: 80px; /* or larger — experiment with 50–80px */
+    height: 90px; /* or larger — experiment with 50–80px */
     background-size: cover; /* maintain aspect ratio */
     margin-bottom: 0rem;
   }

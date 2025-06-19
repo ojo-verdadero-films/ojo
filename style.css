@@ -420,21 +420,21 @@ body, html {
 
 .wave-border {
   display: block;
-  width: 105vw;                            /* Full viewport width */
-  height: 75px;                            /* Adjust as needed */
+  width: 100vw; /* Changed from 105vw to prevent overflow scrollbars */
+  height: 90px; /* Slightly taller to remove white line at seams */
   background-image: url('/images/waves-orange.svg');
   background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-  background-color: #fbcfc9;
+  background-position: center;
+  background-size: 100% 100%;  /* Force full stretch */
+  background-color: #ec8168;   /* Match the NEXT section background exactly */
   margin: 0;
   padding: 0;
   border: none;
   line-height: 0;
   position: relative;
   z-index: 1;
-  margin-bottom: -2px;            /* Tuck into the next section */
-  margin-top: -1px;              /* Tuck into the top section */
+  margin-bottom: -5px; /* Overlap slightly into next section */
+  margin-top: -5px;    /* Overlap slightly into top section */
 }
 
 .flower-border-container {

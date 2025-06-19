@@ -720,7 +720,8 @@ body, html {
   font-size: 2rem;
   text-align: center;
   margin-top: 2rem;
-  display: block;
+  display: flex;
+  align-items: center;
   }
 
   .photo-content {

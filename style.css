@@ -1197,7 +1197,7 @@ body, html {
 
 .marquee-wrapper {
   position: relative;
-  height: 5.5rem;                     /* ⬅️ Shorter for mobile */
+  height: 6.5rem;                     /* ⬅️ Shorter for mobile */
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -1212,7 +1212,7 @@ body, html {
   width: 100%;
   white-space: nowrap;
   font-family: "rl-limo", sans-serif;
-  font-size: 4.2rem;                  /* ⬅️ Reduce font size for mobile */
+  font-size: 5rem;                  /* ⬅️ Reduce font size for mobile */
   line-height: 1;
   color: #66021f;
   opacity: 0.10;
@@ -1222,7 +1222,7 @@ body, html {
 
 .marquee span {
   display: inline-block;
-  animation: marquee-scroll 60s linear infinite; /* ⬅️ Slower is smoother */
+  animation: marquee-scroll 15s linear infinite; /* ⬅️ Slower is smoother */
   white-space: nowrap;
 }
 
@@ -1235,7 +1235,7 @@ body, html {
   background-color: #ffe9ec;
   color: #a26e75;
   font-family: "rl-limo", sans-serif;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem; 
   font-size: 2rem;
   font-weight: bold;
   border-radius: 8px;
